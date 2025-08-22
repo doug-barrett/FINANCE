@@ -1,0 +1,56 @@
+fileVersion: 1
+id: "1"
+macroString: |
+  {%- macro create_yaml_to_json_udf() -%}
+  create or replace function {{ ref_no_link(node.location.name, 'YAML_TO_JSON') }}(col string)
+      returns variant
+      language python
+      runtime_version = '3.8'
+      packages = ('ruamel.yaml')
+      handler = 'convert'
+  as
+  $$
+  import json
+  from ruamel.yaml import YAML, parser
+  def convert(yaml_string):
+      try:
+          if yaml_string is None:
+              return yaml_string
+          yaml=YAML(typ='safe') 
+          data = yaml.load(yaml_string)
+          return json.dumps(data)
+      except Exception as e:
+          return json.dumps(dict({
+                                  'ERROR': f"Failed to upload to ftp: {e}",
+                                  'INPUT': yaml_string
+                                  }))
+  $$;
+  {%- endmacro -%}
+
+  {%- macro firestore_label(column_name='`_meta_path`') -%}
+  CASE 
+      WHEN SPLIT_PART( {{ column_name }},'/', 2) = 'cls-prod-apac' THEN 'APAC'
+      WHEN SPLIT_PART( {{ column_name }},'/', 2) = 'dev-etl-284121' THEN 'US'
+      WHEN SPLIT_PART( {{ column_name }},'/', 2) = 'cls-prod-canada' THEN 'CANADA'
+      WHEN SPLIT_PART( {{ column_name }},'/', 2) = 'cls-prod-eu' THEN 'EU'
+      ELSE SPLIT_PART( {{ column_name }},'/', 2)
+  END
+  {%- endmacro -%}
+
+  {%- macro test_data_freshness(region=None, time_column='"_meta/mtime"', region_column='"FIRESTORE_ENV"', look_back_hours=24, record_count_threshold=0 ) -%}
+      {% if parameters.skip_freshness_checks %}
+          /* `parameters.skip_freshness_checks` is set to `true`. Skipping freshness checks. */
+          SELECT 'Skipping Freshness Checks' LIMIT 0
+      {% else %}
+          SELECT count(*) as c FROM {{ this }} 
+          WHERE 
+              {{ time_column }} > DATEADD('hour', -{{ look_back_hours }}, CURRENT_TIMESTAMP) 
+              {% if region_column is not none %}
+                  and 
+                  {{ region_column }} = '{{ region }}'
+              {% endif %}
+          HAVING c <= {{ record_count_threshold }}
+      {% endif %}
+  {%- endmacro -%}
+name: macro
+type: Macro

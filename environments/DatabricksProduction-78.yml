@@ -1,0 +1,29 @@
+fileVersion: 1
+id: "78"
+mappingDefinitions:
+  COALESCE_APP:
+    database: customer_health_metrics
+    schema: coalesce_app_prod
+  DATADOG:
+    database: customer_health_metrics
+    schema: data_dog
+  DATES:
+    database: customer_health_metrics
+    schema: dates
+  PYLON:
+    database: customer_health_metrics
+    schema: pylon_support
+  SALESFORCE:
+    database: customer_health_metrics
+    schema: salesforce
+  STAGING:
+    database: customer_health_metrics
+    schema: prod_staging
+  TARGET:
+    database: customer_health_metrics
+    schema: prod_target
+  ZENDESK:
+    database: customer_health_metrics
+    schema: zendesk
+name: Databricks Production
+type: Environment

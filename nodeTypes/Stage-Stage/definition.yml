@@ -2,7 +2,7 @@ fileVersion: 1
 id: Stage
 isDisabled: false
 metadata:
-  defaultStorageLocation: null
+  defaultStorageLocation: STAGING
   error: null
   nodeMetadataSpec: |
 

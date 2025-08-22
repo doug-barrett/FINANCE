@@ -1,0 +1,104 @@
+fileVersion: 1
+id: 20940877-6315-4e48-a2d5-2c43bdfda5cd
+name: STG_DAILY_NODES_ACCOUNT
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e9a181af-11cc-472a-bb49-24c3cc3a6ddd
+          stepCounter: 20940877-6315-4e48-a2d5-2c43bdfda5cd
+        config: {}
+        dataType: STRING
+        description: ""
+        name: org_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5c439caf-f6d6-430b-918b-651c75267e3d
+                stepCounter: 449c6420-6f07-4658-9be3-ce76eef6d8e4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c01a9bc9-9122-4ab8-bb73-c94e49c49d3d
+          stepCounter: 20940877-6315-4e48-a2d5-2c43bdfda5cd
+        config: {}
+        dataType: STRING
+        description: ""
+        name: meta_ctime
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cf440f08-ee4d-4269-b828-ae57781e89da
+                stepCounter: 449c6420-6f07-4658-9be3-ce76eef6d8e4
+            transform: "`STG_NODE_DEDUP`.`meta_ctime`::date"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e2b7154d-91f0-4523-bd58-810f1e5434f2
+          stepCounter: 20940877-6315-4e48-a2d5-2c43bdfda5cd
+        config: {}
+        dataType: STRING
+        description: ""
+        name: account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 020c55da-0550-4b60-864e-51834c2503da
+                stepCounter: 449c6420-6f07-4658-9be3-ce76eef6d8e4
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: dbe8af99-ee71-4af2-aee3-8a1657162e85
+          stepCounter: 20940877-6315-4e48-a2d5-2c43bdfda5cd
+        config: {}
+        dataType: INT
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: node_count
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: COUNT(distinct `STG_NODE_DEDUP`.`node_id`)
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_NODE_DEDUP: 449c6420-6f07-4658-9be3-ce76eef6d8e4
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STAGING
+            nodeName: STG_NODE_DEDUP
+        join:
+          joinCondition: |-
+            FROM {{ ref('STAGING', 'STG_NODE_DEDUP') }} `STG_NODE_DEDUP`
+            GROUP BY ALL
+        name: STG_DAILY_NODES_ACCOUNT
+        noLinkRefs: []
+  name: STG_DAILY_NODES_ACCOUNT
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,99 @@
+fileVersion: 1
+id: 656f5064-67e1-40b7-a31b-ef24c08d967d
+name: STG_FIRST_MONTH
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 89bdcc1f-f2df-487d-96ec-924e0c852969
+          stepCounter: 656f5064-67e1-40b7-a31b-ef24c08d967d
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the unique identifier for the account associated with the opportunity. 
+          - Sourced from the 'opportunity' table's 'account_id' column. 
+          - Used for joining and linking with the account table to access account-specific information.
+        name: account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8e9e6ba3-4c8b-41eb-a494-f2f35747614f
+                stepCounter: fb9b35b0-4b67-4259-9c74-06a9e4525c1d
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 316e48d7-0f3b-4039-8682-c92194ed94f2
+          stepCounter: 656f5064-67e1-40b7-a31b-ef24c08d967d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: account_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 28b78836-c9d1-4270-9ecd-43a00284641f
+                stepCounter: fb9b35b0-4b67-4259-9c74-06a9e4525c1d
+            transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 50f614d3-18a8-4e26-a220-1b0c8dc5730e
+          stepCounter: 656f5064-67e1-40b7-a31b-ef24c08d967d
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: first_month
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1976bd9e-acab-4f67-8386-06c6f9cc4305
+                stepCounter: fb9b35b0-4b67-4259-9c74-06a9e4525c1d
+            transform: MIN(DATE_TRUNC('month',`STG_ARR_OPPS`.`date_closed`))
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_ARR_OPPS: fb9b35b0-4b67-4259-9c74-06a9e4525c1d
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STAGING
+            nodeName: STG_ARR_OPPS
+        join:
+          joinCondition: |-
+            FROM {{ ref('STAGING', 'STG_ARR_OPPS') }} `STG_ARR_OPPS`
+            GROUP BY `STG_ARR_OPPS`.`account_id`,`STG_ARR_OPPS`.`account_name`
+        name: STG_FIRST_MONTH
+        noLinkRefs: []
+  name: STG_FIRST_MONTH
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

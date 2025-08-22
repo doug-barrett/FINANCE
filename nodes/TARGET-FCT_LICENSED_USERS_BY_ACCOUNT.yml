@@ -1,0 +1,76 @@
+fileVersion: 1
+id: 2dfbcf28-bc1e-41fd-b33b-a936066289ec
+name: FCT_LICENSED_USERS_BY_ACCOUNT
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: UNION ALL
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bd5399be-9f85-4a2e-82f3-06605e7e3e7f
+          stepCounter: 2dfbcf28-bc1e-41fd-b33b-a936066289ec
+        config: {}
+        dataType: STRING
+        description: ""
+        name: account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d0f20dc7-f5ee-46ca-976e-8ffe8b078ff9
+                stepCounter: 80da6d02-309c-45c3-a5d9-5bafa7a65346
+            transform: DISTINCT `FCT_LICENSED_USERS_BY_ORG`.`account_id`
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 27f09901-4f7b-44d5-a077-d95e9b6e5773
+          stepCounter: 2dfbcf28-bc1e-41fd-b33b-a936066289ec
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: licensed_users
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 67f64c3b-be6a-4670-9849-6f25e4048459
+                stepCounter: 80da6d02-309c-45c3-a5d9-5bafa7a65346
+            transform: MAX(`FCT_LICENSED_USERS_BY_ORG`.`licensed_users`)
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          FCT_LICENSED_USERS_BY_ORG: 80da6d02-309c-45c3-a5d9-5bafa7a65346
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TARGET
+            nodeName: FCT_LICENSED_USERS_BY_ORG
+        join:
+          joinCondition: |-
+            FROM {{ ref('TARGET', 'FCT_LICENSED_USERS_BY_ORG') }} `FCT_LICENSED_USERS_BY_ORG`
+            GROUP BY 1
+        name: FCT_LICENSED_USERS_BY_ACCOUNT
+        noLinkRefs: []
+  name: FCT_LICENSED_USERS_BY_ACCOUNT
+  overrideSQL: false
+  schema: ""
+  sqlType: Fact
+  type: sql
+  version: 1
+type: Node

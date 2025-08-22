@@ -1,0 +1,185 @@
+fileVersion: 1
+id: 449c6420-6f07-4658-9be3-ce76eef6d8e4
+name: STG_NODE_DEDUP
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b170e5e4-c78b-4eca-92f3-0a9cbba16be4
+          stepCounter: 449c6420-6f07-4658-9be3-ce76eef6d8e4
+        config: {}
+        dataType: STRING
+        description: ""
+        name: node_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 651dba87-20d0-4ee8-ae2a-62f86149dc77
+                stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b6b89257-e69b-415b-a906-9c6dd0f7333a
+          stepCounter: 449c6420-6f07-4658-9be3-ce76eef6d8e4
+        config: {}
+        dataType: STRING
+        description: ""
+        name: workspace_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 838b04d4-a503-458e-b0ef-be7a953d489a
+                stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5c439caf-f6d6-430b-918b-651c75267e3d
+          stepCounter: 449c6420-6f07-4658-9be3-ce76eef6d8e4
+        config: {}
+        dataType: STRING
+        description: ""
+        name: org_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 50079c4d-4914-45ea-bea8-533e0dfee199
+                stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1dab1fbf-f2e2-4fcc-8bd0-3238a3ca9713
+          stepCounter: 449c6420-6f07-4658-9be3-ce76eef6d8e4
+        config: {}
+        dataType: STRING
+        description: ""
+        name: meta_mtime
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ad3ad1e8-7770-413b-a4b3-9e6b8ac8b123
+                stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c1bf096f-afe1-400c-9c70-b94cc3beaf71
+          stepCounter: 449c6420-6f07-4658-9be3-ce76eef6d8e4
+        config: {}
+        dataType: STRING
+        description: ""
+        name: meta_path
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ef78468c-9aa3-4eea-aaf3-1f2a0223af52
+                stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a2e2d37e-f35b-4046-a653-5f015d13a6c4
+          stepCounter: 449c6420-6f07-4658-9be3-ce76eef6d8e4
+        config: {}
+        dataType: STRING
+        description: ""
+        name: meta_uuid
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 74351b61-2588-435d-b3f6-2aa7e1d70047
+                stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cf440f08-ee4d-4269-b828-ae57781e89da
+          stepCounter: 449c6420-6f07-4658-9be3-ce76eef6d8e4
+        config: {}
+        dataType: STRING
+        description: ""
+        name: meta_ctime
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9805ccb6-7298-475a-8ddd-82450f8bbb8f
+                stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d935882c-1a86-4872-ba2f-51e77582bb2d
+          stepCounter: 449c6420-6f07-4658-9be3-ce76eef6d8e4
+        config: {}
+        dataType: STRING
+        description: ""
+        name: database
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 303cbf33-b312-4b35-84cc-13a8f55992f2
+                stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 020c55da-0550-4b60-864e-51834c2503da
+          stepCounter: 449c6420-6f07-4658-9be3-ce76eef6d8e4
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: caa5c400-6886-4704-960a-420bc6e83c49
+                stepCounter: f5e6b2af-5872-4209-b8b4-1d2e67752e04
+            transform: ""
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_COALESCE_ORGS: f5e6b2af-5872-4209-b8b4-1d2e67752e04
+          stg_orgs_workspaces_steps: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STAGING
+            nodeName: STG_COALESCE_ORGS
+          - locationName: STAGING
+            nodeName: stg_orgs_workspaces_steps
+        join:
+          joinCondition: |-
+            FROM {{ ref('STAGING', 'stg_orgs_workspaces_steps') }} `stg_orgs_workspaces_steps`
+            LEFT JOIN {{ ref('STAGING', 'STG_COALESCE_ORGS') }} `STG_COALESCE_ORGS`
+            ON `stg_orgs_workspaces_steps`.`org_id` = `STG_COALESCE_ORGS`.`org_id`
+            QUALIFY ROW_NUMBER() OVER (
+                        PARTITION BY 
+                            stg_orgs_workspaces_steps.node_id, 
+                            stg_orgs_workspaces_steps.workspace_id
+                        ORDER BY 
+                            stg_orgs_workspaces_steps._meta_ctime ASC
+                    ) = 1
+        name: STG_NODE_DEDUP
+        noLinkRefs: []
+  name: STG_NODE_DEDUP
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

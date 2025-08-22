@@ -1,0 +1,107 @@
+fileVersion: 1
+id: 5994dc7e-6812-4e60-8d04-aa52bc60c22e
+name: FCT_CURRENT_ACCOUNT_LICENSES
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: UNION ALL
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9b9b3074-7a81-4a40-ab8c-e88473e5b73f
+          stepCounter: 5994dc7e-6812-4e60-8d04-aa52bc60c22e
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the unique identifier for the account associated with the opportunity. 
+          - Sourced from the 'opportunity' table's 'account_id' column. 
+          - Used for joining and linking with the account table to access account-specific information.
+        name: account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fd3d0e99-1b6b-4fce-9ebe-11304261d5d9
+                stepCounter: 960271ae-56ef-4cba-8fcd-f5628cb73983
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8d54a46a-c326-4e60-9249-83d182d640a3
+          stepCounter: 5994dc7e-6812-4e60-8d04-aa52bc60c22e
+        config: {}
+        dataType: STRING
+        description: ""
+        name: account_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 72ee9de7-0a4c-4218-ad03-65b1817d766f
+                stepCounter: 960271ae-56ef-4cba-8fcd-f5628cb73983
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5bbad7f0-b8a1-47ee-8afe-57ae6a96c3c7
+          stepCounter: 5994dc7e-6812-4e60-8d04-aa52bc60c22e
+        config: {}
+        dataType: DATE
+        description: ""
+        name: month_start
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d52b3f19-3732-4255-b000-7e036108e0b9
+                stepCounter: 960271ae-56ef-4cba-8fcd-f5628cb73983
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d41a070f-6c31-4411-bb8c-ac69a7280191
+          stepCounter: 5994dc7e-6812-4e60-8d04-aa52bc60c22e
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: license_count
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b4ddb72b-7267-41fd-8184-4d8303e07cb4
+                stepCounter: 960271ae-56ef-4cba-8fcd-f5628cb73983
+            transform: CASE WHEN `FCT_MONTHLY_ACCOUNT_LICENSES`.`license_count` = 1000 THEN 100 ELSE `FCT_MONTHLY_ACCOUNT_LICENSES`.`license_count` END
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          FCT_MONTHLY_ACCOUNT_LICENSES: 960271ae-56ef-4cba-8fcd-f5628cb73983
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TARGET
+            nodeName: FCT_MONTHLY_ACCOUNT_LICENSES
+        join:
+          joinCondition: |
+            FROM {{ ref('TARGET', 'FCT_MONTHLY_ACCOUNT_LICENSES') }} `FCT_MONTHLY_ACCOUNT_LICENSES`
+            WHERE month_start = DATE_TRUNC('month',GETDATE())
+        name: FCT_CURRENT_ACCOUNT_LICENSES
+        noLinkRefs: []
+  name: FCT_CURRENT_ACCOUNT_LICENSES
+  overrideSQL: false
+  schema: ""
+  sqlType: Fact
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,116 @@
+fileVersion: 1
+id: 50467326-48b3-4e48-8a92-a8a263cf4d4d
+name: FCT_T6M_EXPANSIONS
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: UNION ALL
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 18dd805b-e26d-462a-ae3b-fc706a9900a3
+          stepCounter: 50467326-48b3-4e48-8a92-a8a263cf4d4d
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the unique identifier for the account associated with the opportunity. 
+          - Sourced from the 'opportunity' table's 'account_id' column. 
+          - Used for joining and linking with the account table to access account-specific information.
+        name: account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a2205b1b-9985-40c0-8e6b-c538d1cb703a
+                stepCounter: 5042476b-f373-45bd-8ff5-fac59ae70197
+            transform: DISTINCT(`STG_ACCOUNT_MONTH_DETAIL`.`account_id`)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ca39716a-5e67-45d8-b13c-246f7f7b891a
+          stepCounter: 50467326-48b3-4e48-8a92-a8a263cf4d4d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: account_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cefcd3dc-59ca-41ff-a318-8c168859b8bd
+                stepCounter: 5042476b-f373-45bd-8ff5-fac59ae70197
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 535e5538-5280-4c0f-aa8b-227ec548bb78
+          stepCounter: 50467326-48b3-4e48-8a92-a8a263cf4d4d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: arr_cohort
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 077efbf6-2b8a-4646-9bfa-c0d6ee16e246
+                stepCounter: 5042476b-f373-45bd-8ff5-fac59ae70197
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: abf344b3-aa54-4534-9616-f54c30b112fc
+          stepCounter: 50467326-48b3-4e48-8a92-a8a263cf4d4d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: t6m_expansions
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: CASE WHEN `FCT_MONTHLY_ACCOUNT_ARR`.`expansion_arr` > 0 AND(DATE_DIFF(MONTH,`FCT_MONTHLY_ACCOUNT_ARR`.`month_start`,GETDATE())< 6) THEN 1 ELSE 0 END
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STAGING
+            nodeName: STG_ACCOUNT_MONTH_DETAIL
+          - locationName: TARGET
+            nodeName: FCT_MONTHLY_ACCOUNT_ARR
+        join:
+          joinCondition: |
+            FROM {{ ref('STAGING', 'STG_ACCOUNT_MONTH_DETAIL') }} `STG_ACCOUNT_MONTH_DETAIL`
+            INNER JOIN {{ ref('TARGET', 'FCT_MONTHLY_ACCOUNT_ARR') }} `FCT_MONTHLY_ACCOUNT_ARR`
+            ON `STG_ACCOUNT_MONTH_DETAIL`.`account_id` = `FCT_MONTHLY_ACCOUNT_ARR`.`account_id`
+            QUALIFY ROW_NUMBER() OVER ( PARTITION BY `STG_ACCOUNT_MONTH_DETAIL`.`account_id` ORDER BY `t6m_expansions` DESC ) = 1
+        name: FCT_T6M_EXPANSIONS
+        noLinkRefs: []
+  name: FCT_T6M_EXPANSIONS
+  overrideSQL: false
+  schema: ""
+  sqlType: Fact
+  type: sql
+  version: 1
+type: Node

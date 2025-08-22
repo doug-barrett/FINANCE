@@ -1,0 +1,4118 @@
+fileVersion: 1
+id: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+name: node_create_v2
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: DATADOG
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 96a34ae3-dbc7-48ef-881b-81c3d290bcba
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: |-
+          The id of the webhook request, which is automatically added by the connector
+          auto-generated projection of JSON at: /_meta/webhookId with inferred types: [string]
+        name: _meta/webhookId
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7af36fae-484b-49fd-862d-f7acf527550e
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /_id with inferred types: [string]"
+        name: _id
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3e7696b6-afbb-4708-88f1-192881e3f8cc
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/appEnv/firebaseEnv with inferred types: [string]"
+        name: attributes/appEnv/firebaseEnv
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b62282a1-bbc8-41be-818f-94581fd95202
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/appEnv/windowInfo/frontendURLHost with inferred types: [string]"
+        name: attributes/appEnv/windowInfo/frontendURLHost
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f1049086-4432-4e02-a7aa-243957e6257c
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/application_id with inferred types: [string]"
+        name: attributes/application_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4276f53b-0aa4-4b5d-9a8b-53e3e1ce9824
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/ci/is_failure with inferred types: [boolean]"
+        name: attributes/ci/is_failure
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 31e30a4a-62a6-4716-bb39-8b677967611b
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/ci/job/id with inferred types: [string]"
+        name: attributes/ci/job/id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f1181424-2d9b-43c8-95e9-dd6e7dcacd67
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/ci/job/log_fingerprint with inferred types: [string]"
+        name: attributes/ci/job/log_fingerprint
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 913eafab-1488-4ff5-8d82-76c6e6825ff1
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/ci/job/name with inferred types: [string]"
+        name: attributes/ci/job/name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: efbf77d6-217b-4703-9f40-89a8602445e4
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/ci/job/url with inferred types: [string]"
+        name: attributes/ci/job/url
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 743b9ec1-470e-4687-843a-4d54576e13a4
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/ci/node/labels with inferred types: [array]"
+        name: attributes/ci/node/labels
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bf31d67f-9f98-4e1c-8835-d145f93f0ff5
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/ci/node/name with inferred types: [string]"
+        name: attributes/ci/node/name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 41c4c235-848f-4d47-b664-4fb6b547723f
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/ci/pipeline/id with inferred types: [string]"
+        name: attributes/ci/pipeline/id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: db228597-065b-4751-8374-b26630213d19
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/ci/pipeline/name with inferred types: [string]"
+        name: attributes/ci/pipeline/name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f8e86e6a-e811-4f76-8be8-e8a463f3756a
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/ci/provider/name with inferred types: [string]"
+        name: attributes/ci/provider/name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 525172fe-ab75-452a-8873-ccde92abc8ab
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/ci/status with inferred types: [string]"
+        name: attributes/ci/status
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6c39b309-3591-4e72-8750-a80c7f5df850
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/coalesceSoftwareVersion with inferred types: [string]"
+        name: attributes/coalesceSoftwareVersion
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 912e36d5-5dc1-475c-b79d-4d5e5e5e4fa3
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/commitHash with inferred types: [string]"
+        name: attributes/commitHash
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f6931c4e-688f-475f-ad54-fadb260322d0
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/date with inferred types: [integer]"
+        name: attributes/date
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8cccdd87-ba05-4289-9b67-17ba0e70fdc4
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/dd-request-id with inferred types: [string]"
+        name: attributes/dd-request-id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f650e903-1758-4545-af6a-59b2b5668336
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/domain with inferred types: [string]"
+        name: attributes/domain
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fbdf2e27-0ab9-4d51-a9b0-c0695ea7e1df
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/env with inferred types: [string]"
+        name: attributes/env
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 814db02d-4bce-4932-8397-aea763a2370e
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/envID with inferred types: [integer string]"
+        name: attributes/envID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5eece32f-a31e-4523-b247-a9c2e03f524a
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/environmentID with inferred types: [integer]"
+        name: attributes/environmentID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 326ce43a-f8c9-4d97-bb3d-f4d6523f0b16
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/git/branch with inferred types: [string]"
+        name: attributes/git/branch
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fca83cfd-819b-4a61-a569-2b429f8ceeb7
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/git/commit/author/email with inferred types: [string]"
+        name: attributes/git/commit/author/email
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 28df26bb-328b-40ae-8a83-2ba00ef399b7
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/git/commit/author/name with inferred types: [string]"
+        name: attributes/git/commit/author/name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6c5adb11-974b-450f-b6f2-33e3b813784c
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/git/commit/committer/date with inferred types: [string]"
+        name: attributes/git/commit/committer/date
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cba4a2ec-0ca4-4ffa-85de-ba4646f0ce3b
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/git/commit/committer/email with inferred types: [string]"
+        name: attributes/git/commit/committer/email
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c229433e-491b-4c77-b8aa-cd428a9e72cc
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/git/commit/committer/name with inferred types: [string]"
+        name: attributes/git/commit/committer/name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e85f956f-e368-466d-b660-13c9a0b8cc3c
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/git/commit/message with inferred types: [string]"
+        name: attributes/git/commit/message
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ed703cca-7a99-4a6e-ab64-af2bf1aa7f67
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/git/commit/sha with inferred types: [string]"
+        name: attributes/git/commit/sha
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6375200a-4327-4b44-a1c3-85886b9b7ddb
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/git/default_branch with inferred types: [string]"
+        name: attributes/git/default_branch
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 50e0c739-6494-4977-9138-39bd40a6b277
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/git/repository_url with inferred types: [string]"
+        name: attributes/git/repository_url
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ebd765a5-fe4f-41f5-bf47-218dbb69f2a9
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/github/app_id with inferred types: [string]"
+        name: attributes/github/app_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 82f80866-701d-472e-ae6b-c146459be78f
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/github/conclusion with inferred types: [string]"
+        name: attributes/github/conclusion
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 298aaebc-ab81-4642-9d9b-75b6c86b94c7
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/github/html_url with inferred types: [string]"
+        name: attributes/github/html_url
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 25d810a1-c9bf-4cea-a057-f2ae45a20495
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/github/node_group with inferred types: [string]"
+        name: attributes/github/node_group
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: dbee9e88-c640-4b38-8ae7-ff3b5ce93cbc
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/github/run_attempt with inferred types: [string]"
+        name: attributes/github/run_attempt
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: dbdd136b-8820-4fa0-b1ce-d9f0b8302dbb
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/hostname with inferred types: [string]"
+        name: attributes/hostname
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 47df784b-07b5-4ca8-8bfe-c3b4565b9b3b
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/http/method with inferred types: [string]"
+        name: attributes/http/method
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ffa67d4f-825c-424f-ae19-54cf2d4fd3b7
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/http/useragent with inferred types: [string]"
+        name: attributes/http/useragent
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b29038c6-1143-4e39-b457-ce9ffa453460
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/http/useragent_details/browser/family with inferred types: [string]"
+        name: attributes/http/useragent_details/browser/family
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4cfaeff8-fa18-4733-9974-2f6cf7c6ef7d
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/http/useragent_details/browser/major with inferred types: [string]"
+        name: attributes/http/useragent_details/browser/major
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2acb0bf6-253e-4fba-8724-a2189d2c9676
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/http/useragent_details/browser/minor with inferred types: [string]"
+        name: attributes/http/useragent_details/browser/minor
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 387c08bd-34f3-4717-81e2-e9235806a9f4
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/http/useragent_details/browser/patch with inferred types: [string]"
+        name: attributes/http/useragent_details/browser/patch
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 469e2140-632e-4105-b63b-46d56399a96c
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/http/useragent_details/browser/patch_minor with inferred types: [string]"
+        name: attributes/http/useragent_details/browser/patch_minor
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0d1c11a7-35e9-43d9-9782-1c1b8f9f7e9b
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/http/useragent_details/device/brand with inferred types: [string]"
+        name: attributes/http/useragent_details/device/brand
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 330d36b5-fcd3-4117-b6c7-982ca04aa255
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/http/useragent_details/device/category with inferred types: [string]"
+        name: attributes/http/useragent_details/device/category
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6f218032-34d1-4758-b2d1-50d3cba10e6c
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/http/useragent_details/device/family with inferred types: [string]"
+        name: attributes/http/useragent_details/device/family
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d1e693c9-edaf-4224-b5a4-23af488886ff
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/http/useragent_details/device/model with inferred types: [string]"
+        name: attributes/http/useragent_details/device/model
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3a170d8b-e687-4b29-aad6-2e17a4377956
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/http/useragent_details/os/family with inferred types: [string]"
+        name: attributes/http/useragent_details/os/family
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f30eb81c-f7fd-4296-b9a9-7e25183cc468
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/http/useragent_details/os/major with inferred types: [string]"
+        name: attributes/http/useragent_details/os/major
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d02d0944-083e-4cae-9cf4-586bb545288a
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/http/useragent_details/os/minor with inferred types: [string]"
+        name: attributes/http/useragent_details/os/minor
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2e0bb1ec-fdac-4bdb-93bb-9ec41043230e
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/http/useragent_details/os/patch with inferred types: [string]"
+        name: attributes/http/useragent_details/os/patch
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d8bdb1a3-1025-4b07-84ac-e362c25d2771
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/kubernetesJobUuid with inferred types: [string]"
+        name: attributes/kubernetesJobUuid
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8f546caa-dc75-4914-aa78-1dc09343fc49
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/level with inferred types: [string]"
+        name: attributes/level
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b6d7fa3b-8f10-468c-a548-1fc4a47b845f
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/logContext/orgID with inferred types: [string]"
+        name: attributes/logContext/orgID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: af33958e-d815-4266-9125-52001cc74b0f
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/logContext/userID with inferred types: [string]"
+        name: attributes/logContext/userID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f17b3495-bf8f-44fe-9e79-77b1b7ad43c4
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/loggingArea with inferred types: [string]"
+        name: attributes/loggingArea
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3165ba5b-f0e3-4e9e-aa54-cce7e147ae56
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/metric-name with inferred types: [string]"
+        name: attributes/metric-name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 253c11c1-10a4-4c3d-8469-490370b6d92c
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/network/client/geoip/as/domain with inferred types: [string]"
+        name: attributes/network/client/geoip/as/domain
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: dca5f071-824f-4dfb-a87a-0ad63c151c26
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/network/client/geoip/as/name with inferred types: [string]"
+        name: attributes/network/client/geoip/as/name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: dff87e42-9eb2-4955-9fb3-f6753eec2cdb
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/network/client/geoip/as/number with inferred types: [string]"
+        name: attributes/network/client/geoip/as/number
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 57248d35-9422-49d4-bb63-e437570f6707
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/network/client/geoip/as/route with inferred types: [string]"
+        name: attributes/network/client/geoip/as/route
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ca0f51e3-c154-46a2-95ce-d404b26594e1
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/network/client/geoip/as/type with inferred types: [string]"
+        name: attributes/network/client/geoip/as/type
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 163e1621-eb28-433a-9e2b-d1e333a9193c
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/network/client/geoip/city/name with inferred types: [string]"
+        name: attributes/network/client/geoip/city/name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fbc2ebec-ba1f-4674-8ed8-014312564a44
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/network/client/geoip/continent/code with inferred types: [string]"
+        name: attributes/network/client/geoip/continent/code
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2e1589b2-d003-4a80-beab-7283c7ff2593
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/network/client/geoip/continent/name with inferred types: [string]"
+        name: attributes/network/client/geoip/continent/name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b7180df4-7038-4467-b9d5-4302791538e3
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/network/client/geoip/country/iso_code with inferred types: [string]"
+        name: attributes/network/client/geoip/country/iso_code
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bb1c4e70-e55f-41f2-b39c-ca834ff5975d
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/network/client/geoip/country/name with inferred types: [string]"
+        name: attributes/network/client/geoip/country/name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3d9dfdbc-a33d-41c1-9fa3-f888c989cae9
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/network/client/geoip/ipAddress with inferred types: [string]"
+        name: attributes/network/client/geoip/ipAddress
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2ab887f2-0dcd-42be-8c07-d84ec420d179
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: DOUBLE
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/network/client/geoip/location/latitude with inferred types: [number]"
+        name: attributes/network/client/geoip/location/latitude
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4974c5fa-e15e-4185-8485-21ac1bed8b2c
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: DOUBLE
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/network/client/geoip/location/longitude with inferred types: [number]"
+        name: attributes/network/client/geoip/location/longitude
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 14eb86c2-f63a-4cfe-a4b9-e7db6338047c
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/network/client/geoip/subdivision/iso_code with inferred types: [string]"
+        name: attributes/network/client/geoip/subdivision/iso_code
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 72318184-0f40-4d4f-8a9c-e0103d70acb0
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/network/client/geoip/subdivision/name with inferred types: [string]"
+        name: attributes/network/client/geoip/subdivision/name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c4866409-c1ad-4b28-8955-0bbfc5f20f63
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/network/client/geoip/timezone with inferred types: [string]"
+        name: attributes/network/client/geoip/timezone
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2f8911a0-6153-4d2d-abb7-7e38255c7318
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/network/client/ip with inferred types: [string]"
+        name: attributes/network/client/ip
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a7f4707c-e809-477d-bd4c-2b7252095957
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/network/client/is_private_network_ip with inferred types: [boolean]"
+        name: attributes/network/client/is_private_network_ip
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7c7519a6-890f-4d4a-9fb1-a798da1ddb75
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/network/ip/attributes with inferred types: [array]"
+        name: attributes/network/ip/attributes
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a3dc2aaa-76bd-4d3a-8210-959140216140
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/network/ip/list with inferred types: [array]"
+        name: attributes/network/ip/list
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1b2d7d42-b84b-4035-950d-d1870bb53fb9
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/nodeID with inferred types: [string]"
+        name: attributes/nodeID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ffcdd8b0-f8e7-468a-9f5a-2e6ab096b2b1
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/orgID with inferred types: [string]"
+        name: attributes/orgID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3a9585f1-499f-4295-a3d7-612651674c17
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/company_name with inferred types: [string]"
+        name: attributes/orgLookup/company_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e718fd9f-1b61-41a9-90c7-d70195b9137b
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/days_since_last_activity with inferred types: [string]"
+        name: attributes/orgLookup/days_since_last_activity
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6c8f77eb-8825-4026-a519-d2476e9679ad
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/firebase_env with inferred types: [string]"
+        name: attributes/orgLookup/firebase_env
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bca3574d-0afc-44eb-8cb0-149846429fca
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/last_activity_timestamp with inferred types: [string]"
+        name: attributes/orgLookup/last_activity_timestamp
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5a39c12d-7879-4659-8d95-b5a710644623
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/max_node_count with inferred types: [string]"
+        name: attributes/orgLookup/max_node_count
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cbe1f50e-1b18-4c97-b739-6eafb23188d0
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/org_create_date with inferred types: [string]"
+        name: attributes/orgLookup/org_create_date
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ec591ac5-0b2d-4fe5-b958-0b921cd466b4
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/org_name with inferred types: [string]"
+        name: attributes/orgLookup/org_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 39dd0ea1-0de1-4cdf-a86e-d2eb97cf2c2c
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/subscription_end_date with inferred types: [string]"
+        name: attributes/orgLookup/subscription_end_date
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 830b8bb6-bfae-47ba-827f-240519bd67a7
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/subscription_start_date with inferred types: [string]"
+        name: attributes/orgLookup/subscription_start_date
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6b66c220-9191-4616-a1e3-0b9de6b5d194
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/ticket_closed_resolved_count with inferred types: [string]"
+        name: attributes/orgLookup/ticket_closed_resolved_count
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3b475a4f-ac05-4574-b12f-65e47e7e8e26
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/ticket_open_pending_count with inferred types: [string]"
+        name: attributes/orgLookup/ticket_open_pending_count
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6562fa16-2732-43d3-8bdb-0fd0d86dd28c
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/ticket_total_count with inferred types: [string]"
+        name: attributes/orgLookup/ticket_total_count
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: daed133c-b5a0-4bb7-948d-cdb09fd95425
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/ticket_wait_on_dev_count with inferred types: [string]"
+        name: attributes/orgLookup/ticket_wait_on_dev_count
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 592a3acb-562f-4708-b475-9ac4987d6456
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/trial_activated_by_user_id with inferred types: [string]"
+        name: attributes/orgLookup/trial_activated_by_user_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ac538931-674e-4128-8858-44183ef76c2f
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/trial_source with inferred types: [string]"
+        name: attributes/orgLookup/trial_source
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: eaa2d819-397b-4d0e-8f63-51cbf7e10abb
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/type with inferred types: [string]"
+        name: attributes/orgLookup/type
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3e7f3d44-4c3c-4e8c-989d-0db2fcfa5f53
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/user_count with inferred types: [string]"
+        name: attributes/orgLookup/user_count
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 474573dd-8251-475f-b73f-5f675db3aff7
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/origin with inferred types: [string]"
+        name: attributes/origin
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6164bd6b-377e-47cf-928c-50f534c2ddaa
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/accepted with inferred types: [integer]"
+        name: attributes/params/accepted
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c712d2c1-7f25-4d71-8cc2-f0401adfb334
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/allEntityCount with inferred types: [integer]"
+        name: attributes/params/allEntityCount
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9cce2700-9d1c-4df9-91d2-f3bd09e3a897
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/artTest with inferred types: [boolean]"
+        name: attributes/params/artTest
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1ee5a0c4-939d-4aea-a29e-5bdef6e775a0
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/attribution with inferred types: [array]"
+        name: attributes/params/attribution
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b8486e52-f7b7-454a-b811-03e72b827a83
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/browserName with inferred types: [string]"
+        name: attributes/params/browserName
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cfe83146-bcd0-4491-9bbb-aaa64d80bc51
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/candidatesTokenCount with inferred types: [integer]"
+        name: attributes/params/candidatesTokenCount
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 76acaf3d-8d7e-4ec4-b330-29cb8f6188b2
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/commitSHA with inferred types: [string]"
+        name: attributes/params/commitSHA
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: db063d04-087b-482c-ba63-a5ead43309ff
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/concurrencyTest with inferred types: [boolean]"
+        name: attributes/params/concurrencyTest
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f7176bee-bca6-4628-8ea4-fc0cfb00ba79
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/contextCount with inferred types: [integer]"
+        name: attributes/params/contextCount
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 000b41e5-cad4-43b2-87de-446b8c769105
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: DOUBLE
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/duration with inferred types: [number]"
+        name: attributes/params/duration
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: dbd74135-17bf-4832-9731-1bcaa2697804
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/entryType with inferred types: [string]"
+        name: attributes/params/entryType
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d7b01a20-b041-4ead-8273-b03e8974f353
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/error/caller with inferred types: [string]"
+        name: attributes/params/error/caller
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 961bce2d-a656-4400-986d-97b3bd880ca4
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/error/code with inferred types: [string]"
+        name: attributes/params/error/code
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 00e4bc4a-ab46-4b16-bf79-9ecfdfc11ac3
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/error/data/filepaths with inferred types: [array]"
+        name: attributes/params/error/data/filepaths
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 554b0bee-b819-42d4-bbc0-3d5f748efe57
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/error/data/what with inferred types: [string]"
+        name: attributes/params/error/data/what
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bd36ef02-58d7-471e-a81d-982b4cbf57f0
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/error/matcherResult/actual with inferred types: [string]"
+        name: attributes/params/error/matcherResult/actual
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6b59dbe2-6a39-43d2-b143-f5fe8a21ddac
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/error/matcherResult/expected with inferred types: [string]"
+        name: attributes/params/error/matcherResult/expected
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3902dbed-ba0a-4af2-9922-ad4cf1a7c989
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/error/matcherResult/log with inferred types: [array]"
+        name: attributes/params/error/matcherResult/log
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 58a82f01-1d4b-4bc2-92a5-dd132a3eefcd
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/error/matcherResult/message with inferred types: [string]"
+        name: attributes/params/error/matcherResult/message
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 64ce8e04-73da-4778-9c59-ac38a84d98c8
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/error/matcherResult/name with inferred types: [string]"
+        name: attributes/params/error/matcherResult/name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 47100350-8e95-4c9f-9db2-c8949c6e9ee9
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/error/matcherResult/pass with inferred types: [boolean]"
+        name: attributes/params/error/matcherResult/pass
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d1841492-6554-4d00-83fd-97f8c9004c1c
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/error/matcherResult/timeout with inferred types: [integer]"
+        name: attributes/params/error/matcherResult/timeout
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8b0b9d86-160e-4bd1-b1ff-39b7602b7378
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/error/message with inferred types: [string]"
+        name: attributes/params/error/message
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d58bc562-0403-4f8c-a1c5-a5651008c6e7
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/error/name with inferred types: [string]"
+        name: attributes/params/error/name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2eff007a-92db-40a7-9a75-e5054d266727
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/error/stack with inferred types: [string]"
+        name: attributes/params/error/stack
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 555a98d0-2e8d-4917-918c-4770c491ab92
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/isFinal with inferred types: [boolean]"
+        name: attributes/params/isFinal
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9db7abfc-3712-4e1b-a181-e72a3857379f
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/modified with inferred types: [integer]"
+        name: attributes/params/modified
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7d81852e-8b58-4a9a-b31e-24d2f8b278b6
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/modifiedFiles with inferred types: [integer]"
+        name: attributes/params/modifiedFiles
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6a534aa2-1d61-4842-b3d5-95bab1b5849b
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/name with inferred types: [string]"
+        name: attributes/params/name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 644ad305-18c5-4b8b-820f-27b9b2a3caa5
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/numOfColumns with inferred types: [integer]"
+        name: attributes/params/numOfColumns
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 14d2eee1-dc69-47ef-8970-c612dc0aa06a
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/numOfDeployableEnvs with inferred types: [integer]"
+        name: attributes/params/numOfDeployableEnvs
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4f4c1f4e-5a66-4eb4-b26d-2b846eca9662
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/numOfNodes with inferred types: [integer]"
+        name: attributes/params/numOfNodes
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6267211a-7699-4efc-a21f-727c778b0242
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/os with inferred types: [string]"
+        name: attributes/params/os
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: be705211-ea93-4e87-8818-8101b6cfadce
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/platform with inferred types: [string]"
+        name: attributes/params/platform
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 09ed7dd9-efbb-490d-b50d-283d4c9d9df8
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/promptTokenCount with inferred types: [integer]"
+        name: attributes/params/promptTokenCount
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 308843ed-1cbe-4551-a29e-c3819e233c22
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/ref with inferred types: [string]"
+        name: attributes/params/ref
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 01204543-3b97-458d-a1ad-474b9f156115
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/rejected with inferred types: [integer]"
+        name: attributes/params/rejected
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8269283d-6daa-4777-a62a-66175ad8f027
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: DOUBLE
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/startTime with inferred types: [number]"
+        name: attributes/params/startTime
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e97c2b9f-eaf6-49d8-b90b-7a61fb7cc81b
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/stepCounter with inferred types: [string]"
+        name: attributes/params/stepCounter
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8c756d82-de99-4b07-a433-d7bde0cad484
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/tabID with inferred types: [string]"
+        name: attributes/params/tabID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bfdfc672-5767-4abf-9745-a90a69bafd31
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/tabType with inferred types: [string]"
+        name: attributes/params/tabType
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7b80503f-7ddd-4209-aae4-f76085426bcf
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/timeout with inferred types: [integer]"
+        name: attributes/params/timeout
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a223c27e-62c3-4ba0-97d2-ae2e0832ced9
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/totalRows with inferred types: [integer]"
+        name: attributes/params/totalRows
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c663f2ae-3ce9-427a-8a83-09507d152ed5
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/totalRuns with inferred types: [string]"
+        name: attributes/params/totalRuns
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 49e5ad93-6e49-4056-8e1d-446160a51732
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/totalTokenCount with inferred types: [integer]"
+        name: attributes/params/totalTokenCount
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9949ae1d-d058-403a-bc0f-5f6dd0ad1e21
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/traceId with inferred types: [string]"
+        name: attributes/params/traceId
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3c09450f-262e-429c-969c-7c91a7d35d80
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/vm with inferred types: [boolean]"
+        name: attributes/params/vm
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8e5f1dbd-7754-4236-ba90-0e86a0f737ec
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/params/warning with inferred types: [boolean]"
+        name: attributes/params/warning
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6f7392e4-52aa-42ee-b459-a4bb3ca9cc84
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/planID with inferred types: [string]"
+        name: attributes/planID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8d0bc570-b8da-4619-a7c4-ccb0f7c8ffbc
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/reactAppCoalesceDev with inferred types: [string]"
+        name: attributes/reactAppCoalesceDev
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a8d0e588-d64f-4943-ab37-18c8c9200423
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/requestID with inferred types: [string]"
+        name: attributes/requestID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2293577d-3bb4-4e66-a100-1b86a35ef761
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/runID with inferred types: [integer]"
+        name: attributes/runID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4891ada0-0431-4982-817a-4c1bbe960b52
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/service with inferred types: [string]"
+        name: attributes/service
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 03663ac7-4625-43d4-8e68-729d9d8a8481
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/session_id with inferred types: [string]"
+        name: attributes/session_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: aa94145f-beb4-49e5-8b57-5c8e761fcc58
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/snowflakeRequestID with inferred types: [string]"
+        name: attributes/snowflakeRequestID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 79f231c2-3ae2-4756-acf0-e6f9692d638e
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/span_id with inferred types: [string]"
+        name: attributes/span_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3888c0f8-d78c-495c-a667-f7a4f94a29bc
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/status with inferred types: [string]"
+        name: attributes/status
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 21bcf624-f671-4836-859c-6669139b2710
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/threat_intel/indicators_matched with inferred types: [array]"
+        name: attributes/threat_intel/indicators_matched
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4a063893-111f-4f06-ba8e-d594abd83754
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/threat_intel/ip with inferred types: [array]"
+        name: attributes/threat_intel/ip
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 97cca427-074e-49a0-a5bc-3a570f695acc
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/threat_intel/results with inferred types: [array]"
+        name: attributes/threat_intel/results
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d17617a4-b680-47c4-9580-5836c66ca63a
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/time-ms with inferred types: [integer]"
+        name: attributes/time-ms
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 665de62e-373f-45b3-b9a4-55f7d2301a67
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/timestamp with inferred types: [integer string]"
+        name: attributes/timestamp
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8cb67b46-1ce7-4171-b0a1-cf2f85449cc0
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/total time-ms with inferred types: [integer]"
+        name: attributes/total_time-ms
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1e6c67f1-00d3-4b2f-aab7-531e57ee5db9
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/traceId with inferred types: [string]"
+        name: attributes/traceId
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 293188b7-9b42-4fb3-b620-812b79366b82
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/trace_flags with inferred types: [string]"
+        name: attributes/trace_flags
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5387b0e4-8e29-466d-876f-45cc2441ecff
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/trace_id with inferred types: [string]"
+        name: attributes/trace_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5b20a395-48aa-4f20-86cf-d456d40956bb
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/urlPath with inferred types: [string]"
+        name: attributes/urlPath
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e766b617-a3d1-41c2-a285-76ac965b08f6
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/userID with inferred types: [string]"
+        name: attributes/userID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 67e7c93d-5db0-4170-8e50-c23c018482cd
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/user_action/id with inferred types: [string]"
+        name: attributes/user_action/id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6498ff95-a4a4-45e2-8ebb-d783ef80f3a3
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/id with inferred types: [string]"
+        name: attributes/view/id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 25c71e00-983e-4131-ad80-6bc34a5bd3ba
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/referrer with inferred types: [string]"
+        name: attributes/view/referrer
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b48c5490-df09-4b7e-9c3c-567276bf95b6
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/hash with inferred types: [string]"
+        name: attributes/view/referrer_details/hash
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ee0df824-f4dd-4623-8d3d-cc74a19f7460
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/host with inferred types: [string]"
+        name: attributes/view/referrer_details/host
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bfd7c165-8ce1-4ee7-af22-4b21edc75012
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/path with inferred types: [string]"
+        name: attributes/view/referrer_details/path
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d669c837-7d99-473a-b7e2-1337707cc9bf
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/4nx4fwtbualw5kh6ckrfyulsfy with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/4nx4fwtbualw5kh6ckrfyulsfy
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f02e466e-1e72-45b5-97e5-7eea3f2ae0b8
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/code with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/code
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ac51c91f-5033-44f8-a260-f17e80e97b28
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/dlrhrthbb5dwiqwobkimz75pk4 with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/dlrhrthbb5dwiqwobkimz75pk4
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 03434731-2448-4d17-8547-0c81c28ad4ef
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/environment with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/environment
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0a136350-3904-472e-ab5a-9b903f2ba4a0
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/environmentId with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/environmentId
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a984d3cc-61a6-4906-bd96-cd49c286ae9e
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/error with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/error
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: de80e187-3ee5-4de2-be18-a5cb38df702d
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/error_description with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/error_description
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: eca8ff5e-e8fd-48c9-a041-129481dbbf9b
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/hxjw224cu7p44tnodov2eihnki with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/hxjw224cu7p44tnodov2eihnki
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0ec73b0c-2ed1-474e-aaba-b7d9c7672b8d
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/isNewWorkspace with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/isNewWorkspace
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 99bd83e1-d17d-454e-9862-39bc202fdbd4
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/iss with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/iss
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1fae06d5-3b37-4bc6-baff-a5db4f95dc07
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/job with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/job
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b0053564-3474-4da5-8e41-e849d79b81cb
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/jobName with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/jobName
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: db7352dd-d3d3-427d-b5ea-88abf92d4642
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/oAuthSuccess with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/oAuthSuccess
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a56b679e-5dcd-4c04-98d7-7fd21551bd34
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/project with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/project
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0bb9503d-fd21-466a-afd7-2bc0e26db225
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/projectId with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/projectId
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 40230b09-ee73-468f-8934-a56be306a258
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/r6yhr35uptmktabafiyzdcrtbi with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/r6yhr35uptmktabafiyzdcrtbi
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0b802dd9-26e0-43a4-a6b4-d3d218efc2f3
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/runStatus with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/runStatus
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 160c0f96-9f15-4784-a0f3-f06767626d01
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/runType with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/runType
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 89282319-3ea9-4600-991a-46797fec57a5
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/search with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/search
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ec49db29-7221-48f2-aa00-3a792dd56a1d
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/session_state with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/session_state
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9b1d4354-1d3c-419b-96bc-fd9fb2351e54
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/state with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/state
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: db1b12e6-e6f6-4d61-a3b2-05d3ff5a7728
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/subError with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/subError
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1dcbac50-c2fc-4a7b-afe8-5aad0899e5fe
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/token with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/token
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4ebb5c4a-5751-46f9-881a-721eaebb6d8a
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/u6anhvxpptwa4gsmiwranrmmtu with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/u6anhvxpptwa4gsmiwranrmmtu
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ef78a902-a16d-4423-9d91-aeaeaf44ceb7
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/v3ghoddxsrmejt3w262lheg7xe with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/v3ghoddxsrmejt3w262lheg7xe
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b816091c-5e73-4256-b56a-573ce51dcffb
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/workspaceId with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/workspaceId
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fd68e2d1-4090-4a75-a9a9-0755a9a7475d
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/scheme with inferred types: [string]"
+        name: attributes/view/referrer_details/scheme
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bce6a80f-ae86-4294-9a8f-8adcd86ff307
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/url with inferred types: [string]"
+        name: attributes/view/url
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9bd74f6d-1ae9-4e14-ba17-dbd8ee97cdd1
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/hash with inferred types: [string]"
+        name: attributes/view/url_details/hash
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 83189635-987a-4a2c-abf1-36653a8b69c6
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/host with inferred types: [string]"
+        name: attributes/view/url_details/host
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9caa02e5-9c15-4fe0-aabf-483faa8af84e
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/path with inferred types: [string]"
+        name: attributes/view/url_details/path
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 47fb391a-f315-447d-8589-cbfde1577461
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/code with inferred types: [string]"
+        name: attributes/view/url_details/queryString/code
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ad3c623f-63d5-4f2e-b1de-89bb85dc83eb
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/environment with inferred types: [string]"
+        name: attributes/view/url_details/queryString/environment
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f911d19b-55d9-4a23-a78f-9a674907ce5a
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/environmentId with inferred types: [string]"
+        name: attributes/view/url_details/queryString/environmentId
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3e2ab643-2b27-4dff-b366-78a415547155
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/error with inferred types: [string]"
+        name: attributes/view/url_details/queryString/error
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a2a7fb0b-4740-4b26-a683-dd7d9bfa0725
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/error_description with inferred types: [string]"
+        name: attributes/view/url_details/queryString/error_description
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5690d9ac-39c7-4565-a2a8-9b4ac0304e03
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/include with inferred types: [string]"
+        name: attributes/view/url_details/queryString/include
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: de7b6c15-d074-45a7-b4b5-976c9f1688f2
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/isNewWorkspace with inferred types: [string]"
+        name: attributes/view/url_details/queryString/isNewWorkspace
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4bb94a90-3a31-4a7f-b9ab-b03101dbad3f
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/iss with inferred types: [string]"
+        name: attributes/view/url_details/queryString/iss
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4c7153a3-a103-4fbf-9f4c-558768e05e5b
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/jobName with inferred types: [string]"
+        name: attributes/view/url_details/queryString/jobName
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d4d2ab3c-9862-4ec9-a997-abecbc795f2f
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/locationName with inferred types: [string]"
+        name: attributes/view/url_details/queryString/locationName
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fa98e4a3-910b-432e-849a-ec975073546b
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/oAuthSuccess with inferred types: [string]"
+        name: attributes/view/url_details/queryString/oAuthSuccess
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: eb980b9f-470e-409f-a1e5-ec59aa7a3b7f
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/project with inferred types: [string]"
+        name: attributes/view/url_details/queryString/project
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 488fc1d9-652f-42b7-a80d-7b5b1b1f724c
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/projectId with inferred types: [string]"
+        name: attributes/view/url_details/queryString/projectId
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cf569984-c390-45ff-acc2-fa4b26148957
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/runStatus with inferred types: [string]"
+        name: attributes/view/url_details/queryString/runStatus
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f0cc8f83-ac38-4dd8-8ca7-a8af421f602d
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/runType with inferred types: [string]"
+        name: attributes/view/url_details/queryString/runType
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 42d8230b-fefc-4edc-b06c-d3efb82e4d2d
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/search with inferred types: [string]"
+        name: attributes/view/url_details/queryString/search
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2f56e041-9b07-4744-ac5b-638b780cb31f
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/session_state with inferred types: [string]"
+        name: attributes/view/url_details/queryString/session_state
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0392b44e-38ae-4b50-b31c-23ce1c6c681d
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/sqlType with inferred types: [string]"
+        name: attributes/view/url_details/queryString/sqlType
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 73798d8b-79a7-45e9-a27b-10bac91f5c76
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/state with inferred types: [string]"
+        name: attributes/view/url_details/queryString/state
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a5b926e7-999b-41a4-9bd4-f017ca111545
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/subError with inferred types: [string]"
+        name: attributes/view/url_details/queryString/subError
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e48bcb32-95d5-40a2-9461-1d03759be3a0
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/workspaceId with inferred types: [string]"
+        name: attributes/view/url_details/queryString/workspaceId
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1bb188d5-bda4-4813-84ea-16249feee521
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/scheme with inferred types: [string]"
+        name: attributes/view/url_details/scheme
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 13bcd164-b932-4fb7-8f84-ec28f5dd3764
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /attributes/workspaceID with inferred types: [integer string]"
+        name: attributes/workspaceID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3dcf8366-0e4a-4d8e-ae6d-92df7050fa05
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /date with inferred types: [string]"
+        name: date
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 930b1b77-07f0-40a3-8701-2cba086a275d
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: |-
+          Flow Publication Time
+          Flow publication date-time of this document
+          auto-generated projection of JSON at: /_meta/uuid with inferred types: [string]
+        name: flow_published_at
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e3d74cc5-055b-4931-8337-e8027874bb12
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /host with inferred types: [string]"
+        name: host
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6003590c-1586-4ba2-b2c5-6bd623c65012
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /message with inferred types: [string]"
+        name: message
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 16e476ac-c766-47a0-bd67-70446df1ad8f
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /service with inferred types: [string]"
+        name: service
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 34c69f6f-9921-44fd-a2a2-9055b376772c
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /source with inferred types: [string]"
+        name: source
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d701552b-5db1-41ca-8f37-f34daddb0d9f
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /span_id with inferred types: [string]"
+        name: span_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9ebe644b-62ed-4593-9989-15a0bceab558
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /status with inferred types: [string]"
+        name: status
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fbc1953a-6733-4eb3-87e7-8ca7e955f8c1
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /tags with inferred types: [array]"
+        name: tags
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fc3b73e2-2f5f-4185-be7e-f7a92ce5f925
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: "auto-generated projection of JSON at: /trace_id with inferred types: [string]"
+        name: trace_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5021fa7f-5252-45b7-920e-0fc46276edfa
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "auto-generated projection of JSON at:  with inferred types: [object]"
+        name: flow_document
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 974863fe-9c4c-4c56-8e4e-349e1a8e96ab
+          stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: attributes/view/referrer_details/queryString/xzhbp2ryserne6ntlbzoaee25y
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+  name: node_create_v2
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

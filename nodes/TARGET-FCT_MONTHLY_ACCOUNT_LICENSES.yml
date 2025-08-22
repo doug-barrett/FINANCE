@@ -1,0 +1,118 @@
+fileVersion: 1
+id: 960271ae-56ef-4cba-8fcd-f5628cb73983
+name: FCT_MONTHLY_ACCOUNT_LICENSES
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: UNION ALL
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fd3d0e99-1b6b-4fce-9ebe-11304261d5d9
+          stepCounter: 960271ae-56ef-4cba-8fcd-f5628cb73983
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the unique identifier for the account associated with the opportunity. 
+          - Sourced from the 'opportunity' table's 'account_id' column. 
+          - Used for joining and linking with the account table to access account-specific information.
+        name: account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f96f9cdf-a286-449e-9264-cdffad84625a
+                stepCounter: e39121ce-3919-4b48-8e46-2a418473827f
+            transform: DISTINCT `STG_ACCOUNT_MONTHS`.`account_id`
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 72ee9de7-0a4c-4218-ad03-65b1817d766f
+          stepCounter: 960271ae-56ef-4cba-8fcd-f5628cb73983
+        config: {}
+        dataType: STRING
+        description: ""
+        name: account_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 29d54ec0-f6b8-41a7-b8eb-c6e32d7731d1
+                stepCounter: e39121ce-3919-4b48-8e46-2a418473827f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d52b3f19-3732-4255-b000-7e036108e0b9
+          stepCounter: 960271ae-56ef-4cba-8fcd-f5628cb73983
+        config: {}
+        dataType: DATE
+        description: ""
+        name: month_start
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e946d899-e731-44c2-ab6e-668d0654c3bd
+                stepCounter: e39121ce-3919-4b48-8e46-2a418473827f
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b4ddb72b-7267-41fd-8184-4d8303e07cb4
+          stepCounter: 960271ae-56ef-4cba-8fcd-f5628cb73983
+        config: {}
+        dataType: INTEGER
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: license_count
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: SUM(CASE WHEN DATE_TRUNC('month',`STG_ARR_LICENSE_LINES`.`line_subscription_start_date_c`) <= DATE_TRUNC('month',`STG_ACCOUNT_MONTHS`.`month_start`) AND DATE_TRUNC('month',`STG_ARR_LICENSE_LINES`.`line_subscription_end_date_c`) > DATE_TRUNC('month',`STG_ACCOUNT_MONTHS`.`month_start`) THEN `STG_ARR_LICENSE_LINES`.`quantity` ELSE 0 END)
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_ACCOUNT_MONTHS: e39121ce-3919-4b48-8e46-2a418473827f
+          STG_ARR_LICENSE_LINES: 910bba33-2c0e-4a3c-aa0d-42b3ee96bc04
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STAGING
+            nodeName: STG_ACCOUNT_MONTHS
+          - locationName: STAGING
+            nodeName: STG_ARR_LICENSE_LINES
+        join:
+          joinCondition: |
+            FROM {{ ref('STAGING', 'STG_ACCOUNT_MONTHS') }} `STG_ACCOUNT_MONTHS`
+            LEFT JOIN {{ ref('STAGING', 'STG_ARR_LICENSE_LINES') }} `STG_ARR_LICENSE_LINES`
+            ON `STG_ACCOUNT_MONTHS`.`account_id` = `STG_ARR_LICENSE_LINES`.`account_id`
+            GROUP BY 1,2,3
+        name: FCT_MONTHLY_ACCOUNT_LICENSES
+        noLinkRefs: []
+  name: FCT_MONTHLY_ACCOUNT_LICENSES
+  overrideSQL: false
+  schema: ""
+  sqlType: Fact
+  type: sql
+  version: 1
+type: Node

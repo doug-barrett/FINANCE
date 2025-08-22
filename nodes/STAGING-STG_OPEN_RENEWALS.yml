@@ -1,0 +1,1199 @@
+fileVersion: 1
+id: 04665d01-6990-4135-9aee-75c24ad808bc
+name: STG_OPEN_RENEWALS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2fc56c52-3a2a-468f-bfc7-2199b4bbbb10
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          - Represents the unique identifier for an opportunity in the Salesforce system. 
+          - Sourced from the 'opportunity' table's 'id' column.
+          - Used for joining and linking with other tables for downstream analysis and reporting.
+        name: opp_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 81c3528d-4d80-4b96-9478-4a1da6b470d8
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4b8e838c-7162-4338-b8f0-64ac91c406bf
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: BOOLEAN
+        description: |-
+          - Indicates whether the opportunity is marked as deleted in Salesforce. 
+          - Sourced from the 'opportunity' table's 'is_deleted' column. 
+          - Used in reporting to filter out inactive opportunities and provide accurate analysis of active opportunities.
+        name: is_deleted
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 517320c3-e6cc-4d5f-b293-47caefdd0bae
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5ca550bb-0cce-4604-a353-f93d4325d8ff
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the unique identifier for the account associated with the opportunity. 
+          - Sourced from the 'opportunity' table's 'account_id' column. 
+          - Used for joining and linking with the account table to access account-specific information.
+        name: account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9c8ec8ca-9e83-431d-a322-076a5d026f00
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5ac5392e-7ea8-4a66-9cee-a0c709a75a32
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          - Represents the name or title of the opportunity. 
+          - Sourced from the 'opportunity' table's 'name' column. 
+          - Used for identifying and categorizing opportunities in reports and analyses.
+        name: opp_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 130b3df5-0ea8-4680-ad46-5f2b6b1eded7
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e0622774-e3c9-4db2-944d-cebc3fbda05d
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the type of opportunity. 
+          - Sourced from the 'opportunity' table's 'type' column. 
+          - Used for segmenting opportunities based on their nature and for calculating type-specific KPIs.
+        name: opp_type
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 10edc942-904d-466b-8a3f-caf2a75aa5bb
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 13a24bd9-501d-4e58-9c84-e1fb6b9ec738
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the current stage of the opportunity in the sales pipeline. 
+          - Sourced from the 'opportunity' table's 'stage_name' column. 
+          - Used for tracking opportunity progress, identifying bottlenecks, and forecasting future sales.
+        name: stage
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 59eebf51-de0a-40fb-96e4-bc43ed184851
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 11d6f0b4-2a3a-48bb-bd51-109febe4393b
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          - Represents the unique identifier of the Salesforce user assigned as the owner of the opportunity. 
+          - Sourced from the 'opportunity' table's 'owner_id' column. 
+          - Used for assigning ownership and tracking sales performance of individual representatives.
+        name: opp_owner_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 95446681-d8dd-40e3-9ba3-b3101ec1dfd4
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 20cb1ce7-7ab7-4a7e-9b0f-f277609d1fab
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the assigned sales executive for the opportunity. 
+          - Sourced from the 'opportunity' table's 'se_c' column. 
+          - Used for tracking the performance of specific sales executives and analyzing their contribution to the pipeline.
+        name: se_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 56c1fa3b-23d3-4bf2-9221-be7e3afdf963
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a758cb87-8dbe-4a24-a602-9ec2810d1056
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: DECIMAL
+        description: |-
+          -  Represents the total contract value of the opportunity, converted to the base currency. 
+          - Calculated by dividing the opportunity's 'amount' by its 'exchange_rate_c'. 
+          - Used for evaluating the potential revenue generated by the opportunity.
+        name: tcv_converted
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b4ccb779-521c-4040-98ac-1bee3f93a2ba
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a3baab96-b7b3-4cd8-be74-2d66218edccb
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: DECIMAL
+        description: |-
+          -  Represents the average annual recurring revenue (ARR) of the opportunity, converted to the base currency. 
+          - Calculated by dividing the opportunity's 'average_arr_c' by its 'exchange_rate_c'. 
+          - Used for analyzing the long-term revenue potential of the opportunity.
+        name: average_arr_converted
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 23fbda20-d238-4ee8-b5c7-ffb419917c22
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9caf2296-82ce-49c2-817d-a636816d5bbd
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: DECIMAL
+        description: |-
+          -  Represents the net ARR of the opportunity, converted to the base currency. 
+          - Calculated by dividing the opportunity's 'net_arr_stamp_c' by its 'exchange_rate_c'. 
+          - Used for determining the true recurring revenue after accounting for discounts and other factors.
+        name: net_arr_converted
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 280ac8cd-9fb3-4696-9ac2-a24235fc9f7b
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 54ed6396-3fcd-4e2d-bda2-e96262d5c205
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: DECIMAL
+        description: |-
+          -  Represents the total contract value of the opportunity. 
+          - Sourced from the 'opportunity' table's 'amount' column. 
+          - Used for tracking the total revenue associated with the opportunity.
+        name: total_contract_value
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1fc3cbf3-6461-43a5-bcc0-a62c5b76518c
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5e6839da-4654-40f2-b0c6-69f5bf601dd3
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: DECIMAL
+        description: |-
+          - Represents the average annual recurring revenue (ARR) of the opportunity in the original currency. 
+          - Sourced from the 'opportunity' table's 'average_arr_c' column. 
+          - Used for evaluating the recurring revenue potential of the opportunity.
+        name: average_arr_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2ab2464e-385e-45fd-8c18-a6e9085421f4
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 33031079-bba3-436d-9cd2-98e20bbc0f1c
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: DECIMAL
+        description: |-
+          - Represents the net ARR of the opportunity in the original currency. 
+          - Sourced from the 'opportunity' table's 'net_arr_stamp_c' column. 
+          - Used for determining the recurring revenue after accounting for discounts and other factors.
+        name: net_arr_stamp_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d402ae0a-352f-4474-a439-5c751e706aa0
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: edf381ab-170f-44ed-818e-39d28258b3a3
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: DECIMAL
+        description: |-
+          - Represents the amount associated with professional services related to the opportunity. 
+          - Sourced from the 'opportunity' table's 'professional_services_fee_c' column. 
+          - Used for tracking the revenue generated from professional services and analyzing the impact of services on overall profitability.
+        name: services_amount
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c7e53856-6dcb-403e-94da-bd7320ece7e0
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: af72b596-523f-4c6b-a2ea-3c53a6cfc839
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: TIMESTAMP
+        description: |-
+          - Represents the timestamp when the opportunity was created in Salesforce. 
+          - Sourced from the 'opportunity' table's 'created_date' column. 
+          - Used for analyzing the timeliness of opportunity creation and identifying trends in opportunity generation.
+        name: date_created
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3f5c1512-b407-4b08-8e4a-487a33474d52
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5cc9f641-a5f3-450e-92f0-c67a2b12b4d5
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: DATE
+        description: |-
+          - Represents the date when the opportunity was closed in Salesforce. 
+          - Sourced from the 'opportunity' table's 'close_date' column. 
+          - Used for tracking the duration of the sales cycle, analyzing the effectiveness of sales efforts, and calculating key sales metrics.
+        name: date_closed
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 76e3c2e3-ec9b-4f16-96c9-7ef4449a99d5
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a6aebd24-0663-46bd-820a-4df227a617ee
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: DATE
+        description: |-
+          -  Represents the date associated with the initial stage of the opportunity (pre-pipeline stage). 
+          - Sourced from the 'opportunity' table's 'pre_pipeline_date_c' column. 
+          - Used for tracking the earliest stage of the opportunity and understanding the time it takes to move from the pre-pipeline stage to active stages.
+        name: date_s0
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5e05f8f8-d46f-4602-9b47-a2273c2d31f1
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 49b91b93-e96d-434a-a64f-634502b78ded
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: DATE
+        description: |-
+          - Represents the scheduled date of the account executive (AE) meeting. 
+          - Sourced from the 'opportunity' table's 'ae_meeting_scheduled_date_c' column. 
+          - Used for tracking the scheduling and completion of AE meetings, evaluating meeting efficiency, and identifying potential bottlenecks.
+        name: date_meeting
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5e6a1b3f-8f80-4794-af47-13cbf4c09bb8
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 73353d50-4636-4c44-aa30-71bfe2342683
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: DATE
+        description: |-
+          - Represents the date associated with the discovery stage of the opportunity. 
+          - Sourced from the 'opportunity' table's 'stage_1_date_c' column. 
+          - Used for tracking progress through the sales pipeline and identifying how long it takes to complete each stage.
+        name: date_discovery
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: aa829253-aea1-4cc3-800b-b4a1fcdb08a9
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 43830aea-40bd-4be6-b3ef-1d22a87acfad
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: DATE
+        description: |-
+          - Represents the date associated with the education stage of the opportunity. 
+          - Sourced from the 'opportunity' table's 'stage_2_date_c' column. 
+          - Used for tracking progress through the sales pipeline and identifying how long it takes to complete each stage.
+        name: date_education
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2c2d32f1-a415-4968-bee0-5f15956be777
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e95ff8e6-77ea-4c48-ab28-f63d26c7eae3
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: DATE
+        description: |-
+          -  Represents the date associated with the scoping stage of the opportunity. 
+          - Sourced from the 'opportunity' table's 'stage_3_date_c' column. 
+          - Used for tracking progress through the sales pipeline and identifying how long it takes to complete each stage.
+        name: date_scoping
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cfd51761-8c57-47e1-8f40-f4f29d421812
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 45da3347-e8e4-4346-9983-bc8d695a96c3
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: DATE
+        description: |-
+          -  Represents the date associated with the validation stage of the opportunity. 
+          - Sourced from the 'opportunity' table's 'stage_4_date_c' column. 
+          - Used for tracking progress through the sales pipeline and identifying how long it takes to complete each stage.
+        name: date_validation
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2cbb1cee-fc70-4240-8174-4b68eebbc438
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: dc19e122-ccac-4895-9f5c-2b74b73fb72a
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: DATE
+        description: |-
+          - Represents the date associated with the negotiation stage of the opportunity. 
+          - Sourced from the 'opportunity' table's 'stage_5_date_c' column. 
+          - Used for tracking progress through the sales pipeline and identifying how long it takes to complete each stage.
+        name: date_negotiation
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a0bc0088-f5be-42b8-8bd4-e1cc68d6e7da
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 00d4eb92-a070-4ac7-97c2-334cd786c644
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: DATE
+        description: |-
+          - Represents the planned end date of the subscription associated with the opportunity. 
+          - Sourced from the 'opportunity' table's 'subscription_end_date_c' column. 
+          - Used for calculating the subscription term, forecasting renewal dates, and managing customer relationships.
+        name: subscription_end_date_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9fc6a09b-6680-4527-89b5-68720378d137
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5753ce5a-414f-47a8-b6b6-fb28cd2c6ace
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: DATE
+        description: |-
+          - Represents the planned start date of the subscription associated with the opportunity. 
+          - Sourced from the 'opportunity' table's 'subscription_start_date_c' column. 
+          - Used for calculating the subscription term, tracking subscription activation, and managing customer relationships.
+        name: subscription_start_date_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 94e9d414-1d82-4e03-8feb-2dc42c886144
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4e528590-75db-420e-8a23-d170575bf92d
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: DOUBLE
+        description: |-
+          - Represents the duration of the subscription associated with the opportunity, expressed in months. 
+          - Sourced from the 'opportunity' table's 'subscription_term_months_c' column. 
+          - Used for evaluating the subscription duration, planning revenue streams, and determining customer retention.
+        name: subscription_term_months_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a54ebc9f-0550-4333-ae39-4fc5118687e6
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cdcd5efb-8ddf-48d6-90fb-262be0bb7a8c
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the three-letter ISO code for the currency associated with the opportunity. 
+          - Sourced from the 'opportunity' table's 'currency_iso_code' column. 
+          - Used for converting currencies and ensuring accurate financial reporting.
+        name: currency_iso_code
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3c19cec9-f69c-4af0-ac0c-b355fad0446f
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6b141db7-46ef-4fe1-a21d-d1ee643b7637
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the unique identifier of the Salesforce user who created the opportunity. 
+          - Sourced from the 'opportunity' table's 'created_by_id' column. 
+          - Used for tracking the creator of the opportunity, analyzing the efficiency of opportunity creation processes, and assigning credit for deals won.
+        name: created_by_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: efbad805-848e-4ffe-8c8e-cf1c6f31fa8a
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2fe34404-2960-4f7e-ac4a-65d3fd94ebcb
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the specific details regarding the reason for the opportunity being lost. 
+          - Sourced from the 'opportunity' table's 'reason_lost_detail_c' column. 
+          - Used for analyzing the reasons for lost opportunities, identifying areas for improvement, and adjusting sales strategies.
+        name: reason_lost_detail_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 49354601-3ae3-420a-9902-add89779e958
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 42dbfe19-5ed3-4632-a73e-972556fd9913
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          - Represents the high-level reason for the opportunity being lost. 
+          - Sourced from the 'opportunity' table's 'reason_lost_c' column. 
+          - Used for identifying the primary reasons for lost opportunities, understanding broader sales challenges, and taking appropriate action.
+        name: reason_lost_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 86ba0f25-0297-4abb-8525-692d82b165c9
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 86fb4c02-e7ce-47e9-a95f-c495fe4c7d2e
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          - Represents the name of the individual within the customer's organization who is championing the opportunity. 
+          - Sourced from the 'opportunity' table's 'champion_c' column. 
+          - Used for identifying key stakeholders, building relationships with influential individuals, and managing customer expectations.
+        name: champion_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 25811087-8f27-4b15-9188-a47f3b14cc45
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f68d8fcd-216a-4a14-912f-9a4a458a566e
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the stage of the opportunity immediately before it was closed or lost. 
+          - Sourced from the 'opportunity' table's 'stage_before_closed_lost_c' column. 
+          - Used for analyzing the final stage before closure and understanding the dynamics leading to the outcome.
+        name: stage_before_closed_lost_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a9959a78-6185-45e4-b758-cca1c30ac73f
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 65b43e5b-5505-4249-8487-ce414817dac5
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          - Represents the competitor or alternative solution that the opportunity was lost to. 
+          - Sourced from the 'opportunity' table's 'lost_to_c' column. 
+          - Used for identifying competitive threats, understanding the competitive landscape, and developing strategies to overcome competition.
+        name: lost_to_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8b1bc6d8-e421-44ea-a3cd-457377e45ec6
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 74ec3cc6-3690-412f-beeb-be3cc4788a30
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the reason for the opportunity being won. 
+          - Sourced from the 'opportunity' table's 'reason_won_c' column. 
+          - Used for identifying the factors contributing to winning opportunities, replicating successful strategies, and understanding the strengths of the product or service.
+        name: reason_won_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 85a71053-6c53-4657-aeb0-afb7d7dc84a8
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 38327d20-4b59-4821-bb24-3b4fe6b3f208
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: DATE
+        description: |-
+          - Represents the date when the AE meeting was completed. 
+          - Sourced from the 'opportunity' table's 'ae_meeting_complete_date_c' column. 
+          - Used for tracking the actual completion of AE meetings, evaluating meeting effectiveness, and identifying potential delays or issues.
+        name: ae_meeting_complete_date_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9228e49c-82ea-4e0a-83db-76a092d68762
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4531c657-7dd9-40a8-a9b9-f95b0e2b91c2
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the notes taken during the AE meeting. 
+          - Sourced from the 'opportunity' table's 'ae_meeting_notes_c' column. 
+          - Used for capturing important discussions, recording key insights, and facilitating post-meeting follow-up.
+        name: ae_meeting_notes_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: aa8d0c39-2da7-44a2-b8eb-dd11fd441a70
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f7b3e2de-7f88-4245-a158-f1d8c2e86374
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          - Represents the name or identifier of the person who scheduled the AE meeting. 
+          - Sourced from the 'opportunity' table's 'ae_meeting_scheduled_by_c' column. 
+          - Used for tracking meeting scheduling responsibilities and identifying the individuals responsible for meeting coordination.
+        name: ae_meeting_scheduled_by_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 80f81be1-1c52-417b-85ec-d8417b0d8e15
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3fc03cfb-e1fa-40f6-a038-fa636cb8a94c
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the name or identifier of the individual who the AE meeting was scheduled for. 
+          - Sourced from the 'opportunity' table's 'ae_meeting_scheduled_for_c' column. 
+          - Used for understanding the target audience of the meeting and analyzing the effectiveness of meeting scheduling.
+        name: ae_meeting_scheduled_for_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9d96ecf0-4d4a-4b46-8677-be80450f639a
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3deeb5bc-3920-4735-bfcb-b767c54fbb9d
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the outcome of the AE meeting. 
+          - Sourced from the 'opportunity' table's 'meeting_outcome_c' column. 
+          - Used for understanding the effectiveness of meetings, identifying key decisions made, and guiding future sales strategies.
+        name: meeting_outcome_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b2330400-90ae-471e-a62d-79a14feeef9c
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6b8ba166-978d-4ebd-9767-e9e233b84bb5
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          - Represents the margin associated with referral commissions for the opportunity. 
+          - Sourced from the 'opportunity' table's 'referral_commission_margin_c' column. 
+          - Used for tracking referral commission payouts, calculating referral program effectiveness, and managing partner relationships.
+        name: referral_commission_margin_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 45b5b515-ea67-459f-aa9a-7f4feacfcc07
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: db5f1511-dd19-4339-a1c5-c68279307401
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the unique identifier for the reseller partner account associated with the opportunity. 
+          - Sourced from the 'opportunity' table's 'reseller_partner_account_c' column. 
+          - Used for tracking partner involvement, analyzing partner contributions, and managing partner relationships.
+        name: reseller_partner_account_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7ff1ec2c-2423-4ee3-bbe6-da312bce8824
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2c4285b1-bcc1-44ca-ab72-d792c8937c82
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the source from which the opportunity was generated. 
+          - Sourced from the 'opportunity' table's 'opportunity_source_c' column. 
+          - Used for identifying the most effective lead generation channels, optimizing marketing efforts, and understanding customer acquisition patterns.
+        name: opportunity_source_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4ca3102b-a454-48ef-8beb-3ee3983efffd
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f795ee13-7a53-4760-a679-11396f02e151
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          - Represents the name or identifier of the primary competitor for the opportunity. 
+          - Sourced from the 'opportunity' table's 'competition_c' column. 
+          - Used for identifying competitive threats, understanding the competitive landscape, and developing strategies to overcome competition.
+        name: competition_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 49ade5c1-7c20-4b62-a5cb-47f2a2996b72
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 798c23a0-2a53-4f41-861b-3ef7b114b508
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          - Represents the category assigned to the opportunity by the sales representative for forecasting purposes. 
+          - Sourced from the 'opportunity' table's 'rep_forecast_category_c' column. 
+          - Used for categorizing opportunities for forecasting, analyzing the accuracy of sales forecasts, and refining forecasting models.
+        name: rep_forecast_category_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ef80cd88-c0af-49c1-bd2e-7e2b2d0ca5bd
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ea5460b0-aa9e-41b3-b0cc-904e11dcca1f
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the unique identifier for the co-selling account associated with the opportunity. 
+          - Sourced from the 'opportunity' table's 'co_sell_account_c' column. 
+          - Used for tracking co-selling partnerships, analyzing the impact of co-selling initiatives, and managing co-selling relationships.
+        name: co_sell_account_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8138da07-90ef-45c3-bc36-9a116f59dad9
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b2d84f9f-8dd7-4ffb-9679-89772b1d0be4
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the name or identifier of the individual or entity to whom the opportunity was referred. 
+          - Sourced from the 'opportunity' table's 'outgoing_referral_c' column. 
+          - Used for tracking referral activities, evaluating the effectiveness of referral programs, and managing referral relationships.
+        name: outgoing_referral_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2e4605aa-3383-4162-bce1-f81b50d86f07
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7d3d0326-e04c-4384-b357-0f74b4458b69
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: DOUBLE
+        description: |-
+          -  Represents the total number of users included in the contract associated with the opportunity. 
+          - Sourced from the 'opportunity' table's 'total_contractual_users_c' column. 
+          - Used for tracking the scope of the deal, analyzing the user base, and determining the potential revenue generated per user.
+        name: total_contractual_users_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e06e1e5c-01da-41f1-82f4-07e12fba98cc
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 187e997e-63c7-4109-b89c-f834809bc02a
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: DOUBLE
+        description: |-
+          - Represents the exchange rate used to convert the opportunity's value from the original currency to the base currency. 
+          - Sourced from the 'opportunity' table's 'exchange_rate_c' column. 
+          - Used for ensuring accurate currency conversions and reporting.
+        name: exchange_rate_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8d85450e-2b6c-44f4-a151-eca528987ef1
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 66cf6b43-a022-4f8d-b9e0-7d6431f459b3
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          - Represents the type of expansion opportunity, indicating whether it's a new customer acquisition, a product expansion, or a service expansion. 
+          - Sourced from the 'opportunity' table's 'expansion_type_c' column. 
+          - Used for analyzing the growth strategy, evaluating the effectiveness of different expansion initiatives, and understanding customer preferences.
+        name: expansion_type_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9767abef-966c-4bda-a020-5faf10dd8fc0
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f7bb4024-11e4-4187-885c-a88ebc7fee8d
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          - Represents the security protocols requested or implemented for the opportunity, indicating whether private link or HIPAA compliance is required. 
+          - Sourced from the 'opportunity' table's 'private_link_or_hipaa_c' column. 
+          - Used for analyzing security requirements, managing compliance risks, and tailoring solutions to specific customer needs.
+        name: private_link_or_hipaa_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 914c31e7-dd06-47ab-a115-92af3445e6b5
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a77c194c-e796-46db-8681-8d0ed264d751
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: DATE
+        description: |-
+          - Represents the date when the sales executive (SE) first introduced the opportunity. 
+          - Sourced from the 'opportunity' table's 'x_1_se_intro_date_c' column. 
+          - Used for tracking the initial engagement with the opportunity, understanding the time it takes to qualify leads, and analyzing the efficiency of SE interactions.
+        name: x_1_se_intro_date_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 95b98800-a19a-4d2d-9d5a-4f34d6c3b36d
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7d617231-d77f-424f-b8e7-90463e2c310e
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: DATE
+        description: |-
+          -  Represents the date when the customer started evaluating the solution proposed for the opportunity. 
+          - Sourced from the 'opportunity' table's 'x_2_solution_eval_date_c' column. 
+          - Used for tracking the evaluation process, understanding the customer's decision-making timeline, and identifying potential challenges or delays.
+        name: x_2_solution_eval_date_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2bb0697c-1f39-44af-b919-7f4a62074a29
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3125aba3-750a-478b-9c33-e80c4df684b1
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: DATE
+        description: |-
+          - Represents the date when the customer conducted hands-on evaluation of the solution proposed for the opportunity. 
+          - Sourced from the 'opportunity' table's 'x_3_hands_on_eval_date_c' column. 
+          - Used for tracking the hands-on evaluation process, understanding the customer's technical feedback, and identifying potential areas for improvement in the solution.
+        name: x_3_hands_on_eval_date_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 62300388-a527-4335-b774-b70e141c597f
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6ffd2d65-8dc8-4a7e-9926-4da002dc433f
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: DATE
+        description: |-
+          - Represents the date when the opportunity was deemed a technical win, signifying that the proposed solution meets the customer's technical requirements. 
+          - Sourced from the 'opportunity' table's 'x_4_finalizing_tech_win_date_c' column. 
+          - Used for tracking the technical evaluation process, identifying potential technical roadblocks, and understanding the key factors leading to a technical win.
+        name: x_4_finalizing_tech_win_date_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ed607417-e16a-406a-902e-4882ecc48692
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fd73e7be-1c4c-4e91-9756-ee33c691dcf8
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: DATE
+        description: |-
+          - Represents the date when the technical win was finalized, indicating that the solution has been formally accepted by the customer from a technical perspective. 
+          - Sourced from the 'opportunity' table's 'x_5_technical_win_date_c' column. 
+          - Used for tracking the technical evaluation process, identifying the formal acceptance of the solution, and understanding the final stage of the technical evaluation.
+        name: x_5_technical_win_date_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 49357444-9e90-41ec-a351-8176b56e3dc2
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 728fb31e-4d61-408b-859d-120bf5dffe46
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: DATE
+        description: |-
+          -  Represents the date when the opportunity was deemed a technical loss, signifying that the proposed solution did not meet the customer's technical requirements. 
+          - Sourced from the 'opportunity' table's 'x_6_technical_loss_date_c' column. 
+          - Used for analyzing the technical evaluation process, identifying the reasons for technical losses, and understanding the specific technical issues that led to the loss.
+        name: x_6_technical_loss_date_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 02bed964-814d-4775-9153-5b1b7f67aa7e
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4cc614cf-e0fe-4cc1-9dfe-228387b8b121
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: DATE
+        description: |-
+          -  Represents the date when the opportunity was marked as stale, indicating that it is no longer actively being pursued. 
+          - Sourced from the 'opportunity' table's 'x_7_stale_date_c' column. 
+          - Used for analyzing the opportunity lifecycle, identifying stalled opportunities, and understanding the reasons for stagnation.
+        name: x_7_stale_date_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0a93ecfa-5986-42e6-a409-30fea13c0ffb
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4cffe178-376a-48e6-b51e-9e916ed99329
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          - Represents the type of platform connection required or implemented for the opportunity, such as API integration or other technical connections. 
+          - Sourced from the 'opportunity' table's 'platform_connection_c' column. 
+          - Used for analyzing the technical requirements of the opportunity, understanding the integration complexity, and managing integration projects.
+        name: platform_connection_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a82c49ba-a511-4b27-a0b6-95206bfa4d38
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 28404bfa-d339-4e14-aace-6c92bbe9dd99
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the method used for processing the transaction associated with the opportunity, such as credit card, bank transfer, or other payment methods. 
+          - Sourced from the 'opportunity' table's 'transaction_method_c' column. 
+          - Used for tracking payment preferences, ensuring efficient payment processing, and analyzing transaction patterns.
+        name: transaction_method_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4c18d5e6-d6de-4825-8ac8-ad663737315e
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 80805d3b-c62b-41e0-a63c-23bcb90cd9f4
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents whether the subscription associated with the opportunity is set to auto-renew. 
+          - Sourced from the 'opportunity' table's 'auto_renew_c' column. 
+          - Used for managing customer subscriptions, forecasting future renewals, and optimizing customer retention strategies.
+        name: auto_renew_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 561dbb62-2199-42e2-b44a-9d38e8021781
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b50020cc-5e9c-462f-8f93-69fb61e01de6
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the frequency at which the customer is billed for the subscription associated with the opportunity, such as monthly, quarterly, or annually. 
+          - Sourced from the 'opportunity' table's 'billing_frequency_c' column. 
+          - Used for understanding billing cycles, optimizing billing processes, and analyzing revenue patterns.
+        name: billing_frequency_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 50f56ae9-6cde-475d-a03a-05cdb99a6dd5
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9dbc7575-9b0c-456f-812c-89ecf47fae04
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: DOUBLE
+        description: |-
+          - Represents the payment terms agreed upon for the subscription associated with the opportunity, such as the number of days allowed for payment after invoice generation. 
+          - Sourced from the 'opportunity' table's 'payment_terms_c' column. 
+          - Used for managing payment terms, ensuring timely payments, and analyzing customer payment behavior.
+        name: payment_terms_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fcc4441b-a279-40e9-a6f6-9aad58edfc3c
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: eedf0c73-c9f7-463b-a0a2-d1440c6d23f8
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the source from which the opportunity was referred to the SE. 
+          - Sourced from the 'opportunity' table's 'si_referred_in_c' column. 
+          - Used for understanding referral patterns, identifying effective referral sources, and managing referral partnerships.
+        name: si_referred_in_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fb34266d-1b52-46cf-8dbb-deecd35c98cd
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cf68d36e-a131-48bd-9e6d-31040bb1668e
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the unique identifier for the co-selling partner associated with the opportunity. 
+          - Sourced from the 'opportunity' table's 'co_sell_partner_c' column. 
+          - Used for tracking partner involvement, analyzing partner contributions, and managing partner relationships.
+        name: co_sell_partner_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b833c000-3207-4e0c-beda-23e91285c6a5
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 42129e3e-3799-4069-b34e-c826c710a192
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: BOOLEAN
+        description: |-
+          -  Indicates whether the primary point of contact (POC) for the opportunity is managed by the partner. 
+          - Sourced from the 'opportunity' table's 'partner_led_poc_c' column. 
+          - Used for understanding partner influence, analyzing partner contributions, and managing partner relationships.
+        name: partner_led_poc_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ef5a6f70-3a69-4979-ba41-ce46822684ef
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 19b6f93c-5cd6-4c25-8ecd-158647b76cc1
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: BOOLEAN
+        description: |-
+          -  Indicates whether the record has been deleted in the source system. 
+          - System-generated based on the status of the record in the source. 
+          - Used for identifying deleted records and ensuring data consistency between the source and the destination.
+        name: _fivetran_deleted
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 67750b26-e269-4759-94cc-834eefa6274d
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a87df972-fb8f-4f95-82c1-d70c8ba045bf
+          stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+        config: {}
+        dataType: TIMESTAMP
+        description: |-
+          -  Represents the timestamp when the record was last synced from the source system. 
+          - System-generated based on the last sync operation. 
+          - Used for tracking data freshness, identifying data latency, and ensuring data integrity.
+        name: _fivetran_synced
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: acf34545-2ca5-4110-a24f-6462e35729bd
+                stepCounter: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_OPPORTUNITY: 923ecbc1-ca3d-4858-8a04-33c8e6413fa3
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STAGING
+            nodeName: STG_OPPORTUNITY
+        join:
+          joinCondition: |-
+            FROM {{ ref('STAGING', 'STG_OPPORTUNITY') }} `STG_OPPORTUNITY`
+            WHERE `STG_OPPORTUNITY`.`opp_type` ilike '%renewal%'
+            AND `STG_OPPORTUNITY`.`stage` not ilike '%closed%'
+        name: STG_OPEN_RENEWALS
+        noLinkRefs: []
+  name: STG_OPEN_RENEWALS
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

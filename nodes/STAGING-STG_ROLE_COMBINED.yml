@@ -1,0 +1,246 @@
+fileVersion: 1
+id: 16186cb4-4ceb-4f00-85ee-e446f8e40f80
+name: STG_ROLE_COMBINED
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: true
+  locationName: STAGING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6f4f1aa5-780e-4886-85f3-185bd2caf743
+          stepCounter: 16186cb4-4ceb-4f00-85ee-e446f8e40f80
+        config: {}
+        dataType: STRING
+        description: ""
+        name: org_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fda97520-5229-4331-a097-4fa05b1d13c1
+                stepCounter: 8df87776-f842-4f75-8e61-21a146c068d2
+            transform: ""
+          - columnReferences:
+              - columnCounter: f0b09b61-cd56-4c32-a359-a227ef153fb5
+                stepCounter: a748423c-60b1-4962-8661-000f8d7a7639
+            transform: ""
+          - columnReferences:
+              - columnCounter: 005cd607-32c6-4433-b6ec-1dfd2fc6e1c4
+                stepCounter: d39f6c0b-a7ba-4102-b6ea-2729cab1bf15
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 90d7e7ca-fe21-4023-9018-708e3522050a
+          stepCounter: 16186cb4-4ceb-4f00-85ee-e446f8e40f80
+        config: {}
+        dataType: STRING
+        description: ""
+        name: user_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f01c389c-25e2-4b72-b6fa-e264e587c845
+                stepCounter: 8df87776-f842-4f75-8e61-21a146c068d2
+            transform: ""
+          - columnReferences:
+              - columnCounter: 33853316-3fab-4189-9db4-7a96fd730b9a
+                stepCounter: a748423c-60b1-4962-8661-000f8d7a7639
+            transform: ""
+          - columnReferences:
+              - columnCounter: daf4a58a-99aa-4749-bbe0-4999f759507f
+                stepCounter: d39f6c0b-a7ba-4102-b6ea-2729cab1bf15
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2d5965dd-d240-4463-91b9-59be44782c47
+          stepCounter: 16186cb4-4ceb-4f00-85ee-e446f8e40f80
+        config: {}
+        dataType: STRING
+        description: ""
+        name: app_role
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f9829fd0-6c77-4c36-b810-c1c9b5eef73e
+                stepCounter: 8df87776-f842-4f75-8e61-21a146c068d2
+            transform: ""
+          - columnReferences:
+              - columnCounter: 342e1a22-2d7c-4cee-b5a2-54f8e4d03f5d
+                stepCounter: a748423c-60b1-4962-8661-000f8d7a7639
+            transform: ""
+          - columnReferences:
+              - columnCounter: ea7764a5-3f59-49fd-a05c-fb7b135e8579
+                stepCounter: d39f6c0b-a7ba-4102-b6ea-2729cab1bf15
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b080a97a-2129-4f84-a0dc-1ed94bff61e0
+          stepCounter: 16186cb4-4ceb-4f00-85ee-e446f8e40f80
+        config: {}
+        dataType: STRING
+        description: ""
+        name: created_at
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 92b86b7d-e30e-4cce-8bc0-94e35d39cee3
+                stepCounter: 8df87776-f842-4f75-8e61-21a146c068d2
+            transform: ""
+          - columnReferences:
+              - columnCounter: c76ee764-b9a0-4c00-bab5-d6ad6ec4a26b
+                stepCounter: a748423c-60b1-4962-8661-000f8d7a7639
+            transform: ""
+          - columnReferences:
+              - columnCounter: ee3787ad-4cce-4ca7-885c-f00032d8f216
+                stepCounter: d39f6c0b-a7ba-4102-b6ea-2729cab1bf15
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5d89f81a-6bfd-48b9-ba45-093106596e8c
+          stepCounter: 16186cb4-4ceb-4f00-85ee-e446f8e40f80
+        config: {}
+        dataType: STRING
+        description: ""
+        name: updated_at
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 87ab3f98-1168-4ff6-a68b-ce9ae4ab5d5e
+                stepCounter: 8df87776-f842-4f75-8e61-21a146c068d2
+            transform: ""
+          - columnReferences:
+              - columnCounter: 4a07bf65-2329-45f8-89ae-5f19e1087756
+                stepCounter: a748423c-60b1-4962-8661-000f8d7a7639
+            transform: ""
+          - columnReferences:
+              - columnCounter: 6a5029d4-8354-4cc1-84e5-9c7c6e51ca34
+                stepCounter: d39f6c0b-a7ba-4102-b6ea-2729cab1bf15
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 709a15b4-1c1f-43d1-996b-caf77ff44aa4
+          stepCounter: 16186cb4-4ceb-4f00-85ee-e446f8e40f80
+        config: {}
+        dataType: STRING
+        description: ""
+        name: meta_mtime
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5f52b4a4-5b63-463b-8adf-b6b7837145c3
+                stepCounter: 8df87776-f842-4f75-8e61-21a146c068d2
+            transform: ""
+          - columnReferences:
+              - columnCounter: f55fc5ed-abd5-4294-acec-bddefd5f6c56
+                stepCounter: a748423c-60b1-4962-8661-000f8d7a7639
+            transform: ""
+          - columnReferences:
+              - columnCounter: 73d08815-aa19-42b9-ba0f-e92242eb22b1
+                stepCounter: d39f6c0b-a7ba-4102-b6ea-2729cab1bf15
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 91cb7c39-6792-4ba6-8ce9-4920bb1fd96b
+          stepCounter: 16186cb4-4ceb-4f00-85ee-e446f8e40f80
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: app_role_level
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "'Org'"
+          - columnReferences: []
+            transform: "'Project'"
+          - columnReferences: []
+            transform: "'Env'"
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 99df16e2-7e3b-4284-a4ec-b9a07df4c907
+          stepCounter: 16186cb4-4ceb-4f00-85ee-e446f8e40f80
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: firestore_env
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bf835a03-e9c7-4eb0-b6c4-abbed5a3ba38
+                stepCounter: 8df87776-f842-4f75-8e61-21a146c068d2
+            transform: ""
+          - columnReferences:
+              - columnCounter: 0be8adc5-55bd-44ab-88de-7c80732f88c6
+                stepCounter: a748423c-60b1-4962-8661-000f8d7a7639
+            transform: ""
+          - columnReferences:
+              - columnCounter: a7641ee7-d256-49a3-a365-a0ce0605507d
+                stepCounter: d39f6c0b-a7ba-4102-b6ea-2729cab1bf15
+            transform: ""
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          stg_role_org: 8df87776-f842-4f75-8e61-21a146c068d2
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STAGING
+            nodeName: stg_role_org
+        join:
+          joinCondition: FROM {{ ref('STAGING', 'stg_role_org') }} `stg_role_org`
+        name: STG_ROLE_ORG
+        noLinkRefs: []
+      - aliases:
+          stg_role_project: a748423c-60b1-4962-8661-000f8d7a7639
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STAGING
+            nodeName: stg_role_project
+        join:
+          joinCondition: FROM {{ ref('STAGING', 'stg_role_project') }} `stg_role_project`
+        name: STG_ROLE_PROJECT
+        noLinkRefs: []
+      - aliases:
+          stg_role_enviroment: d39f6c0b-a7ba-4102-b6ea-2729cab1bf15
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STAGING
+            nodeName: stg_role_enviroment
+        join:
+          joinCondition: FROM {{ ref('STAGING', 'stg_role_enviroment') }} `stg_role_enviroment`
+        name: STG_ROLE_ENVIRONMENT
+        noLinkRefs: []
+  name: STG_ROLE_COMBINED
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

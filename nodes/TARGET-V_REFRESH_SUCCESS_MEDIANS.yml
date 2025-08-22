@@ -1,0 +1,195 @@
+fileVersion: 1
+id: 8ba5aa48-44a6-4cad-a31d-0abbea79030b
+name: V_REFRESH_SUCCESS_MEDIANS
+operation:
+  config:
+    OverrideSQLCreate: false
+    groupByAll: false
+    insertStrategy: UNION
+    selectDistinct: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8b96233f-fd47-4fb4-8476-3edfcc02e3e8
+          stepCounter: 8ba5aa48-44a6-4cad-a31d-0abbea79030b
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: metric_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3e352990-98bf-4547-9a71-b09402fca549
+          stepCounter: 8ba5aa48-44a6-4cad-a31d-0abbea79030b
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: arr_cohort
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0ff9f33b-ac39-443a-ab36-17d215bd3e6e
+          stepCounter: 8ba5aa48-44a6-4cad-a31d-0abbea79030b
+        config: {}
+        dataType: double
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: metric_median
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: ""
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: |
+            {{ stage('Override Create SQL') }}
+             CREATE OR REPLACE VIEW {{ ref('TARGET', 'V_REFRESH_SUCCESS_MEDIANS')}} AS (
+            with `source_100K+` as (
+            select *
+            from customer_health_metrics.default.fct_monthly_refresh_success
+            where account_tenure > 6
+            and run_month >= date_add(month,-12,DATE_TRUNC('month',GETDATE()))
+            and run_month < DATE_TRUNC('month',GETDATE())
+            and arr_cohort = '100K+'
+            ),
+
+
+            `100K+` as (
+            select
+             'monthly_refresh_success' as metric_name, 
+             '100K+' as arr_cohort,
+             median(distinct refresh_success_rate) as metric_median
+            from
+             `source_100K+`
+            group by all
+            ),
+
+
+            `source_50K-100K` as (
+            select *
+            from customer_health_metrics.default.fct_monthly_refresh_success
+            where account_tenure > 6
+            and run_month >= date_add(month,-12,DATE_TRUNC('month',GETDATE()))
+            and run_month < DATE_TRUNC('month',GETDATE())
+            and arr_cohort = '50K-100K'
+            ),
+
+
+            `50K-100K` as (
+            select
+             'monthly_refresh_success' as metric_name, 
+             '50K-100K' as arr_cohort,
+             median(distinct refresh_success_rate) as metric_median
+            from
+             `source_50K-100K`
+            group by all
+            ),
+
+
+            `source_30K-50K` as (
+            select *
+            from customer_health_metrics.default.fct_monthly_refresh_success
+            where account_tenure > 6
+            and run_month >= date_add(month,-12,DATE_TRUNC('month',GETDATE()))
+            and run_month < DATE_TRUNC('month',GETDATE())
+            and arr_cohort = '30K-50K'
+            ),
+
+
+            `30K-50K` as (
+            select
+             'monthly_refresh_success' as metric_name, 
+             '30K-50K' as arr_cohort,
+             median(distinct refresh_success_rate) as metric_median
+            from
+             `source_30K-50K`
+            group by all
+            ),
+
+
+            `source_0-30K` as (
+            select *
+            from customer_health_metrics.default.fct_monthly_refresh_success
+            where account_tenure > 6
+            and run_month >= date_add(month,-12,DATE_TRUNC('month',GETDATE()))
+            and run_month < DATE_TRUNC('month',GETDATE())
+            and arr_cohort = '0-30K'
+            ),
+
+
+            `0-30K` as (
+            select
+             'monthly_refresh_success' as metric_name, 
+             '0-30K' as arr_cohort,
+             median(distinct refresh_success_rate) as metric_median
+            from
+             `source_0-30K`
+            group by all
+            )
+
+
+            select *
+            from `100K+`
+            UNION
+            select *
+            from `50K-100K`
+            UNION
+            select *
+            from `30K-50K`
+            UNION
+            select *
+            from `0-30K`)
+        dependencies:
+          - locationName: TARGET
+            nodeName: FCT_MONTHLY_REFRESH_SUCCESS
+        join:
+          joinCondition: FROM {{ ref('TARGET', 'FCT_MONTHLY_REFRESH_SUCCESS') }} `FCT_MONTHLY_REFRESH_SUCCESS`
+        name: V_REFRESH_SUCCESS_MEDIANS
+        noLinkRefs: []
+  name: V_REFRESH_SUCCESS_MEDIANS
+  overrideSQL: true
+  schema: ""
+  sqlType: View
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,102 @@
+fileVersion: 1
+id: 80da6d02-309c-45c3-a5d9-5bafa7a65346
+name: FCT_LICENSED_USERS_BY_ORG
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: UNION ALL
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d0f20dc7-f5ee-46ca-976e-8ffe8b078ff9
+          stepCounter: 80da6d02-309c-45c3-a5d9-5bafa7a65346
+        config: {}
+        dataType: STRING
+        description: ""
+        name: account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 14b8ecb9-6af0-4815-b47d-74217854dd23
+                stepCounter: d47ed9e4-aedb-44f5-b166-375474fe0787
+            transform: DISTINCT `STG_APP_USERS_LICENSED`.`account_id`
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 91375ce4-3b11-411a-81af-76e75338512e
+          stepCounter: 80da6d02-309c-45c3-a5d9-5bafa7a65346
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: org_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 56a926b1-e084-4864-bce6-caffdda41cc4
+                stepCounter: d47ed9e4-aedb-44f5-b166-375474fe0787
+            transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 67f64c3b-be6a-4670-9849-6f25e4048459
+          stepCounter: 80da6d02-309c-45c3-a5d9-5bafa7a65346
+        config: {}
+        dataType: INTEGER
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: licensed_users
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: COUNT(DISTINCT CASE WHEN `STG_APP_USERS_LICENSED`.`licensed_user` ilike '%yes%' AND NOT `STG_APP_USERS_LICENSED`.`internal_users`  THEN `STG_APP_USERS_LICENSED`.`user_email` ELSE NULL END)
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_APP_USERS_LICENSED: d47ed9e4-aedb-44f5-b166-375474fe0787
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STAGING
+            nodeName: STG_APP_USERS_LICENSED
+        join:
+          joinCondition: |-
+            FROM {{ ref('STAGING', 'STG_APP_USERS_LICENSED') }} `STG_APP_USERS_LICENSED`
+            GROUP BY 1,2
+        name: FCT_LICENSED_USERS_BY_ORG
+        noLinkRefs: []
+  name: FCT_LICENSED_USERS_BY_ORG
+  overrideSQL: false
+  schema: ""
+  sqlType: Fact
+  type: sql
+  version: 1
+type: Node

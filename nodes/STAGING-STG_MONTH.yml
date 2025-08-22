@@ -1,0 +1,56 @@
+fileVersion: 1
+id: 76fa7523-2a32-40b9-9e6a-5dba25aacafa
+name: STG_MONTH
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ac28024e-cfec-47d9-800c-659b56fbf809
+          stepCounter: 76fa7523-2a32-40b9-9e6a-5dba25aacafa
+        config: {}
+        dataType: DATE
+        description: ""
+        name: month_trunc
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 79e3c478-437c-4991-b1a4-74e616fc54d8
+                stepCounter: 3c09d3b1-f2fb-4248-aba2-5c2df975d5ab
+            transform: DISTINCT `STG_DATE_SPINE`.`month_trunc`
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_DATE_SPINE: 3c09d3b1-f2fb-4248-aba2-5c2df975d5ab
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STAGING
+            nodeName: STG_DATE_SPINE
+        join:
+          joinCondition: |-
+            FROM {{ ref('STAGING', 'STG_DATE_SPINE') }} `STG_DATE_SPINE`
+            ORDER BY `month_trunc` ASC
+        name: STG_MONTH
+        noLinkRefs: []
+  name: STG_MONTH
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

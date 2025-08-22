@@ -1,0 +1,73 @@
+fileVersion: 1
+id: 6fc3143d-646c-472e-9b26-7045137b98f5
+name: orgs_workspaces_steps
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: COALESCE_APP
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ba3b277c-e701-48fd-94d7-bdc88a962a79
+          stepCounter: 6fc3143d-646c-472e-9b26-7045137b98f5
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: |-
+          Document Path
+          Fully qualified document path including Project ID and database name.
+          auto-generated projection of JSON at: /_meta/path with inferred types: [string]
+        name: _meta/path
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 99c27a76-cc32-4367-be92-3f304387545a
+          stepCounter: 6fc3143d-646c-472e-9b26-7045137b98f5
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: |-
+          Flow Publication Time
+          Flow publication date-time of this document
+          auto-generated projection of JSON at: /_meta/uuid with inferred types: [string]
+        name: flow_published_at
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5adac8be-3903-473e-9972-69cf01643d76
+          stepCounter: 6fc3143d-646c-472e-9b26-7045137b98f5
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "user-provided projection of JSON at:  with inferred types: [object]"
+        name: flow_document
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+  name: orgs_workspaces_steps
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

@@ -1,0 +1,98 @@
+fileVersion: 1
+id: e39121ce-3919-4b48-8e46-2a418473827f
+name: STG_ACCOUNT_MONTHS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f96f9cdf-a286-449e-9264-cdffad84625a
+          stepCounter: e39121ce-3919-4b48-8e46-2a418473827f
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the unique identifier for the account associated with the opportunity. 
+          - Sourced from the 'opportunity' table's 'account_id' column. 
+          - Used for joining and linking with the account table to access account-specific information.
+        name: account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 89bdcc1f-f2df-487d-96ec-924e0c852969
+                stepCounter: 656f5064-67e1-40b7-a31b-ef24c08d967d
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 29d54ec0-f6b8-41a7-b8eb-c6e32d7731d1
+          stepCounter: e39121ce-3919-4b48-8e46-2a418473827f
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: account_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 316e48d7-0f3b-4039-8682-c92194ed94f2
+                stepCounter: 656f5064-67e1-40b7-a31b-ef24c08d967d
+            transform: ""
+        systemColumnType: None
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e946d899-e731-44c2-ab6e-668d0654c3bd
+          stepCounter: e39121ce-3919-4b48-8e46-2a418473827f
+        config: {}
+        dataType: DATE
+        description: ""
+        name: month_start
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ac28024e-cfec-47d9-800c-659b56fbf809
+                stepCounter: 76fa7523-2a32-40b9-9e6a-5dba25aacafa
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_FIRST_MONTH: 656f5064-67e1-40b7-a31b-ef24c08d967d
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STAGING
+            nodeName: STG_FIRST_MONTH
+          - locationName: STAGING
+            nodeName: STG_MONTH
+        join:
+          joinCondition: |-
+            FROM {{ ref('STAGING', 'STG_FIRST_MONTH') }} `STG_FIRST_MONTH`
+            JOIN {{ ref('STAGING', 'STG_MONTH') }} `STG_MONTH`
+            ON `STG_FIRST_MONTH`.`first_month` <= `STG_MONTH`.`month_trunc`
+            WHERE `STG_MONTH`.`month_trunc` <= GETDATE()
+            ORDER BY `account_id`,`month_start`
+        name: STG_ACCOUNT_MONTHS
+        noLinkRefs: []
+  name: STG_ACCOUNT_MONTHS
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

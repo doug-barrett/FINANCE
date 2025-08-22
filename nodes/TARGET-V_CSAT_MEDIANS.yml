@@ -1,0 +1,195 @@
+fileVersion: 1
+id: a3380258-66a3-40e7-bd5d-272221cbb45f
+name: V_CSAT_MEDIANS
+operation:
+  config:
+    OverrideSQLCreate: false
+    groupByAll: false
+    insertStrategy: UNION
+    selectDistinct: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 22da5569-385b-47b4-8069-8edaa62a9357
+          stepCounter: a3380258-66a3-40e7-bd5d-272221cbb45f
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: metric_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 92a08f36-634c-4007-bddc-99404e55a403
+          stepCounter: a3380258-66a3-40e7-bd5d-272221cbb45f
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: arr_cohort
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e6b06887-e5f1-4efb-9207-2df73f43dbb5
+          stepCounter: a3380258-66a3-40e7-bd5d-272221cbb45f
+        config: {}
+        dataType: double
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: metric_median
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: ""
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: |-
+            {{ stage('Override Create SQL') }}
+             CREATE OR REPLACE VIEW {{ ref('TARGET', 'V_CSAT_MEDIANS')}} AS (
+            with `source_100K+` as (
+            select *
+            from customer_health_metrics.default.fct_t6m_csat
+            where account_tenure > 6
+            and csat_month >= date_add(month,-12,DATE_TRUNC('month',GETDATE()))
+            and csat_month < DATE_TRUNC('month',GETDATE())
+            and arr_cohort = '100K+'
+            ),
+
+
+            `100K+` as (
+            select
+             't6m_csat' as metric_name, 
+             '100K+' as arr_cohort,
+             median(distinct t6m_csat_score) as metric_median
+            from
+             `source_100K+`
+            group by all
+            ),
+
+
+            `source_50K-100K` as (
+            select *
+            from customer_health_metrics.default.fct_t6m_csat
+            where account_tenure > 6
+            and csat_month >= date_add(month,-12,DATE_TRUNC('month',GETDATE()))
+            and csat_month < DATE_TRUNC('month',GETDATE())
+            and arr_cohort = '50K-100K'
+            ),
+
+
+            `50K-100K` as (
+            select
+             't6m_csat' as metric_name, 
+             '50K-100K' as arr_cohort,
+             median(distinct t6m_csat_score) as metric_median
+            from
+             `source_50K-100K`
+            group by all
+            ),
+
+
+            `source_30K-50K` as (
+            select *
+            from customer_health_metrics.default.fct_t6m_csat
+            where account_tenure > 6
+            and csat_month >= date_add(month,-12,DATE_TRUNC('month',GETDATE()))
+            and csat_month < DATE_TRUNC('month',GETDATE())
+            and arr_cohort = '30K-50K'
+            ),
+
+
+            `30K-50K` as (
+            select
+             't6m_csat' as metric_name, 
+             '30K-50K' as arr_cohort,
+             median(distinct t6m_csat_score) as metric_median
+            from
+             `source_30K-50K`
+            group by all
+            ),
+
+
+            `source_0-30K` as (
+            select *
+            from customer_health_metrics.default.fct_t6m_csat
+            where account_tenure > 6
+            and csat_month >= date_add(month,-12,DATE_TRUNC('month',GETDATE()))
+            and csat_month < DATE_TRUNC('month',GETDATE())
+            and arr_cohort = '0-30K'
+            ),
+
+
+            `0-30K` as (
+            select
+             't6m_csat' as metric_name, 
+             '0-30K' as arr_cohort,
+             median(distinct t6m_csat_score) as metric_median
+            from
+             `source_0-30K`
+            group by all
+            )
+
+
+            select *
+            from `100K+`
+            UNION
+            select *
+            from `50K-100K`
+            UNION
+            select *
+            from `30K-50K`
+            UNION
+            select *
+            from `0-30K`)
+        dependencies:
+          - locationName: TARGET
+            nodeName: FCT_T6M_CSAT
+        join:
+          joinCondition: FROM {{ ref('TARGET', 'FCT_T6M_CSAT') }} `FCT_T6M_CSAT`
+        name: V_CSAT_MEDIANS
+        noLinkRefs: []
+  name: V_CSAT_MEDIANS
+  overrideSQL: true
+  schema: ""
+  sqlType: View
+  type: sql
+  version: 1
+type: Node

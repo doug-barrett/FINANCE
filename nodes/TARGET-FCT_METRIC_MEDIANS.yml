@@ -1,0 +1,317 @@
+fileVersion: 1
+id: 2620b137-4645-4337-87d9-7e1621c49336
+name: FCT_METRIC_MEDIANS
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: UNION ALL
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: true
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2bae25d0-f2c7-4089-92d0-6786cc4e9a86
+          stepCounter: 2620b137-4645-4337-87d9-7e1621c49336
+        config: {}
+        dataType: string
+        description: ""
+        name: metric_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ee54ed95-4725-41d6-9437-3d94f907d63f
+                stepCounter: 16c4eb34-24f7-4244-8697-274c70d4dda4
+            transform: ""
+          - columnReferences:
+              - columnCounter: 22da5569-385b-47b4-8069-8edaa62a9357
+                stepCounter: a3380258-66a3-40e7-bd5d-272221cbb45f
+            transform: ""
+          - columnReferences:
+              - columnCounter: 179359ab-bee0-4554-bf9d-f86e091e77de
+                stepCounter: a44090b1-a226-4c0e-ad3f-eb5d246eacc1
+            transform: ""
+          - columnReferences:
+              - columnCounter: d4689953-99fc-41cb-8c88-5306001f9738
+                stepCounter: b70e8db7-0947-48ff-a05e-bd1418c6fbf5
+            transform: ""
+          - columnReferences:
+              - columnCounter: 91fd3245-223d-4623-8999-79381083a4e3
+                stepCounter: 098a0162-5652-4c06-bd2f-3d310a6123fc
+            transform: ""
+          - columnReferences:
+              - columnCounter: 039986fe-61ab-44ff-b032-6861719b7a05
+                stepCounter: b9309f55-f6f3-4ab8-ad38-cfe8ee4eb7ce
+            transform: ""
+          - columnReferences:
+              - columnCounter: ee54ed95-4725-41d6-9437-3d94f907d63f
+                stepCounter: 16c4eb34-24f7-4244-8697-274c70d4dda4
+            transform: ""
+          - columnReferences:
+              - columnCounter: 6260a85f-db03-4423-87cd-33c2b7a1bebf
+                stepCounter: 21e763aa-7950-403f-9a75-9dfbda10cfbc
+            transform: ""
+          - columnReferences:
+              - columnCounter: 97182eae-74bb-475f-a76e-3af4dbc6a7bd
+                stepCounter: 6211d2a2-e5b6-4234-a172-c29c2db9d947
+            transform: ""
+          - columnReferences:
+              - columnCounter: 8b96233f-fd47-4fb4-8476-3edfcc02e3e8
+                stepCounter: 8ba5aa48-44a6-4cad-a31d-0abbea79030b
+            transform: ""
+          - columnReferences:
+              - columnCounter: f9bacd57-3ea3-43ff-b5c0-7edd99f32702
+                stepCounter: 8dee8f86-5b07-401d-96c8-32c54baab956
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b3eb9734-cc07-40a0-88d3-57a78c71db21
+          stepCounter: 2620b137-4645-4337-87d9-7e1621c49336
+        config: {}
+        dataType: string
+        description: ""
+        name: arr_cohort
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e42ba6a9-6d8f-4574-80cd-2c5a2e8cf944
+                stepCounter: 16c4eb34-24f7-4244-8697-274c70d4dda4
+            transform: ""
+          - columnReferences:
+              - columnCounter: 92a08f36-634c-4007-bddc-99404e55a403
+                stepCounter: a3380258-66a3-40e7-bd5d-272221cbb45f
+            transform: ""
+          - columnReferences:
+              - columnCounter: f0ba3741-cc92-4352-a641-f39f789f5e60
+                stepCounter: a44090b1-a226-4c0e-ad3f-eb5d246eacc1
+            transform: ""
+          - columnReferences:
+              - columnCounter: c6bc4133-ad9e-48f2-9907-c74358367757
+                stepCounter: b70e8db7-0947-48ff-a05e-bd1418c6fbf5
+            transform: ""
+          - columnReferences:
+              - columnCounter: b05b1d90-db72-4e9d-8647-9daf2bea9b56
+                stepCounter: 098a0162-5652-4c06-bd2f-3d310a6123fc
+            transform: ""
+          - columnReferences:
+              - columnCounter: 99a3e10e-1281-4236-9cdf-614c26add8fb
+                stepCounter: b9309f55-f6f3-4ab8-ad38-cfe8ee4eb7ce
+            transform: ""
+          - columnReferences:
+              - columnCounter: e42ba6a9-6d8f-4574-80cd-2c5a2e8cf944
+                stepCounter: 16c4eb34-24f7-4244-8697-274c70d4dda4
+            transform: ""
+          - columnReferences:
+              - columnCounter: 89b01ae0-5db8-48d2-8a57-3cdae4ec53cf
+                stepCounter: 21e763aa-7950-403f-9a75-9dfbda10cfbc
+            transform: ""
+          - columnReferences:
+              - columnCounter: 5b63663d-98c2-4a14-ac14-fce2db9dd44b
+                stepCounter: 6211d2a2-e5b6-4234-a172-c29c2db9d947
+            transform: ""
+          - columnReferences:
+              - columnCounter: 3e352990-98bf-4547-9a71-b09402fca549
+                stepCounter: 8ba5aa48-44a6-4cad-a31d-0abbea79030b
+            transform: ""
+          - columnReferences:
+              - columnCounter: 234afe68-5663-48b0-a993-4ef3ed4ac7bf
+                stepCounter: 8dee8f86-5b07-401d-96c8-32c54baab956
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e7d16a26-32b2-423b-8c79-42070ab12872
+          stepCounter: 2620b137-4645-4337-87d9-7e1621c49336
+        config: {}
+        dataType: double
+        description: ""
+        name: metric_median
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2325a63e-473c-40ce-8331-79d907d87940
+                stepCounter: 16c4eb34-24f7-4244-8697-274c70d4dda4
+            transform: ""
+          - columnReferences:
+              - columnCounter: e6b06887-e5f1-4efb-9207-2df73f43dbb5
+                stepCounter: a3380258-66a3-40e7-bd5d-272221cbb45f
+            transform: ""
+          - columnReferences:
+              - columnCounter: 8aad7217-0fd4-4573-9530-bb6952542a0a
+                stepCounter: a44090b1-a226-4c0e-ad3f-eb5d246eacc1
+            transform: ""
+          - columnReferences:
+              - columnCounter: 35e0b3df-fdbe-4881-8401-ccb9f676881e
+                stepCounter: b70e8db7-0947-48ff-a05e-bd1418c6fbf5
+            transform: ""
+          - columnReferences:
+              - columnCounter: 131fc5d4-ce43-47cb-8071-d292040f92b4
+                stepCounter: 098a0162-5652-4c06-bd2f-3d310a6123fc
+            transform: ""
+          - columnReferences:
+              - columnCounter: 5caba162-82a3-492d-8da5-efca29c63f3b
+                stepCounter: b9309f55-f6f3-4ab8-ad38-cfe8ee4eb7ce
+            transform: ""
+          - columnReferences:
+              - columnCounter: 2325a63e-473c-40ce-8331-79d907d87940
+                stepCounter: 16c4eb34-24f7-4244-8697-274c70d4dda4
+            transform: ""
+          - columnReferences:
+              - columnCounter: c4e0fed2-719f-446e-a6ac-29f762990c51
+                stepCounter: 21e763aa-7950-403f-9a75-9dfbda10cfbc
+            transform: ""
+          - columnReferences:
+              - columnCounter: b73dc3cf-a58f-495d-a0a1-fdd5820d13f5
+                stepCounter: 6211d2a2-e5b6-4234-a172-c29c2db9d947
+            transform: ""
+          - columnReferences:
+              - columnCounter: 0ff9f33b-ac39-443a-ab36-17d215bd3e6e
+                stepCounter: 8ba5aa48-44a6-4cad-a31d-0abbea79030b
+            transform: ""
+          - columnReferences:
+              - columnCounter: 3d08b410-6751-4718-9bee-ff98918df6a2
+                stepCounter: 8dee8f86-5b07-401d-96c8-32c54baab956
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TARGET
+            nodeName: V_NODE_GROWTH_MEDIANS
+        join:
+          joinCondition: FROM {{ ref('TARGET', 'V_NODE_GROWTH_MEDIANS') }} `V_NODE_GROWTH_MEDIANS`
+        name: V_NODE_GROWTH_MEDIANS
+        noLinkRefs: []
+      - aliases:
+          V_CSAT_MEDIANS: a3380258-66a3-40e7-bd5d-272221cbb45f
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TARGET
+            nodeName: V_CSAT_MEDIANS
+        join:
+          joinCondition: FROM {{ ref('TARGET', 'V_CSAT_MEDIANS') }} `V_CSAT_MEDIANS`
+        name: V_CSAT_MEDIANS
+        noLinkRefs: []
+      - aliases:
+          V_DEPLOY_RUNS_MEDIANS: a44090b1-a226-4c0e-ad3f-eb5d246eacc1
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TARGET
+            nodeName: V_DEPLOY_RUNS_MEDIANS
+        join:
+          joinCondition: FROM {{ ref('TARGET', 'V_DEPLOY_RUNS_MEDIANS') }} `V_DEPLOY_RUNS_MEDIANS`
+        name: V_DEPLOY_RUNS_MEDIANS
+        noLinkRefs: []
+      - aliases:
+          V_DEPLOY_SUCCESS_MEDIANS: b70e8db7-0947-48ff-a05e-bd1418c6fbf5
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TARGET
+            nodeName: V_DEPLOY_SUCCESS_MEDIANS
+        join:
+          joinCondition: FROM {{ ref('TARGET', 'V_DEPLOY_SUCCESS_MEDIANS') }} `V_DEPLOY_SUCCESS_MEDIANS`
+        name: V_DEPLOY_SUCCESS_MEDIANS
+        noLinkRefs: []
+      - aliases:
+          V_MONTHLY_TICKET_MEDIANS: 098a0162-5652-4c06-bd2f-3d310a6123fc
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TARGET
+            nodeName: V_MONTHLY_TICKET_MEDIANS
+        join:
+          joinCondition: FROM {{ ref('TARGET', 'V_MONTHLY_TICKET_MEDIANS') }} `V_MONTHLY_TICKET_MEDIANS`
+        name: V_MONTHLY_TICKET_MEDIANS
+        noLinkRefs: []
+      - aliases:
+          V_NODE_COUNT_MEDIANS: b9309f55-f6f3-4ab8-ad38-cfe8ee4eb7ce
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TARGET
+            nodeName: V_NODE_COUNT_MEDIANS
+        join:
+          joinCondition: FROM {{ ref('TARGET', 'V_NODE_COUNT_MEDIANS') }} `V_NODE_COUNT_MEDIANS`
+        name: V_NODE_COUNT_MEDIANS
+        noLinkRefs: []
+      - aliases:
+          V_NODE_GROWTH_MEDIANS: 16c4eb34-24f7-4244-8697-274c70d4dda4
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TARGET
+            nodeName: V_NODE_GROWTH_MEDIANS
+        join:
+          joinCondition: FROM {{ ref('TARGET', 'V_NODE_GROWTH_MEDIANS') }} `V_NODE_GROWTH_MEDIANS`
+        name: V_NODE_GROWTH_MEDIANS
+        noLinkRefs: []
+      - aliases:
+          V_NODES_BUILT_MEDIANS: 21e763aa-7950-403f-9a75-9dfbda10cfbc
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TARGET
+            nodeName: V_NODES_BUILT_MEDIANS
+        join:
+          joinCondition: FROM {{ ref('TARGET', 'V_NODES_BUILT_MEDIANS') }} `V_NODES_BUILT_MEDIANS`
+        name: V_NODES_BUILT_MEDIANS
+        noLinkRefs: []
+      - aliases:
+          V_REFRESH_RUNS_MEDIANS: 6211d2a2-e5b6-4234-a172-c29c2db9d947
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TARGET
+            nodeName: V_REFRESH_RUNS_MEDIANS
+        join:
+          joinCondition: FROM {{ ref('TARGET', 'V_REFRESH_RUNS_MEDIANS') }} `V_REFRESH_RUNS_MEDIANS`
+        name: V_REFRESH_RUNS_MEDIANS
+        noLinkRefs: []
+      - aliases:
+          V_REFRESH_SUCCESS_MEDIANS: 8ba5aa48-44a6-4cad-a31d-0abbea79030b
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TARGET
+            nodeName: V_REFRESH_SUCCESS_MEDIANS
+        join:
+          joinCondition: FROM {{ ref('TARGET', 'V_REFRESH_SUCCESS_MEDIANS') }} `V_REFRESH_SUCCESS_MEDIANS`
+        name: V_REFRESH_SUCCESS_MEDIANS
+        noLinkRefs: []
+      - aliases:
+          V_T3M_TICKET_MEDIANS: 8dee8f86-5b07-401d-96c8-32c54baab956
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TARGET
+            nodeName: V_T3M_TICKET_MEDIANS
+        join:
+          joinCondition: FROM {{ ref('TARGET', 'V_T3M_TICKET_MEDIANS') }} `V_T3M_TICKET_MEDIANS`
+        name: V_T3M_TICKET_MEDIANS
+        noLinkRefs: []
+  name: FCT_METRIC_MEDIANS
+  overrideSQL: false
+  schema: ""
+  sqlType: Fact
+  type: sql
+  version: 1
+type: Node

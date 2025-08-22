@@ -1,0 +1,179 @@
+fileVersion: 1
+id: 612af3de-4e9a-4cc4-8802-9b5e0d500f62
+name: STG_TERRITORY
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ab4745d6-5363-462f-9248-5b60173773c0
+          stepCounter: 612af3de-4e9a-4cc4-8802-9b5e0d500f62
+        config: {}
+        dataType: STRING
+        description: ""
+        name: territory_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 72385dea-8d47-4213-90a4-1f9a39dece01
+                stepCounter: c0f61954-d095-42f0-a06c-a7144cef7ac1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3e216785-c957-49f9-83fd-3d561daf74cb
+          stepCounter: 612af3de-4e9a-4cc4-8802-9b5e0d500f62
+        config: {}
+        dataType: STRING
+        description: ""
+        name: territory_owner_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b1f82724-38bf-4ad9-b832-ede0d10ee26f
+                stepCounter: c0f61954-d095-42f0-a06c-a7144cef7ac1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: dd8ebe85-3460-4f4f-8fc5-9bb1be5bab0e
+          stepCounter: 612af3de-4e9a-4cc4-8802-9b5e0d500f62
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: is_deleted
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fabd023c-43cc-4757-86b2-76ce8ab8751f
+                stepCounter: c0f61954-d095-42f0-a06c-a7144cef7ac1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6e03e701-23ae-4d81-af2a-7caddd4dca79
+          stepCounter: 612af3de-4e9a-4cc4-8802-9b5e0d500f62
+        config: {}
+        dataType: STRING
+        description: ""
+        name: territory_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 09dbfd4c-e330-4651-b2e0-62d9ea2b3bcc
+                stepCounter: c0f61954-d095-42f0-a06c-a7144cef7ac1
+            transform: UPPER(`territory_c`.`name`)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 611b40a2-6cef-4da9-97a1-e793a2d4e931
+          stepCounter: 612af3de-4e9a-4cc4-8802-9b5e0d500f62
+        config: {}
+        dataType: STRING
+        description: ""
+        name: region_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e191b353-5fa0-489a-a941-6db7ff5f9865
+                stepCounter: c0f61954-d095-42f0-a06c-a7144cef7ac1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 25b4d6c7-38f4-4d69-bc5f-bc21ca576f40
+          stepCounter: 612af3de-4e9a-4cc4-8802-9b5e0d500f62
+        config: {}
+        dataType: STRING
+        description: ""
+        name: currency_iso_code
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8e958baa-09ff-4bf6-8066-253f7e7cec0e
+                stepCounter: c0f61954-d095-42f0-a06c-a7144cef7ac1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7471d13e-445b-46b7-95e5-f4a6baa5abfd
+          stepCounter: 612af3de-4e9a-4cc4-8802-9b5e0d500f62
+        config: {}
+        dataType: STRING
+        description: ""
+        name: territory_ae_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ee8d84ee-defc-4d7e-8f0d-e0aca6e2e91f
+                stepCounter: c0f61954-d095-42f0-a06c-a7144cef7ac1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fd01b9f9-2e0b-495b-9c02-595bcb664e2a
+          stepCounter: 612af3de-4e9a-4cc4-8802-9b5e0d500f62
+        config: {}
+        dataType: STRING
+        description: ""
+        name: territory_bdr_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d0ac04e2-e7f5-4f15-b690-a85ca3d6c794
+                stepCounter: c0f61954-d095-42f0-a06c-a7144cef7ac1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a0db0cbc-8ee1-475c-9b2b-5aa350726e3b
+          stepCounter: 612af3de-4e9a-4cc4-8802-9b5e0d500f62
+        config: {}
+        dataType: STRING
+        description: ""
+        name: territory_se_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 58d3c94a-688c-439d-88a9-4cbdeb11bf75
+                stepCounter: c0f61954-d095-42f0-a06c-a7144cef7ac1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ea3da080-2ddd-47ad-af16-a0f127c24e6b
+          stepCounter: 612af3de-4e9a-4cc4-8802-9b5e0d500f62
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: territory_created_date
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9fb03b42-06cb-4a39-8ada-7dd963799faa
+                stepCounter: c0f61954-d095-42f0-a06c-a7144cef7ac1
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SALESFORCE
+            nodeName: territory_c
+        join:
+          joinCondition: FROM {{ ref('SALESFORCE', 'territory_c') }} `territory_c`
+        name: STG_TERRITORY
+        noLinkRefs: []
+  name: STG_TERRITORY
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

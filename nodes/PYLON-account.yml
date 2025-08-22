@@ -1,0 +1,390 @@
+fileVersion: 1
+id: e265743e-3d7c-49b9-9f71-667922cd596b
+name: account
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: PYLON
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0a4a726c-9871-4ed0-9059-4da4617fe32e
+          stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: da78ba64-d848-4f13-9e2b-bdd63dd86704
+          stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: domains
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 79ecdca7-f14d-4c1d-b723-52737ccd3064
+          stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: owner
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f6002d8b-a134-425b-8f77-6169e684e6e1
+          stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: _fivetran_deleted
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: da173697-2e04-4f9e-9c18-d882e989b815
+          stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        name: _fivetran_synced
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: aa5f328a-7f06-4442-935f-bc9aa17d8fe6
+          stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: custom_account_salesforce_product_org_id_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 712cf205-de16-4e26-9b07-0e9234e49e6a
+          stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        name: created_at
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 18b115dd-def2-45af-a2e0-90841be91ef2
+          stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: custom_account_salesforce_billing_city
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6b35e565-843a-41d5-a729-e10e59e760bd
+          stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: custom_account_salesforce_market_segment_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 71be180e-1df4-4656-b960-7132a0e831fd
+          stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: custom_account_salesforce_billing_country
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f7da24fb-8131-4a0f-9b44-1ab54cd45c69
+          stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: custom_account_salesforce_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: da5541ca-5647-4321-bb4d-384254f19f50
+          stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: type
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c6d8674b-ae63-42e2-8856-3199f86f977f
+          stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        name: latest_customer_activity_time
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0c204301-08e2-48e3-bec0-85a89d6364c0
+          stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: custom_salesforce_type
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9383781f-ab60-4053-80aa-3609c0e3884c
+          stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c19c1ce5-1f72-4dc0-9af0-ba886a841338
+          stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: custom_account_salesforce_billing_state
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a21374ed-b2c2-4ccc-8e54-8aafc8b1b770
+          stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: primary_domain
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 71b5451a-6adc-4b23-b113-ce1f158a305f
+          stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: custom_account_salesforce_firestore_environment_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0cc8ac8a-38a6-4cb5-aaa8-87a94043c333
+          stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: custom_account_salesforce_arr_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2d472615-ca08-44ab-889c-39c684874ddd
+          stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: custom_account_salesforce_current_support_package_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 390a8e0e-5328-494b-853a-3b70bce35f2c
+          stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: custom_account_salesforce_renewal_date_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 59eace78-a155-46c0-9280-646cb899c6b9
+          stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: custom_account_salesforce_customer_date_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+  name: account
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

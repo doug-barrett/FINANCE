@@ -1,0 +1,229 @@
+fileVersion: 1
+id: fd5fb467-7562-4f03-b6b3-f01bc6c724f6
+name: FCT_CONTRACT_HEALTH
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: UNION ALL
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 014a846e-aa91-487c-95e7-3d0db20ca072
+          stepCounter: fd5fb467-7562-4f03-b6b3-f01bc6c724f6
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the unique identifier for the account associated with the opportunity. 
+          - Sourced from the 'opportunity' table's 'account_id' column. 
+          - Used for joining and linking with the account table to access account-specific information.
+        name: account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c0fe604b-a1f7-468b-a1f1-cc24a8fd7c6a
+                stepCounter: 38b83add-a489-4eec-ab95-db8710f98a49
+            transform: DISTINCT `FCT_LICENSE_UTILIZATION`.`account_id`
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b2806c5d-9de9-42a8-a79a-b74e943c1046
+          stepCounter: fd5fb467-7562-4f03-b6b3-f01bc6c724f6
+        config: {}
+        dataType: STRING
+        description: ""
+        name: account_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5854281b-04a4-4b22-a82f-6e9c8734b9a3
+                stepCounter: 38b83add-a489-4eec-ab95-db8710f98a49
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: df862906-9813-4bf5-836f-00167ab70d0b
+          stepCounter: fd5fb467-7562-4f03-b6b3-f01bc6c724f6
+        config: {}
+        dataType: DATE
+        description: ""
+        name: month_start
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4dd94da1-1cd6-469f-a341-9cc2fd500213
+                stepCounter: 38b83add-a489-4eec-ab95-db8710f98a49
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0658f556-ce7c-403f-9baa-a0598430ffed
+          stepCounter: fd5fb467-7562-4f03-b6b3-f01bc6c724f6
+        config: {}
+        dataType: STRING
+        description: ""
+        name: arr_cohort
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4c5c1719-d63f-450d-a420-41691ec7ebca
+                stepCounter: 38b83add-a489-4eec-ab95-db8710f98a49
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 426bc4ed-90c0-4a80-91b6-83f9595d1247
+          stepCounter: fd5fb467-7562-4f03-b6b3-f01bc6c724f6
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: account_tenure
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7c0128c2-b1f9-4e29-9afa-d797b03d1229
+                stepCounter: 38b83add-a489-4eec-ab95-db8710f98a49
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8c6d1a20-b6e3-4d71-904a-8cf9769842e2
+          stepCounter: fd5fb467-7562-4f03-b6b3-f01bc6c724f6
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: license_utilization
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 929b4e00-0c5c-4ee3-a0ce-54fe4eface63
+                stepCounter: 38b83add-a489-4eec-ab95-db8710f98a49
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fe65118c-28db-4222-a807-e02637d1416e
+          stepCounter: fd5fb467-7562-4f03-b6b3-f01bc6c724f6
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: t6m_expansions
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: abf344b3-aa54-4534-9616-f54c30b112fc
+                stepCounter: 50467326-48b3-4e48-8a92-a8a263cf4d4d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4b312103-e205-4fb9-85c3-3c166e4f7678
+          stepCounter: fd5fb467-7562-4f03-b6b3-f01bc6c724f6
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: months_remaining
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5c233f22-7238-48fe-9ba1-b44f97671be7
+                stepCounter: b530b82e-b180-464f-9dfe-54fa57904f7c
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a3eb63a2-cfe0-4add-84ca-102a4f4e4234
+          stepCounter: fd5fb467-7562-4f03-b6b3-f01bc6c724f6
+        config: {}
+        dataType: DOUBLE
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: license_score
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: CASE WHEN `FCT_LICENSE_UTILIZATION`.`license_utilization` >= 1 THEN 1 WHEN `FCT_LICENSE_UTILIZATION`.`license_utilization` >= 0.7 THEN 0.5 ELSE 0.3 END
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b19d80e3-410e-400b-806b-5c7bca5de859
+          stepCounter: fd5fb467-7562-4f03-b6b3-f01bc6c724f6
+        config: {}
+        dataType: DOUBLE
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: expansion_score
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: CASE WHEN `FCT_T6M_EXPANSIONS`.`t6m_expansions` IS TRUE THEN 1 ELSE 0 END
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2d3a0ed4-16a9-4ee4-af4a-ab3e43dfb2ca
+          stepCounter: fd5fb467-7562-4f03-b6b3-f01bc6c724f6
+        config: {}
+        dataType: DOUBLE
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: remaining_contract_score
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "CASE WHEN `FCT_CONTRACT_MONTHS_REMAINING`.`months_remaining` > 6 THEN 1 WHEN `FCT_CONTRACT_MONTHS_REMAINING`.`months_remaining` > 3 THEN 0.5 ELSE 0.3 END "
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TARGET
+            nodeName: FCT_CONTRACT_MONTHS_REMAINING
+          - locationName: TARGET
+            nodeName: FCT_LICENSE_UTILIZATION
+          - locationName: TARGET
+            nodeName: FCT_T6M_EXPANSIONS
+        join:
+          joinCondition: |-
+            FROM {{ ref('TARGET', 'FCT_LICENSE_UTILIZATION') }} `FCT_LICENSE_UTILIZATION`
+            INNER JOIN {{ ref('TARGET', 'FCT_T6M_EXPANSIONS') }} `FCT_T6M_EXPANSIONS`
+            ON `FCT_LICENSE_UTILIZATION`.`account_id` = `FCT_T6M_EXPANSIONS`.`account_id`
+            INNER JOIN {{ ref('TARGET', 'FCT_CONTRACT_MONTHS_REMAINING') }} `FCT_CONTRACT_MONTHS_REMAINING`
+            ON `FCT_LICENSE_UTILIZATION`.`account_id` = `FCT_CONTRACT_MONTHS_REMAINING`.`account_id`
+        name: FCT_CONTRACT_HEALTH
+        noLinkRefs: []
+  name: FCT_CONTRACT_HEALTH
+  overrideSQL: false
+  schema: ""
+  sqlType: Fact
+  type: sql
+  version: 1
+type: Node

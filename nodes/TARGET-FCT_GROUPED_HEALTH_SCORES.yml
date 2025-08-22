@@ -1,0 +1,185 @@
+fileVersion: 1
+id: cfa20f22-665d-4fc0-b86b-f04998f1d072
+name: FCT_GROUPED_HEALTH_SCORES
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: UNION ALL
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c281ac18-5b0e-4258-adab-48cad574202e
+          stepCounter: cfa20f22-665d-4fc0-b86b-f04998f1d072
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the unique identifier for the account associated with the opportunity. 
+          - Sourced from the 'opportunity' table's 'account_id' column. 
+          - Used for joining and linking with the account table to access account-specific information.
+        name: account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7f0f499e-3efa-4301-8fdf-5d882543556c
+                stepCounter: 3a2ef2ef-4ad8-409b-8dd9-7fe934fe8cca
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b0556be2-8b26-4617-93c7-f3cfc7dba955
+          stepCounter: cfa20f22-665d-4fc0-b86b-f04998f1d072
+        config: {}
+        dataType: STRING
+        description: ""
+        name: account_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0a843a88-9997-4efb-a8cd-6613d9e30212
+                stepCounter: 3a2ef2ef-4ad8-409b-8dd9-7fe934fe8cca
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8a0474b1-b1bf-432c-b1b7-93336bc8a0ab
+          stepCounter: cfa20f22-665d-4fc0-b86b-f04998f1d072
+        config: {}
+        dataType: STRING
+        description: ""
+        name: arr_cohort
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 287a5449-2f4c-4cd9-87f4-a2722fcd2534
+                stepCounter: 3a2ef2ef-4ad8-409b-8dd9-7fe934fe8cca
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 16436cd4-dccb-4c9b-a756-d2f1b5221bfc
+          stepCounter: cfa20f22-665d-4fc0-b86b-f04998f1d072
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: account_tenure
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bbfab7d3-69fc-4992-bdf5-edb501e85835
+                stepCounter: 3a2ef2ef-4ad8-409b-8dd9-7fe934fe8cca
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c9d53bc5-0c69-477e-93ab-c6091142bb17
+          stepCounter: cfa20f22-665d-4fc0-b86b-f04998f1d072
+        config: {}
+        dataType: DATE
+        description: ""
+        name: metric_month
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 423be0de-31ba-448e-96c7-a146f88dab57
+                stepCounter: 3a2ef2ef-4ad8-409b-8dd9-7fe934fe8cca
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3dc0425a-f117-470e-90ab-4abe45a9b1c5
+          stepCounter: cfa20f22-665d-4fc0-b86b-f04998f1d072
+        config: {}
+        dataType: DOUBLE
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: satisfaction_health
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: SUM(CASE WHEN `metric_name` IN ('t3m_tickets','monthly_tickets') THEN (1 - `median_percent`) WHEN `metric_name` ilike 't6m_csat' THEN `median_percent` ELSE 0 END) / 3
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 02bf6d91-855d-4077-a30b-42ad60735ddb
+          stepCounter: cfa20f22-665d-4fc0-b86b-f04998f1d072
+        config: {}
+        dataType: DOUBLE
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: usage_health
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: SUM(CASE WHEN `metric_name` NOT IN ('monthly_tickets','t3m_tickets','t6m_csat') THEN `median_percent` ELSE 0 END) / 7
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 789b3fbf-408b-4de9-9450-4d4f0a5e63e0
+          stepCounter: cfa20f22-665d-4fc0-b86b-f04998f1d072
+        config: {}
+        dataType: DOUBLE
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: contract_health
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: (`FCT_CONTRACT_HEALTH`.`license_score` + `FCT_CONTRACT_HEALTH`.`expansion_score` + `FCT_CONTRACT_HEALTH`.`remaining_contract_score`) / 3
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TARGET
+            nodeName: FCT_CONTRACT_HEALTH
+          - locationName: TARGET
+            nodeName: FCT_HEALTH_METRICS_PERCENTILE
+        join:
+          joinCondition: |-
+            FROM {{ ref('TARGET', 'FCT_HEALTH_METRICS_PERCENTILE') }} `FCT_HEALTH_METRICS_PERCENTILE`
+            LEFT JOIN {{ ref('TARGET', 'FCT_CONTRACT_HEALTH') }} `FCT_CONTRACT_HEALTH`
+            ON `FCT_HEALTH_METRICS_PERCENTILE`.`account_id` = `FCT_CONTRACT_HEALTH`.`account_id`
+            AND `FCT_HEALTH_METRICS_PERCENTILE`.`metric_month` >= DATE_ADD(MONTH,-1,`FCT_CONTRACT_HEALTH`.`month_start`)
+            GROUP BY ALL
+        name: FCT_GROUPED_HEALTH_SCORES
+        noLinkRefs: []
+  name: FCT_GROUPED_HEALTH_SCORES
+  overrideSQL: false
+  schema: ""
+  sqlType: Fact
+  type: sql
+  version: 1
+type: Node

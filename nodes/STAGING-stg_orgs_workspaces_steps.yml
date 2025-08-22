@@ -1,0 +1,660 @@
+fileVersion: 1
+id: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+name: stg_orgs_workspaces_steps
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 50079c4d-4914-45ea-bea8-533e0dfee199
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: org_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: SPLIT_PART(`_meta/path`,'/', 7)
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 838b04d4-a503-458e-b0ef-be7a953d489a
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: workspace_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: SPLIT_PART(`_meta/path`,'/', 9)
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 651dba87-20d0-4ee8-ae2a-62f86149dc77
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: node_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: SPLIT_PART(`_meta/path`,'/', 11)
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ef78468c-9aa3-4eea-aaf3-1f2a0223af52
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: _meta_path
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ba3b277c-e701-48fd-94d7-bdc88a962a79
+                stepCounter: 6fc3143d-646c-472e-9b26-7045137b98f5
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3e44de3b-1859-4aee-b270-3f1ef1a28128
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: TIMESTAMP
+        description: |-
+          Flow Publication Time
+          Flow publication date-time of this document
+          auto-generated projection of JSON at: /_meta/uuid with inferred types: [string]
+        name: flow_published_at
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 99c27a76-cc32-4367-be92-3f304387545a
+                stepCounter: 6fc3143d-646c-472e-9b26-7045137b98f5
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5f167038-ffd9-404f-84ce-3b71eb666e8c
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: STRING
+        description: "user-provided projection of JSON at:  with inferred types: [object]"
+        name: flow_document
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5adac8be-3903-473e-9972-69cf01643d76
+                stepCounter: 6fc3143d-646c-472e-9b26-7045137b98f5
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5c6e8a23-831e-4a92-9a4c-39e983c078b7
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: config_downstreamOption
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: TRY_CAST(`orgs_workspaces_steps`.`flow_document`:`config`.`downstreamOption` AS BOOLEAN)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 47cc1096-52b3-45a2-b6a9-eed259701c9a
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: config_groupByAll
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: TRY_CAST(`orgs_workspaces_steps`.`flow_document`:`config`.`groupByAll` AS BOOLEAN)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 590f0d05-2c1e-4482-a883-e6a6cf79eed8
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: config_initialize
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`orgs_workspaces_steps`.`flow_document`:`config`.`initialize`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d4109a83-a4e8-48d7-8e74-bf0feb312859
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: config_insertStrategy
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`orgs_workspaces_steps`.`flow_document`:`config`.`insertStrategy`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7459df8e-ccee-4484-9652-b324cdacebec
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: config_objectType
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`orgs_workspaces_steps`.`flow_document`:`config`.`objectType`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c9518625-4b5c-402d-8712-897796b8a22e
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: config_overrideLagOption
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: TRY_CAST(`orgs_workspaces_steps`.`flow_document`:`config`.`overrideLagOption` AS BOOLEAN)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7ff96fcf-2b8f-4c48-9fcf-9217e559d1aa
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: config_refresh_mode
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`orgs_workspaces_steps`.`flow_document`:`config`.`refresh_mode`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f7191707-afb7-4c20-bea0-cd0a0bac5ac3
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: config_selectDistinct
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: TRY_CAST(`orgs_workspaces_steps`.`flow_document`:`config`.`selectDistinct` AS BOOLEAN)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 95f7e72b-3763-4e52-b78f-a0673afca659
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: createdAt
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`orgs_workspaces_steps`.`flow_document`:`createdAt`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 71de176d-9d3b-4990-84f5-2c1edec96cca
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: createdBy
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`orgs_workspaces_steps`.`flow_document`:`createdBy`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 303cbf33-b312-4b35-84cc-13a8f55992f2
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: database
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`orgs_workspaces_steps`.`flow_document`:`database`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0203dcb0-0d3d-4a3e-858d-976cbe59dcb4
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: dataset
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`orgs_workspaces_steps`.`flow_document`:`dataset`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 42daf727-3699-4e1f-81d0-15f21b53f288
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: deployEnabled
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: TRY_CAST(`orgs_workspaces_steps`.`flow_document`:`deployEnabled` AS BOOLEAN)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9281bd3c-7ac4-4555-81ab-b229082ec23d
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: description
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`orgs_workspaces_steps`.`flow_document`:`description`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a4588015-2bc6-41d1-b911-0da1ce8d180f
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: isMultisource
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: TRY_CAST(`orgs_workspaces_steps`.`flow_document`:`isMultisource` AS BOOLEAN)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 770cb21e-c7f4-4a6e-93a5-29274000cbc1
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: locationName
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`orgs_workspaces_steps`.`flow_document`:`locationName`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4bf578d5-c598-4649-bf12-1477ff6cb135
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: materializationType
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`orgs_workspaces_steps`.`flow_document`:`materializationType`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: eefab668-7f68-45ce-a599-b51d7dd4d4ce
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: metadata_cteString
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`orgs_workspaces_steps`.`flow_document`:`metadata`.`cteString`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fe33275e-752c-4b61-8bbb-dd290e4aefc3
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: metadata_description
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`orgs_workspaces_steps`.`flow_document`:`metadata`.`description`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 344da301-d707-4129-9d41-5bd192e15458
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: metadata_destinationName
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`orgs_workspaces_steps`.`flow_document`:`metadata`.`destinationName`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6ef535b6-724d-4a39-b633-97a1f40fba58
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: metadata_join_joinCondition
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`orgs_workspaces_steps`.`flow_document`:`metadata`.`join`.`joinCondition`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: eec2fe5c-4a8a-4f43-9f4a-dcae56179883
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: metadata_materializationOption
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`orgs_workspaces_steps`.`flow_document`:`metadata`.`materializationOption`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2b020a0a-e23d-4259-82cb-14dd0d9f01c9
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`orgs_workspaces_steps`.`flow_document`:`name`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a4a7a29e-b7d2-4ad0-b41e-886679e144f7
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: overrideSQL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: TRY_CAST(`orgs_workspaces_steps`.`flow_document`:`overrideSQL` AS BOOLEAN)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0d35c2bc-44f0-492d-be90-ecf561e1c74c
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: schema
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`orgs_workspaces_steps`.`flow_document`:`schema`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5a4921c9-87f0-4a64-8359-31199da76817
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: sqlType
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`orgs_workspaces_steps`.`flow_document`:`sqlType`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e093aa0f-c1e1-49b5-a300-55be5b88e2f1
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: table
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`orgs_workspaces_steps`.`flow_document`:`table`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b77135fd-df6a-467c-9cff-11e99ecd2349
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: type
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`orgs_workspaces_steps`.`flow_document`:`type`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7f01d6b5-9303-4d97-9086-7b8ec6ba6075
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: updatedAt
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`orgs_workspaces_steps`.`flow_document`:`updatedAt`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 01899cbf-1237-41d5-a454-ba29cfe30e93
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: updatedBy
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`orgs_workspaces_steps`.`flow_document`:`updatedBy`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 10daf9df-c20b-48e9-b4bf-f58b39dfb221
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: version
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`orgs_workspaces_steps`.`flow_document`:`version`::DOUBLE"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9805ccb6-7298-475a-8ddd-82450f8bbb8f
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: _meta_ctime
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`orgs_workspaces_steps`.`flow_document`:`_meta`.`ctime`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ad3ad1e8-7770-413b-a4b3-9e6b8ac8b123
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: _meta_mtime
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`orgs_workspaces_steps`.`flow_document`:`_meta`.`mtime`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 74351b61-2588-435d-b3f6-2aa7e1d70047
+          stepCounter: f4b4d0a4-fd74-4519-9d79-9207978a8b7d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: _meta_uuid
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`orgs_workspaces_steps`.`flow_document`:`_meta`.`uuid`::STRING"
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          orgs_workspaces_steps: 6fc3143d-646c-472e-9b26-7045137b98f5
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: COALESCE_APP
+            nodeName: orgs_workspaces_steps
+        join:
+          joinCondition: |-
+            FROM {{ ref('COALESCE_APP', 'orgs_workspaces_steps') }} `orgs_workspaces_steps` 
+            WHERE `orgs_workspaces_steps`.`flow_document`:`_meta`.`ctime` IS NOT NULL
+        name: stg_orgs_workspaces_steps
+        noLinkRefs: []
+  name: stg_orgs_workspaces_steps
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

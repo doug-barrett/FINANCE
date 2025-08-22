@@ -1,0 +1,218 @@
+fileVersion: 1
+id: 73f68051-33de-4cc9-b76a-202ee4153a88
+name: FCT_MONTHLY_ACCOUNT_ARR
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: UNION ALL
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1aedabdc-677b-4464-8bb7-9e19876aec7a
+          stepCounter: 73f68051-33de-4cc9-b76a-202ee4153a88
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the unique identifier for the account associated with the opportunity. 
+          - Sourced from the 'opportunity' table's 'account_id' column. 
+          - Used for joining and linking with the account table to access account-specific information.
+        name: account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f96f9cdf-a286-449e-9264-cdffad84625a
+                stepCounter: e39121ce-3919-4b48-8e46-2a418473827f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6609ceab-f15f-437f-92df-f6f1048900f3
+          stepCounter: 73f68051-33de-4cc9-b76a-202ee4153a88
+        config: {}
+        dataType: STRING
+        description: ""
+        name: account_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 29d54ec0-f6b8-41a7-b8eb-c6e32d7731d1
+                stepCounter: e39121ce-3919-4b48-8e46-2a418473827f
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 09a45e51-07a4-4e74-97c3-fa53015fa3ce
+          stepCounter: 73f68051-33de-4cc9-b76a-202ee4153a88
+        config: {}
+        dataType: DATE
+        description: ""
+        name: month_start
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e946d899-e731-44c2-ab6e-668d0654c3bd
+                stepCounter: e39121ce-3919-4b48-8e46-2a418473827f
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8e0bf8a1-35cb-43bc-9a2a-fc28ea0906de
+          stepCounter: 73f68051-33de-4cc9-b76a-202ee4153a88
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: starting_arr
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: COALESCE(SUM(CASE WHEN `STG_ARR_OPPS`.`date_closed` < month_start THEN `STG_ARR_OPPS`.`net_arr_converted` ELSE 0 END), 0)
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d459c019-11ea-4944-aa5e-f623811e3f39
+          stepCounter: 73f68051-33de-4cc9-b76a-202ee4153a88
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: new_business_arr
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: COALESCE(SUM(CASE WHEN `STG_ARR_OPPS`.`arr_type` ILIKE 'New Business' AND DATE_TRUNC('month',`STG_ARR_OPPS`.`date_closed`) = month_start THEN `STG_ARR_OPPS`.`net_arr_converted` ELSE 0 END), 0)
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d88420b4-e8aa-4bd8-873a-6f2a0b59710d
+          stepCounter: 73f68051-33de-4cc9-b76a-202ee4153a88
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: expansion_arr
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: COALESCE(SUM(CASE WHEN `STG_ARR_OPPS`.`arr_type` ILIKE 'Expansion' AND DATE_TRUNC('month',`STG_ARR_OPPS`.`date_closed`) = month_start THEN `STG_ARR_OPPS`.`net_arr_converted` ELSE 0 END), 0)
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ab548849-1953-4673-bfef-a70e7b54f135
+          stepCounter: 73f68051-33de-4cc9-b76a-202ee4153a88
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: contraction_arr
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: COALESCE(SUM(CASE WHEN `STG_ARR_OPPS`.`arr_type` ILIKE 'Contraction' AND DATE_TRUNC('month',`STG_ARR_OPPS`.`date_closed`) = month_start  THEN `STG_ARR_OPPS`.`net_arr_converted` ELSE 0 END), 0)
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c78f8432-c1f9-4f06-bdcc-6b860b9d6111
+          stepCounter: 73f68051-33de-4cc9-b76a-202ee4153a88
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: churn_arr
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: COALESCE(SUM(CASE WHEN `STG_ARR_OPPS`.`arr_type` ILIKE 'Churn' AND DATE_TRUNC('month',`STG_ARR_OPPS`.`date_closed`) = month_start  THEN `STG_ARR_OPPS`.`net_arr_converted` ELSE 0 END), 0)
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7fa62678-f968-4f1b-b761-b3c0e852ea07
+          stepCounter: 73f68051-33de-4cc9-b76a-202ee4153a88
+        config: {}
+        dataType: DECIMAL
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: ending_arr
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: COALESCE(SUM(CASE WHEN DATE_TRUNC('month',`STG_ARR_OPPS`.`date_closed`) <= month_start THEN `STG_ARR_OPPS`.`net_arr_converted` ELSE 0 END), 0)
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_ACCOUNT_MONTHS: e39121ce-3919-4b48-8e46-2a418473827f
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STAGING
+            nodeName: STG_ACCOUNT_MONTHS
+          - locationName: STAGING
+            nodeName: STG_ARR_OPPS
+        join:
+          joinCondition: |-
+            FROM {{ ref('STAGING', 'STG_ACCOUNT_MONTHS') }} `STG_ACCOUNT_MONTHS`
+            INNER JOIN {{ ref('STAGING', 'STG_ARR_OPPS') }} `STG_ARR_OPPS`
+            ON `STG_ACCOUNT_MONTHS`.`account_id` = `STG_ARR_OPPS`.`account_id`
+            GROUP BY `STG_ACCOUNT_MONTHS`.`account_id`,`STG_ACCOUNT_MONTHS`.`account_name`,`STG_ACCOUNT_MONTHS`.`month_start`
+            ORDER BY `STG_ACCOUNT_MONTHS`.`account_id`, `STG_ACCOUNT_MONTHS`.`month_start` asc
+        name: FCT_MONTHLY_ACCOUNT_ARR
+        noLinkRefs: []
+  name: FCT_MONTHLY_ACCOUNT_ARR
+  overrideSQL: false
+  schema: ""
+  sqlType: Fact
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,208 @@
+fileVersion: 1
+id: 8df87776-f842-4f75-8e61-21a146c068d2
+name: stg_role_org
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fda97520-5229-4331-a097-4fa05b1d13c1
+          stepCounter: 8df87776-f842-4f75-8e61-21a146c068d2
+        config: {}
+        dataType: STRING
+        description: ""
+        name: org_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: split(`_meta/path`,'/')[6]
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f01c389c-25e2-4b72-b6fa-e264e587c845
+          stepCounter: 8df87776-f842-4f75-8e61-21a146c068d2
+        config: {}
+        dataType: STRING
+        description: ""
+        name: user_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: split(`_meta/path`,'/')[8]
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f9829fd0-6c77-4c36-b810-c1c9b5eef73e
+          stepCounter: 8df87776-f842-4f75-8e61-21a146c068d2
+        config: {}
+        dataType: STRING
+        description: ""
+        name: app_org_role
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`app_org_role`"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b0f890e4-f73c-4539-9b8d-462364d82e45
+          stepCounter: 8df87776-f842-4f75-8e61-21a146c068d2
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: created_at
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "`flow_document`:`createdAt`::TIMESTAMP"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1027e701-15b4-45ef-9dd4-ffc54b09682d
+          stepCounter: 8df87776-f842-4f75-8e61-21a146c068d2
+        config: {}
+        dataType: STRING
+        description: ""
+        name: created_by
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "`flow_document`:`createdBy`::STRING"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 92b86b7d-e30e-4cce-8bc0-94e35d39cee3
+          stepCounter: 8df87776-f842-4f75-8e61-21a146c068d2
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: updated_at
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "`flow_document`:`updatedAt`::TIMESTAMP"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 87ab3f98-1168-4ff6-a68b-ce9ae4ab5d5e
+          stepCounter: 8df87776-f842-4f75-8e61-21a146c068d2
+        config: {}
+        dataType: STRING
+        description: ""
+        name: updated_by
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "`flow_document`:`updatedBy`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bf835a03-e9c7-4eb0-b6c4-abbed5a3ba38
+          stepCounter: 8df87776-f842-4f75-8e61-21a146c068d2
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: firestore_env
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "{{ firestore_label(column_name='`_meta/path`') }}"
+        systemColumnType: None
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5f52b4a4-5b63-463b-8adf-b6b7837145c3
+          stepCounter: 8df87776-f842-4f75-8e61-21a146c068d2
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: _meta_mtime
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "`flow_document`:`_meta`.`mtime`::TIMESTAMP"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8b80a211-9f2a-417c-b2ee-66b583f67efe
+          stepCounter: 8df87776-f842-4f75-8e61-21a146c068d2
+        config: {}
+        dataType: STRING
+        description: |-
+          Document Path
+          Fully qualified document path including Project ID and database name.
+          auto-generated projection of JSON at: /_meta/path with inferred types: [string]
+        name: _meta/path
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a7e0f23d-cb2d-43cd-b9af-f2cec8db2ad1
+                stepCounter: b15e8d6a-ec1d-4884-80fa-60cfe30e9e8d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 76fcf5a4-1e89-4f3d-a503-14bdaaa3a8a2
+          stepCounter: 8df87776-f842-4f75-8e61-21a146c068d2
+        config: {}
+        dataType: TIMESTAMP
+        description: |-
+          Flow Publication Time
+          Flow publication date-time of this document
+          auto-generated projection of JSON at: /_meta/uuid with inferred types: [string]
+        name: flow_published_at
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fc548f81-fd94-4ab3-9965-256139ae8262
+                stepCounter: b15e8d6a-ec1d-4884-80fa-60cfe30e9e8d
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          orgs_userroles: b15e8d6a-ec1d-4884-80fa-60cfe30e9e8d
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: COALESCE_APP
+            nodeName: orgs_userroles
+        join:
+          joinCondition: |-
+            FROM {{ ref('COALESCE_APP', 'orgs_userroles') }} `orgs_userroles`
+            LATERAL VIEW explode(from_json(flow_document:`organizationRoles`, 'array<string>')) t AS app_org_role
+            WHERE app_org_role IS NOT NULL
+            QUALIFY
+              row_number() OVER (
+                PARTITION BY `_meta/path`
+                ORDER BY to_timestamp(get_json_object(flow_document, '$._meta.mtime')) DESC
+              ) = 1
+        name: stg_role_org
+        noLinkRefs: []
+  name: stg_role_org
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

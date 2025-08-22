@@ -1,0 +1,301 @@
+fileVersion: 1
+id: b0f6795b-35ae-4328-89d2-8897b95d59c4
+name: stg_pylon_tickets_accounts
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9359a2e5-83e5-41dc-9279-3c4b22e1ea6b
+          stepCounter: b0f6795b-35ae-4328-89d2-8897b95d59c4
+        config: {}
+        dataType: STRING
+        description: ""
+        name: ticket_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fd0f60b2-984e-4de5-8512-f215c372b797
+                stepCounter: 7cc34f51-f11b-4102-9040-e0e33b1b65f9
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 16c7f0a4-eef3-4a9f-8857-a9558a62ee39
+          stepCounter: b0f6795b-35ae-4328-89d2-8897b95d59c4
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: org_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3cf365db-538d-40ec-8bfd-0ec53114f323
+                stepCounter: 8f6eb510-13f4-4ca5-8e55-58d7bd2ca081
+            transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b061feba-a35c-47cd-a2e0-8c9e45cc267a
+          stepCounter: b0f6795b-35ae-4328-89d2-8897b95d59c4
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: caa5c400-6886-4704-960a-420bc6e83c49
+                stepCounter: f5e6b2af-5872-4209-b8b4-1d2e67752e04
+            transform: ""
+        systemColumnType: None
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 06f5bb80-5fca-43ab-8130-5765b473629a
+          stepCounter: b0f6795b-35ae-4328-89d2-8897b95d59c4
+        config: {}
+        dataType: INT
+        description: ""
+        name: ticket_number
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 57d987ff-9df7-48c1-b3d2-cc7c6bab6525
+                stepCounter: 7cc34f51-f11b-4102-9040-e0e33b1b65f9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f2284589-3eb6-468e-83fd-d6e99b6e20c7
+          stepCounter: b0f6795b-35ae-4328-89d2-8897b95d59c4
+        config: {}
+        dataType: STRING
+        description: ""
+        name: assignee_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9e0ef308-d2fa-4db4-a88c-8caf9af567ee
+                stepCounter: 7cc34f51-f11b-4102-9040-e0e33b1b65f9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 674de32c-2583-44a0-b44f-a8ac9c6e498d
+          stepCounter: b0f6795b-35ae-4328-89d2-8897b95d59c4
+        config: {}
+        dataType: STRING
+        description: ""
+        name: pylon_account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7c1b3b6b-784b-4ea8-8f33-9651b38c8067
+                stepCounter: 7cc34f51-f11b-4102-9040-e0e33b1b65f9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9b4093de-d19d-4a9d-90df-d4b8c11179ca
+          stepCounter: b0f6795b-35ae-4328-89d2-8897b95d59c4
+        config: {}
+        dataType: STRING
+        description: ""
+        name: requester_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5055b369-3688-4a8a-8deb-438baf1d5d0a
+                stepCounter: 7cc34f51-f11b-4102-9040-e0e33b1b65f9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f2d81d5c-ce4d-4565-9f75-ce11a3cd209b
+          stepCounter: b0f6795b-35ae-4328-89d2-8897b95d59c4
+        config: {}
+        dataType: STRING
+        description: ""
+        name: status
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 93931df9-5ec4-4809-bfba-019df14fa3a8
+                stepCounter: 7cc34f51-f11b-4102-9040-e0e33b1b65f9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7057ec6f-beda-4bc6-be24-a0f3a3b58e21
+          stepCounter: b0f6795b-35ae-4328-89d2-8897b95d59c4
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: created_at
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1da6a0f4-1898-435c-b5d0-222b154015db
+                stepCounter: 7cc34f51-f11b-4102-9040-e0e33b1b65f9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 20e03621-1a40-4e50-bb4e-5887ec465827
+          stepCounter: b0f6795b-35ae-4328-89d2-8897b95d59c4
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: first_response_time
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b2822992-4b7e-4097-ab58-05f4267e54a4
+                stepCounter: 7cc34f51-f11b-4102-9040-e0e33b1b65f9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0b3680ef-ada0-41db-80a8-a90577b0e9e7
+          stepCounter: b0f6795b-35ae-4328-89d2-8897b95d59c4
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: latest_message_time
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 643d0504-0e75-4107-8045-c93fd834fc85
+                stepCounter: 7cc34f51-f11b-4102-9040-e0e33b1b65f9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 72866e30-444f-430b-abc3-cc351e60b022
+          stepCounter: b0f6795b-35ae-4328-89d2-8897b95d59c4
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: resolution_time
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 35eadafb-2e9d-4b1f-b55c-8b95274932d3
+                stepCounter: 7cc34f51-f11b-4102-9040-e0e33b1b65f9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ae54d4f2-4864-47e5-a78b-a420789a64b5
+          stepCounter: b0f6795b-35ae-4328-89d2-8897b95d59c4
+        config: {}
+        dataType: STRING
+        description: ""
+        name: slack_channel_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4ab2859c-a261-49f2-b6c2-cd3b96474bc4
+                stepCounter: 7cc34f51-f11b-4102-9040-e0e33b1b65f9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6b1bb9a4-38f0-4d2a-89e1-861113e77874
+          stepCounter: b0f6795b-35ae-4328-89d2-8897b95d59c4
+        config: {}
+        dataType: STRING
+        description: ""
+        name: title
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 30671d37-0baf-472d-822e-b6a0601ce774
+                stepCounter: 7cc34f51-f11b-4102-9040-e0e33b1b65f9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f3c739f7-49ab-47f8-97ee-f7ac758ffe58
+          stepCounter: b0f6795b-35ae-4328-89d2-8897b95d59c4
+        config: {}
+        dataType: STRING
+        description: ""
+        name: type
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2abcbfde-e26b-4e11-b2aa-75f310c123cb
+                stepCounter: 7cc34f51-f11b-4102-9040-e0e33b1b65f9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bd294028-ba4b-4cd6-907e-e54613cd430f
+          stepCounter: b0f6795b-35ae-4328-89d2-8897b95d59c4
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: _fivetran_deleted
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ca9a33e9-83f6-42aa-85e1-6761958829ff
+                stepCounter: 7cc34f51-f11b-4102-9040-e0e33b1b65f9
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 12fb7952-562a-4b23-b935-d2984648b9f1
+          stepCounter: b0f6795b-35ae-4328-89d2-8897b95d59c4
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: _fivetran_synced
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 22ddb461-644e-4174-8c60-07d5beac5de1
+                stepCounter: 7cc34f51-f11b-4102-9040-e0e33b1b65f9
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          issue: 7cc34f51-f11b-4102-9040-e0e33b1b65f9
+          stg_coalesce_orgs: f5e6b2af-5872-4209-b8b4-1d2e67752e04
+          stg_pylon_accounts: 8f6eb510-13f4-4ca5-8e55-58d7bd2ca081
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: PYLON
+            nodeName: issue
+          - locationName: STAGING
+            nodeName: STG_COALESCE_ORGS
+          - locationName: STAGING
+            nodeName: stg_pylon_accounts
+        join:
+          joinCondition: |-
+            FROM {{ ref('PYLON', 'issue') }} `issue`
+            LEFT JOIN {{ ref('STAGING', 'stg_pylon_accounts') }} `stg_pylon_accounts`
+            ON `issue`.`account_id` = `stg_pylon_accounts`.`pylon_account_id`
+            LEFT JOIN {{ ref('STAGING', 'STG_COALESCE_ORGS') }} `stg_coalesce_orgs` 
+            ON `stg_pylon_accounts`.`org_id` = `stg_coalesce_orgs`.`org_id`
+        name: stg_pylon_tickets_accounts
+        noLinkRefs: []
+  name: stg_pylon_tickets_accounts
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

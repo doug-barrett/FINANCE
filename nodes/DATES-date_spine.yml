@@ -1,0 +1,33 @@
+fileVersion: 1
+id: 6394f522-a17f-462b-a935-267bd2ed1fd0
+name: date_spine
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: DATES
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c86a5297-00e1-4a2e-9500-7d4685f74e6c
+          stepCounter: 6394f522-a17f-462b-a935-267bd2ed1fd0
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: date_ts
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+  name: date_spine
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

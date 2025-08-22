@@ -1,0 +1,502 @@
+fileVersion: 1
+id: 367a37bb-c02a-4916-bb2d-9160ed272174
+name: stg_app_users
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6b3d605d-5199-4372-ad3c-41226d9aec29
+          stepCounter: 367a37bb-c02a-4916-bb2d-9160ed272174
+        config: {}
+        dataType: STRING
+        description: |-
+          Document Path
+          Fully qualified document path including Project ID and database name.
+          auto-generated projection of JSON at: /_meta/path with inferred types: [string]
+        name: _meta/path
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b24433d2-1687-4efa-b2a8-48d039ba61dd
+                stepCounter: 1d51da75-988c-4bec-9bea-978a4ed24461
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8d2c7603-db37-47f2-abdb-023777ea9bc4
+          stepCounter: 367a37bb-c02a-4916-bb2d-9160ed272174
+        config: {}
+        dataType: TIMESTAMP
+        description: |-
+          Flow Publication Time
+          Flow publication date-time of this document
+          auto-generated projection of JSON at: /_meta/uuid with inferred types: [string]
+        name: flow_published_at
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1f2b19b6-6b87-4414-84c4-ebf089b0a942
+                stepCounter: 1d51da75-988c-4bec-9bea-978a4ed24461
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 354d805b-3389-4273-9ae9-d8e46cdfa346
+          stepCounter: 367a37bb-c02a-4916-bb2d-9160ed272174
+        config: {}
+        dataType: STRING
+        description: "user-provided projection of JSON at:  with inferred types: [object]"
+        name: flow_document
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c8017374-5ce6-4093-b4f4-ac010f81b298
+                stepCounter: 1d51da75-988c-4bec-9bea-978a4ed24461
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 69957168-87e7-418c-9de7-4b7ab379885e
+          stepCounter: 367a37bb-c02a-4916-bb2d-9160ed272174
+        config: {}
+        dataType: STRING
+        description: ""
+        name: accountType
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`users`.`flow_document`:`accountType`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a561f830-ba43-4fb8-8f20-fb8dede049c6
+          stepCounter: 367a37bb-c02a-4916-bb2d-9160ed272174
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: activated
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`users`.`flow_document`:`activated`::BOOLEAN"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: da0a71c5-2b77-40bf-a8b9-df89b1d619ef
+          stepCounter: 367a37bb-c02a-4916-bb2d-9160ed272174
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: authDisabled
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`users`.`flow_document`:`authDisabled`::BOOLEAN"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ccaeb4b5-cdc2-40cf-a1d2-e15091d0b24d
+          stepCounter: 367a37bb-c02a-4916-bb2d-9160ed272174
+        config: {}
+        dataType: STRING
+        description: ""
+        name: createdAt
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`users`.`flow_document`:`createdAt`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9e2ec8e8-fb0e-4ac8-bb40-c30cfd533fcf
+          stepCounter: 367a37bb-c02a-4916-bb2d-9160ed272174
+        config: {}
+        dataType: STRING
+        description: ""
+        name: createdBy
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`users`.`flow_document`:`createdBy`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e0d5fbc0-d48f-419f-89dc-43213824c77e
+          stepCounter: 367a37bb-c02a-4916-bb2d-9160ed272174
+        config: {}
+        dataType: STRING
+        description: ""
+        name: currentTeam
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`users`.`flow_document`:`currentTeam`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a82851f8-e3c3-4af9-9a6e-f29c69112f7f
+          stepCounter: 367a37bb-c02a-4916-bb2d-9160ed272174
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: deleted
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`users`.`flow_document`:`deleted`::BOOLEAN"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d0aeadeb-d905-48aa-8e8f-dcf9718df3e3
+          stepCounter: 367a37bb-c02a-4916-bb2d-9160ed272174
+        config: {}
+        dataType: STRING
+        description: ""
+        name: email
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`users`.`flow_document`:`email`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 90b54f14-6d94-4dd5-8895-f5b25cc3b1fc
+          stepCounter: 367a37bb-c02a-4916-bb2d-9160ed272174
+        config: {}
+        dataType: STRING
+        description: ""
+        name: firstName
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`users`.`flow_document`:`firstName`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 07ae7760-b27e-44db-b725-80bb8c19e03f
+          stepCounter: 367a37bb-c02a-4916-bb2d-9160ed272174
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: hasProvisioningAccess
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`users`.`flow_document`:`hasProvisioningAccess`::BOOLEAN"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c636eaf1-f374-4942-9677-7335b10012d7
+          stepCounter: 367a37bb-c02a-4916-bb2d-9160ed272174
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: hasSuperUserAccess
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`users`.`flow_document`:`hasSuperUserAccess`::BOOLEAN"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f73f3173-8493-4e60-9a85-ce1c337fd62e
+          stepCounter: 367a37bb-c02a-4916-bb2d-9160ed272174
+        config: {}
+        dataType: STRING
+        description: ""
+        name: lastName
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`users`.`flow_document`:`lastName`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9e9d64b9-c69f-4d83-b1f2-7fbcf22ee8ed
+          stepCounter: 367a37bb-c02a-4916-bb2d-9160ed272174
+        config: {}
+        dataType: STRING
+        description: ""
+        name: phoneNumber
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`users`.`flow_document`:`phoneNumber`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bdd41f0e-dd58-4950-b3b7-757d9c4afb84
+          stepCounter: 367a37bb-c02a-4916-bb2d-9160ed272174
+        config: {}
+        dataType: STRING
+        description: ""
+        name: role
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`users`.`flow_document`:`role`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0d648d91-f0b9-4ea3-8d78-f266dcb1bc0b
+          stepCounter: 367a37bb-c02a-4916-bb2d-9160ed272174
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: setPassword
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`users`.`flow_document`:`setPassword`::BOOLEAN"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1e9bc0b1-f959-4579-9451-2715110eac07
+          stepCounter: 367a37bb-c02a-4916-bb2d-9160ed272174
+        config: {}
+        dataType: STRING
+        description: ""
+        name: updatedAt
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`users`.`flow_document`:`updatedAt`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 10a78209-e4a7-429b-84d9-0fa64a572036
+          stepCounter: 367a37bb-c02a-4916-bb2d-9160ed272174
+        config: {}
+        dataType: STRING
+        description: ""
+        name: updatedBy
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`users`.`flow_document`:`updatedBy`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7dca6234-303f-4ff7-9a32-5ed1bf2c4dac
+          stepCounter: 367a37bb-c02a-4916-bb2d-9160ed272174
+        config: {}
+        dataType: STRING
+        description: ""
+        name: userID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`users`.`flow_document`:`userID`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a8a69940-daa2-4e12-9c7b-78572d1e1d90
+          stepCounter: 367a37bb-c02a-4916-bb2d-9160ed272174
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: version
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`users`.`flow_document`:`version`::DOUBLE"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0e3efb1a-1b4b-4770-a954-f16d0fd4b340
+          stepCounter: 367a37bb-c02a-4916-bb2d-9160ed272174
+        config: {}
+        dataType: STRING
+        description: ""
+        name: _meta_ctime
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`users`.`flow_document`:`_meta`.`ctime`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5ee8383c-92b0-4a36-b8a4-bb625a7bda94
+          stepCounter: 367a37bb-c02a-4916-bb2d-9160ed272174
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: _meta_delete
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`users`.`flow_document`:`_meta`.`delete`::BOOLEAN"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5d7ccadc-db05-47ef-8965-a03b2f761d1e
+          stepCounter: 367a37bb-c02a-4916-bb2d-9160ed272174
+        config: {}
+        dataType: STRING
+        description: ""
+        name: _meta_mtime
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`users`.`flow_document`:`_meta`.`mtime`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a597379f-9c21-449c-9bf8-5d950d883e60
+          stepCounter: 367a37bb-c02a-4916-bb2d-9160ed272174
+        config: {}
+        dataType: STRING
+        description: ""
+        name: _meta_path
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`users`.`flow_document`:`_meta`.`path`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 11de0f74-39fd-45d3-9903-909481136874
+          stepCounter: 367a37bb-c02a-4916-bb2d-9160ed272174
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: _meta_snapshot
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`users`.`flow_document`:`_meta`.`snapshot`::BOOLEAN"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f7c88859-0be8-492a-a2e8-f688e4a45226
+          stepCounter: 367a37bb-c02a-4916-bb2d-9160ed272174
+        config: {}
+        dataType: STRING
+        description: ""
+        name: _meta_uuid
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: "`users`.`flow_document`:`_meta`.`uuid`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bc889709-1d99-432e-9e18-c477a64aab7a
+          stepCounter: 367a37bb-c02a-4916-bb2d-9160ed272174
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: firestore_env
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "{{ firestore_label() }}"
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c5e882f9-71ea-40d6-82d8-564ad66e9156
+          stepCounter: 367a37bb-c02a-4916-bb2d-9160ed272174
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: internal_user
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: CONTAINS(LOWER(flow_document::STRING), '@coalesce')
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: COALESCE_APP
+            nodeName: users
+        join:
+          joinCondition: FROM {{ ref('COALESCE_APP', 'users') }} `users`
+        name: stg_app_users
+        noLinkRefs: []
+  name: stg_app_users
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,260 @@
+fileVersion: 1
+id: fefcbad6-9225-4f6e-9ebf-91472ae5879d
+name: FCT_TOTAL_HEALTH_PERCENTILE
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: UNION ALL
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 18efed29-c839-4c3b-bf85-a9379c683918
+          stepCounter: fefcbad6-9225-4f6e-9ebf-91472ae5879d
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the unique identifier for the account associated with the opportunity. 
+          - Sourced from the 'opportunity' table's 'account_id' column. 
+          - Used for joining and linking with the account table to access account-specific information.
+        name: account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a97ef441-8ba4-4926-875b-11aa374201ef
+                stepCounter: 6bf82351-5e74-4492-90ef-0db043417530
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e0b74e64-0fe6-4358-a056-52e2821f0c6e
+          stepCounter: fefcbad6-9225-4f6e-9ebf-91472ae5879d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: account_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9cd1bed0-97b0-43ea-bb7c-9116b63666f9
+                stepCounter: 6bf82351-5e74-4492-90ef-0db043417530
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8a278d9c-2134-464b-8535-58736e27bfe7
+          stepCounter: fefcbad6-9225-4f6e-9ebf-91472ae5879d
+        config: {}
+        dataType: STRING
+        description: ""
+        name: arr_cohort
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fbbef136-ecfc-405e-bbfd-18d85da811d1
+                stepCounter: 6bf82351-5e74-4492-90ef-0db043417530
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e4f8bd08-7219-4942-9a69-4e54b711db07
+          stepCounter: fefcbad6-9225-4f6e-9ebf-91472ae5879d
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: account_tenure
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 34a797fd-a969-4f28-b932-e8aa7034df13
+                stepCounter: 6bf82351-5e74-4492-90ef-0db043417530
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 97bda348-b94d-4859-9de7-39a2838cc0ca
+          stepCounter: fefcbad6-9225-4f6e-9ebf-91472ae5879d
+        config: {}
+        dataType: DATE
+        description: ""
+        name: metric_month
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a1c1a4f0-c0d8-4170-9a24-801beb2866cd
+                stepCounter: 6bf82351-5e74-4492-90ef-0db043417530
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 140f7f6f-c554-47c3-9730-1b22dd2ebb10
+          stepCounter: fefcbad6-9225-4f6e-9ebf-91472ae5879d
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: satisfaction_health
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 20b9f219-3044-48cb-ba24-1ac4ca19282e
+                stepCounter: 6bf82351-5e74-4492-90ef-0db043417530
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9ca4e96a-4c25-49d1-b36f-f4792c603f9f
+          stepCounter: fefcbad6-9225-4f6e-9ebf-91472ae5879d
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: usage_health
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c2dc4ebb-ef47-47a4-b7c3-e682fca9eec8
+                stepCounter: 6bf82351-5e74-4492-90ef-0db043417530
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 11f42395-a30f-4034-85d2-7d45370db83a
+          stepCounter: fefcbad6-9225-4f6e-9ebf-91472ae5879d
+        config: {}
+        dataType: DOUBLE
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: contract_health
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3659c177-7aaf-4aae-a640-80f2a1c65d65
+                stepCounter: 6bf82351-5e74-4492-90ef-0db043417530
+            transform: ""
+        systemColumnType: None
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: da0f39eb-8fe5-42f3-8c44-06ca3d057acb
+          stepCounter: fefcbad6-9225-4f6e-9ebf-91472ae5879d
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: total_health
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7bfd6ddb-b2bb-44ca-8ec1-545acc660fb5
+                stepCounter: 6bf82351-5e74-4492-90ef-0db043417530
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 36c71b4b-717e-45c7-a129-958275379274
+          stepCounter: fefcbad6-9225-4f6e-9ebf-91472ae5879d
+        config: {}
+        dataType: DOUBLE
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: satisfaction_health_percentile
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: CASE WHEN MAX(CASE WHEN `account_tenure` > 6 THEN `satisfaction_health` ELSE NULL END) OVER (PARTITION BY `arr_cohort` ORDER BY `metric_month` RANGE BETWEEN INTERVAL '12 months' PRECEDING AND CURRENT ROW) > 0 THEN `satisfaction_health` * 1 / MAX(CASE WHEN `account_tenure` > 6 THEN `satisfaction_health` ELSE NULL END) OVER (PARTITION BY `arr_cohort` ORDER BY `metric_month` RANGE BETWEEN INTERVAL '12 months' PRECEDING AND CURRENT ROW) END
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d680d8f8-d7ee-4060-89c1-32cfc9e44c6c
+          stepCounter: fefcbad6-9225-4f6e-9ebf-91472ae5879d
+        config: {}
+        dataType: DOUBLE
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: usage_health_percentile
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: CASE WHEN MAX(CASE WHEN `account_tenure` > 6 THEN `usage_health` ELSE NULL END) OVER (PARTITION BY `arr_cohort` ORDER BY `metric_month` RANGE BETWEEN INTERVAL '12 months' PRECEDING AND CURRENT ROW) > 0 THEN `usage_health` * 1 / MAX(CASE WHEN `account_tenure` > 6 THEN `usage_health` ELSE NULL END) OVER (PARTITION BY `arr_cohort` ORDER BY `metric_month` RANGE BETWEEN INTERVAL '12 months' PRECEDING AND CURRENT ROW) END
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4cc08447-3f8f-4f64-8212-f557e6a832e8
+          stepCounter: fefcbad6-9225-4f6e-9ebf-91472ae5879d
+        config: {}
+        dataType: DOUBLE
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: contract_health_percentile
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: CASE WHEN MAX(CASE WHEN `account_tenure` > 6 THEN `contract_health` ELSE NULL END) OVER (PARTITION BY `arr_cohort`) > 0 THEN `contract_health` * 1 / MAX(CASE WHEN `account_tenure` > 6 THEN `usage_health` ELSE NULL END) OVER (PARTITION BY `arr_cohort`) END
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 215b8d11-74f8-4d8f-a22b-88dc845a5851
+          stepCounter: fefcbad6-9225-4f6e-9ebf-91472ae5879d
+        config: {}
+        dataType: DOUBLE
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: total_health_percentile
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: CASE WHEN MAX(CASE WHEN `account_tenure` > 6 THEN `total_health` ELSE NULL END) OVER (PARTITION BY `arr_cohort` ORDER BY `metric_month` RANGE BETWEEN INTERVAL '12 months' PRECEDING AND CURRENT ROW) > 0 THEN `total_health` * 1 / MAX(CASE WHEN `account_tenure` > 6 THEN `total_health` ELSE NULL END) OVER (PARTITION BY `arr_cohort` ORDER BY `metric_month` RANGE BETWEEN INTERVAL '12 months' PRECEDING AND CURRENT ROW) END
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TARGET
+            nodeName: FCT_TOTAL_HEALTH_SCORE
+        join:
+          joinCondition: FROM {{ ref('TARGET', 'FCT_TOTAL_HEALTH_SCORE') }} `FCT_TOTAL_HEALTH_SCORE`
+        name: FCT_TOTAL_HEALTH_PERCENTILE
+        noLinkRefs: []
+  name: FCT_TOTAL_HEALTH_PERCENTILE
+  overrideSQL: false
+  schema: ""
+  sqlType: Fact
+  type: sql
+  version: 1
+type: Node

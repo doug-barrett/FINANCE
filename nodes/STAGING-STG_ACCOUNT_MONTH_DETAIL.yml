@@ -1,0 +1,128 @@
+fileVersion: 1
+id: 5042476b-f373-45bd-8ff5-fac59ae70197
+name: STG_ACCOUNT_MONTH_DETAIL
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a2205b1b-9985-40c0-8e6b-c538d1cb703a
+          stepCounter: 5042476b-f373-45bd-8ff5-fac59ae70197
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the unique identifier for the account associated with the opportunity. 
+          - Sourced from the 'opportunity' table's 'account_id' column. 
+          - Used for joining and linking with the account table to access account-specific information.
+        name: account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1aedabdc-677b-4464-8bb7-9e19876aec7a
+                stepCounter: 73f68051-33de-4cc9-b76a-202ee4153a88
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cefcd3dc-59ca-41ff-a318-8c168859b8bd
+          stepCounter: 5042476b-f373-45bd-8ff5-fac59ae70197
+        config: {}
+        dataType: STRING
+        description: ""
+        name: account_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6609ceab-f15f-437f-92df-f6f1048900f3
+                stepCounter: 73f68051-33de-4cc9-b76a-202ee4153a88
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3754d78d-bf9d-472d-964f-e6b3059f117b
+          stepCounter: 5042476b-f373-45bd-8ff5-fac59ae70197
+        config: {}
+        dataType: DATE
+        description: ""
+        name: month_start
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 09a45e51-07a4-4e74-97c3-fa53015fa3ce
+                stepCounter: 73f68051-33de-4cc9-b76a-202ee4153a88
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 077efbf6-2b8a-4646-9bfa-c0d6ee16e246
+          stepCounter: 5042476b-f373-45bd-8ff5-fac59ae70197
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: arr_cohort
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: CASE WHEN `FCT_MONTHLY_ACCOUNT_ARR`.`ending_arr` > 100000 THEN '100K+' WHEN `FCT_MONTHLY_ACCOUNT_ARR`.`ending_arr` > 50000 THEN '50K-100K' WHEN `FCT_MONTHLY_ACCOUNT_ARR`.`ending_arr` > 30000 THEN '30K-50K' WHEN `FCT_MONTHLY_ACCOUNT_ARR`.`ending_arr` > 0 THEN '0-30K' ELSE NULL END
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8d87bb61-5da4-49b9-8ba2-fda351bd8b91
+          stepCounter: 5042476b-f373-45bd-8ff5-fac59ae70197
+        config: {}
+        dataType: INTEGER
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: account_tenure
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: FLOOR(MONTHS_BETWEEN(`FCT_MONTHLY_ACCOUNT_ARR`.`month_start`,FIRST_VALUE(`FCT_MONTHLY_ACCOUNT_ARR`.`month_start`) OVER (PARTITION BY `FCT_MONTHLY_ACCOUNT_ARR`.`account_id` ORDER BY `FCT_MONTHLY_ACCOUNT_ARR`.`month_start` ASC))) + 1
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          FCT_MONTHLY_ACCOUNT_ARR: 73f68051-33de-4cc9-b76a-202ee4153a88
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TARGET
+            nodeName: FCT_MONTHLY_ACCOUNT_ARR
+        join:
+          joinCondition: |-
+            FROM {{ ref('TARGET', 'FCT_MONTHLY_ACCOUNT_ARR') }} `FCT_MONTHLY_ACCOUNT_ARR`
+            WHERE `FCT_MONTHLY_ACCOUNT_ARR`.`ending_arr` > 0 
+            ORDER BY `FCT_MONTHLY_ACCOUNT_ARR`.`account_id` asc, `FCT_MONTHLY_ACCOUNT_ARR`.`month_start` asc
+        name: STG_ACCOUNT_MONTH_DETAIL
+        noLinkRefs: []
+  name: STG_ACCOUNT_MONTH_DETAIL
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

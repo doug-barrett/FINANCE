@@ -1,0 +1,184 @@
+fileVersion: 1
+id: 04cf093c-b308-4620-b42e-8b9b37fe6b74
+name: FCT_MONTHLY_NODES_BUILT
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: UNION ALL
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b60dd383-780b-4ee7-a293-4ea4d7b5a3bb
+          stepCounter: 04cf093c-b308-4620-b42e-8b9b37fe6b74
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the unique identifier for the account associated with the opportunity. 
+          - Sourced from the 'opportunity' table's 'account_id' column. 
+          - Used for joining and linking with the account table to access account-specific information.
+        name: account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a2205b1b-9985-40c0-8e6b-c538d1cb703a
+                stepCounter: 5042476b-f373-45bd-8ff5-fac59ae70197
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0c294d13-37e4-4cd7-a008-40a0d265053f
+          stepCounter: 04cf093c-b308-4620-b42e-8b9b37fe6b74
+        config: {}
+        dataType: STRING
+        description: ""
+        name: account_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cefcd3dc-59ca-41ff-a318-8c168859b8bd
+                stepCounter: 5042476b-f373-45bd-8ff5-fac59ae70197
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c7f412d6-8307-4aea-9441-a18962d709ec
+          stepCounter: 04cf093c-b308-4620-b42e-8b9b37fe6b74
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: arr_cohort
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 077efbf6-2b8a-4646-9bfa-c0d6ee16e246
+                stepCounter: 5042476b-f373-45bd-8ff5-fac59ae70197
+            transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 834ad4a2-2236-4615-84dc-79b5121b1396
+          stepCounter: 04cf093c-b308-4620-b42e-8b9b37fe6b74
+        config: {}
+        dataType: INTEGER
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: account_tenure
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8d87bb61-5da4-49b9-8ba2-fda351bd8b91
+                stepCounter: 5042476b-f373-45bd-8ff5-fac59ae70197
+            transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 12e4053d-778a-465e-92a1-eb65cc0ce543
+          stepCounter: 04cf093c-b308-4620-b42e-8b9b37fe6b74
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: metric_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "'new_nodes_built'"
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: eddcab2e-2b4b-4873-9785-76df28a68cad
+          stepCounter: 04cf093c-b308-4620-b42e-8b9b37fe6b74
+        config: {}
+        dataType: INT
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: nodes_built
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: COUNT(`STG_NODE_DEDUP`.`node_id`)
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8fe7349f-223f-4b2d-986e-d5c9c1fbb699
+          stepCounter: 04cf093c-b308-4620-b42e-8b9b37fe6b74
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: node_month
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3754d78d-bf9d-472d-964f-e6b3059f117b
+                stepCounter: 5042476b-f373-45bd-8ff5-fac59ae70197
+            transform: ""
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STAGING
+            nodeName: STG_ACCOUNT_MONTH_DETAIL
+          - locationName: STAGING
+            nodeName: STG_NODE_DEDUP
+        join:
+          joinCondition: |
+            FROM {{ ref('STAGING', 'STG_ACCOUNT_MONTH_DETAIL') }} `STG_ACCOUNT_MONTH_DETAIL`
+            LEFT JOIN {{ ref('STAGING', 'STG_NODE_DEDUP') }} `STG_NODE_DEDUP`
+            ON `STG_ACCOUNT_MONTH_DETAIL`.`account_id` = `STG_NODE_DEDUP`.`account_id`
+            AND `STG_ACCOUNT_MONTH_DETAIL`.`month_start` =  DATE_TRUNC('month',`STG_NODE_DEDUP`.`meta_ctime`)
+            GROUP BY ALL
+            ORDER BY account_id asc, node_month asc
+        name: FCT_MONTHLY_NODES_BUILT
+        noLinkRefs: []
+  name: FCT_MONTHLY_NODES_BUILT
+  overrideSQL: false
+  schema: ""
+  sqlType: Fact
+  type: sql
+  version: 1
+type: Node

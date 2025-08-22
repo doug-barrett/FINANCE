@@ -1,0 +1,97 @@
+fileVersion: 1
+id: ee1c4845-3132-4cc1-aa71-4b147e0ce8ec
+name: STG_MONTHLY_NODES_ACCOUNT
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 86918fd3-bcf0-4ae4-86be-80a664f24493
+          stepCounter: ee1c4845-3132-4cc1-aa71-4b147e0ce8ec
+        config: {}
+        dataType: STRING
+        description: ""
+        name: node_month
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c01a9bc9-9122-4ab8-bb73-c94e49c49d3d
+                stepCounter: 20940877-6315-4e48-a2d5-2c43bdfda5cd
+            transform: DATE_TRUNC('month',`STG_DAILY_NODES_ACCOUNT`.`meta_ctime`)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a1f02683-4cf3-477a-9377-8b27c6a5fd16
+          stepCounter: ee1c4845-3132-4cc1-aa71-4b147e0ce8ec
+        config: {}
+        dataType: STRING
+        description: ""
+        name: account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e2b7154d-91f0-4523-bd58-810f1e5434f2
+                stepCounter: 20940877-6315-4e48-a2d5-2c43bdfda5cd
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e3e4abe2-ac6e-4c87-abae-ce7dde9a9ba2
+          stepCounter: ee1c4845-3132-4cc1-aa71-4b147e0ce8ec
+        config: {}
+        dataType: INT
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: monthly_node_count
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: |-
+              SUM(`STG_DAILY_NODES_ACCOUNT`.`node_count`) OVER (
+                      PARTITION BY `STG_DAILY_NODES_ACCOUNT`.`account_id`
+                      ORDER BY DATE_TRUNC('month',`STG_DAILY_NODES_ACCOUNT`.`meta_ctime`)
+                      ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+                  )
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_DAILY_NODES_ACCOUNT: 20940877-6315-4e48-a2d5-2c43bdfda5cd
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STAGING
+            nodeName: STG_DAILY_NODES_ACCOUNT
+        join:
+          joinCondition: |
+            FROM {{ ref('STAGING', 'STG_DAILY_NODES_ACCOUNT') }} `STG_DAILY_NODES_ACCOUNT`
+            where `account_id` = '0015f00000Nax86AAB'
+            GROUP BY node_month, account_id, node_count
+            QUALIFY monthly_node_count = MAX(monthly_node_count) OVER (PARTITION BY account_id, node_month) 
+        name: STG_MONTHLY_NODES_ACCOUNT
+        noLinkRefs: []
+  name: STG_MONTHLY_NODES_ACCOUNT
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

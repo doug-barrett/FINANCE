@@ -1,0 +1,213 @@
+fileVersion: 1
+id: 3c09d3b1-f2fb-4248-aba2-5c2df975d5ab
+name: STG_DATE_SPINE
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ebabd96f-c715-409e-895e-30c89ea4cd18
+          stepCounter: 3c09d3b1-f2fb-4248-aba2-5c2df975d5ab
+        config: {}
+        dataType: DATE
+        description: ""
+        name: date_ts
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c86a5297-00e1-4a2e-9500-7d4685f74e6c
+                stepCounter: 6394f522-a17f-462b-a935-267bd2ed1fd0
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: acbad6a4-f363-451a-8e2f-c0e76def45c5
+          stepCounter: 3c09d3b1-f2fb-4248-aba2-5c2df975d5ab
+        config: {}
+        dataType: INT
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: month_ts
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: month(`date_spine`.`date_ts`)
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8da7854d-47a7-4fc8-a48a-e9ed54dae8fd
+          stepCounter: 3c09d3b1-f2fb-4248-aba2-5c2df975d5ab
+        config: {}
+        dataType: INT
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: year_ts
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: YEAR(`date_spine`.`date_ts`)
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5305b31c-7c89-4b1d-8770-59cda6baa28f
+          stepCounter: 3c09d3b1-f2fb-4248-aba2-5c2df975d5ab
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: quarter_ts
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: CONCAT('Q', date_format(`date_spine`.`date_ts`, 'q')) || "'" || right(year_ts,2)
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: eec67d02-5b80-4ef1-99eb-5bda1fdad896
+          stepCounter: 3c09d3b1-f2fb-4248-aba2-5c2df975d5ab
+        config: {}
+        dataType: INT
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: FY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: YEAR(ADD_MONTHS(`date_spine`.`date_ts`, 11))
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5ecb7c3d-a62f-41ca-8801-2279788ccde6
+          stepCounter: 3c09d3b1-f2fb-4248-aba2-5c2df975d5ab
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: FY_Q
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: CONCAT('Q', date_format(`date_spine`.`date_ts`, 'q')) || "'" || right(FY,2)
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a9b2c50a-105f-4e1e-8a20-ad23e2f65332
+          stepCounter: 3c09d3b1-f2fb-4248-aba2-5c2df975d5ab
+        config: {}
+        dataType: INT
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: day_of_week
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: DAYOFWEEK(`date_spine`.`date_ts`)
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 74c17bfe-a05b-4283-be2a-4767b2085695
+          stepCounter: 3c09d3b1-f2fb-4248-aba2-5c2df975d5ab
+        config: {}
+        dataType: INT
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: week_of_year
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: WEEKOFYEAR(`date_spine`.`date_ts`)
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 79e3c478-437c-4991-b1a4-74e616fc54d8
+          stepCounter: 3c09d3b1-f2fb-4248-aba2-5c2df975d5ab
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: month_trunc
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: DATE_TRUNC('month',`date_spine`.`date_ts`)
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DATES
+            nodeName: date_spine
+        join:
+          joinCondition: FROM {{ ref('DATES', 'date_spine') }} `date_spine`
+        name: STG_DATE_SPINE
+        noLinkRefs: []
+  name: STG_DATE_SPINE
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

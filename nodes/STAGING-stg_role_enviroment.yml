@@ -1,0 +1,253 @@
+fileVersion: 1
+id: d39f6c0b-a7ba-4102-b6ea-2729cab1bf15
+name: stg_role_enviroment
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 005cd607-32c6-4433-b6ec-1dfd2fc6e1c4
+          stepCounter: d39f6c0b-a7ba-4102-b6ea-2729cab1bf15
+        config: {}
+        dataType: STRING
+        description: ""
+        name: org_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: split(`_meta/path`,'/')[6]
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: daf4a58a-99aa-4749-bbe0-4999f759507f
+          stepCounter: d39f6c0b-a7ba-4102-b6ea-2729cab1bf15
+        config: {}
+        dataType: STRING
+        description: ""
+        name: user_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: split(`_meta/path`,'/')[8]
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2075c69a-402c-4c18-9c9d-6bd66d8a728e
+          stepCounter: d39f6c0b-a7ba-4102-b6ea-2729cab1bf15
+        config: {}
+        dataType: STRING
+        description: ""
+        name: project_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: project_id
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 04607b1e-89c5-40da-88dd-eb46453e47f4
+          stepCounter: d39f6c0b-a7ba-4102-b6ea-2729cab1bf15
+        config: {}
+        dataType: STRING
+        description: ""
+        name: environment_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: environment_id
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ea7764a5-3f59-49fd-a05c-fb7b135e8579
+          stepCounter: d39f6c0b-a7ba-4102-b6ea-2729cab1bf15
+        config: {}
+        dataType: STRING
+        description: ""
+        name: app_environment_role
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: app_environment_role
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ee3787ad-4cce-4ca7-885c-f00032d8f216
+          stepCounter: d39f6c0b-a7ba-4102-b6ea-2729cab1bf15
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: created_at
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "`flow_document`:`createdAt`::TIMESTAMP"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4f23ee2f-41ea-4537-8ece-9c331ce88e5f
+          stepCounter: d39f6c0b-a7ba-4102-b6ea-2729cab1bf15
+        config: {}
+        dataType: STRING
+        description: ""
+        name: created_by
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "`flow_document`:`createdBy`::STRING"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6a5029d4-8354-4cc1-84e5-9c7c6e51ca34
+          stepCounter: d39f6c0b-a7ba-4102-b6ea-2729cab1bf15
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: updated_at
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "`flow_document`:`updatedAt`::TIMESTAMP"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b6dda34b-1024-4b68-add7-a07a1e9f9214
+          stepCounter: d39f6c0b-a7ba-4102-b6ea-2729cab1bf15
+        config: {}
+        dataType: STRING
+        description: ""
+        name: updated_by
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "`flow_document`:`updatedBy`::STRING"
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a7641ee7-d256-49a3-a365-a0ce0605507d
+          stepCounter: d39f6c0b-a7ba-4102-b6ea-2729cab1bf15
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: firestore_env
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "{{ firestore_label(column_name='`_meta/path`') }}"
+        systemColumnType: None
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 73d08815-aa19-42b9-ba0f-e92242eb22b1
+          stepCounter: d39f6c0b-a7ba-4102-b6ea-2729cab1bf15
+        config: {}
+        dataType: STRING
+        description: ""
+        name: meta_mtime
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "`flow_document`:`_meta`.`mtime`::TIMESTAMP"
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8e5e4397-ce86-456f-a48f-7cb1f1363766
+          stepCounter: d39f6c0b-a7ba-4102-b6ea-2729cab1bf15
+        config: {}
+        dataType: STRING
+        description: ""
+        name: meta_path
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a7e0f23d-cb2d-43cd-b9af-f2cec8db2ad1
+                stepCounter: b15e8d6a-ec1d-4884-80fa-60cfe30e9e8d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e906afdb-bd5f-4d63-a9f9-353d4c1dd61e
+          stepCounter: d39f6c0b-a7ba-4102-b6ea-2729cab1bf15
+        config: {}
+        dataType: TIMESTAMP
+        description: |-
+          Flow Publication Time
+          Flow publication date-time of this document
+          auto-generated projection of JSON at: /_meta/uuid with inferred types: [string]
+        name: flow_published_at
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fc548f81-fd94-4ab3-9965-256139ae8262
+                stepCounter: b15e8d6a-ec1d-4884-80fa-60cfe30e9e8d
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          orgs_userroles: b15e8d6a-ec1d-4884-80fa-60cfe30e9e8d
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: COALESCE_APP
+            nodeName: orgs_userroles
+        join:
+          joinCondition: |-
+            FROM {{ ref('COALESCE_APP', 'orgs_userroles') }} `orgs_userroles`
+            LATERAL VIEW explode(
+                from_json(
+                  flow_document,
+                  'struct<projects:map<string,struct<
+                     environments:map<string,struct<environmentRoles:array<string>>>,
+                     projectRoles:array<string>>>>'
+                ).projects
+              ) projects_kv AS project_id, project_map
+
+            LATERAL VIEW explode(project_map.environments) env_kv AS environment_id, environment_map
+
+            -- explode each environment's roles
+            LATERAL VIEW explode(environment_map.environmentRoles) AS app_environment_role
+
+            WHERE app_environment_role IS NOT NULL
+
+            QUALIFY
+              row_number() OVER (
+                PARTITION BY `_meta/path`
+                ORDER BY to_timestamp(get_json_object(flow_document, '$._meta.mtime')) DESC
+              ) = 1
+        name: stg_role_enviroment
+        noLinkRefs: []
+  name: stg_role_enviroment
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

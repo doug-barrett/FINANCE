@@ -1,0 +1,107 @@
+fileVersion: 1
+id: 22304a22-4b47-4c49-ae04-30593adb1077
+name: STG_MOM_NODES_ACCOUNT
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d60a5dd7-6c82-419e-af6d-42398e29554e
+          stepCounter: 22304a22-4b47-4c49-ae04-30593adb1077
+        config: {}
+        dataType: STRING
+        description: ""
+        name: node_month
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 86918fd3-bcf0-4ae4-86be-80a664f24493
+                stepCounter: ee1c4845-3132-4cc1-aa71-4b147e0ce8ec
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 20d5a81d-660e-4e6f-8830-712c8d36a8ec
+          stepCounter: 22304a22-4b47-4c49-ae04-30593adb1077
+        config: {}
+        dataType: STRING
+        description: ""
+        name: account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a1f02683-4cf3-477a-9377-8b27c6a5fd16
+                stepCounter: ee1c4845-3132-4cc1-aa71-4b147e0ce8ec
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 32732a54-04e3-465f-a1e6-41011e0c770c
+          stepCounter: 22304a22-4b47-4c49-ae04-30593adb1077
+        config: {}
+        dataType: INT
+        description: ""
+        name: monthly_node_count
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e3e4abe2-ac6e-4c87-abae-ce7dde9a9ba2
+                stepCounter: ee1c4845-3132-4cc1-aa71-4b147e0ce8ec
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6a518242-f90e-4de1-aa6c-8066127a2ac5
+          stepCounter: 22304a22-4b47-4c49-ae04-30593adb1077
+        config: {}
+        dataType: INT
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: previous_month_node_count
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: |-
+              LAG(monthly_node_count) OVER (
+                      PARTITION BY account_id
+                      ORDER BY node_month
+                  ) 
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_MONTHLY_NODES_ACCOUNT: ee1c4845-3132-4cc1-aa71-4b147e0ce8ec
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STAGING
+            nodeName: STG_MONTHLY_NODES_ACCOUNT
+        join:
+          joinCondition: |
+            FROM {{ ref('STAGING', 'STG_MONTHLY_NODES_ACCOUNT') }} `STG_MONTHLY_NODES_ACCOUNT`
+        name: STG_MOM_NODES_ACCOUNT
+        noLinkRefs: []
+  name: STG_MOM_NODES_ACCOUNT
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

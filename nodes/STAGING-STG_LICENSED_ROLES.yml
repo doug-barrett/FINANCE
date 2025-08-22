@@ -1,0 +1,98 @@
+fileVersion: 1
+id: 4cb481c7-caa8-49e6-9e9b-b481e56ed8ba
+name: STG_LICENSED_ROLES
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0dad040c-2205-4940-95bf-026d64f32e57
+          stepCounter: 4cb481c7-caa8-49e6-9e9b-b481e56ed8ba
+        config: {}
+        dataType: STRING
+        description: ""
+        name: org_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6f4f1aa5-780e-4886-85f3-185bd2caf743
+                stepCounter: 16186cb4-4ceb-4f00-85ee-e446f8e40f80
+            transform: DISTINCT `STG_ROLE_COMBINED`.`org_id`
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a8dcc81b-fae2-4eb4-bb9d-848f7de83375
+          stepCounter: 4cb481c7-caa8-49e6-9e9b-b481e56ed8ba
+        config: {}
+        dataType: STRING
+        description: ""
+        name: user_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 90d7e7ca-fe21-4023-9018-708e3522050a
+                stepCounter: 16186cb4-4ceb-4f00-85ee-e446f8e40f80
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 42f2a393-bc09-47ee-8be4-74e8b95cdcf1
+          stepCounter: 4cb481c7-caa8-49e6-9e9b-b481e56ed8ba
+        config: {}
+        dataType: STRING
+        description: ""
+        name: firestore_env
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 99df16e2-7e3b-4284-a4ec-b9a07df4c907
+                stepCounter: 16186cb4-4ceb-4f00-85ee-e446f8e40f80
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_ROLE_COMBINED: 16186cb4-4ceb-4f00-85ee-e446f8e40f80
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STAGING
+            nodeName: STG_ROLE_COMBINED
+        join:
+          joinCondition: |-
+            FROM {{ ref('STAGING', 'STG_ROLE_COMBINED') }} `STG_ROLE_COMBINED`
+            WHERE 
+                ( 
+                    APP_ROLE_LEVEL ilike 'org' and 
+                    APP_ROLE ilike '%admin%'
+                ) 
+                or 
+                (
+                    APP_ROLE_LEVEL ilike 'project' and
+                    (app_role ilike '%admin%' 
+                    OR 
+                    app_role ilike '%architect%'
+                    OR 
+                    app_role ilike '%contributor%'
+                    )
+                    )
+        name: STG_LICENSED_ROLES
+        noLinkRefs: []
+  name: STG_LICENSED_ROLES
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

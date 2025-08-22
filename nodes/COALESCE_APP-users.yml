@@ -1,0 +1,73 @@
+fileVersion: 1
+id: 1d51da75-988c-4bec-9bea-978a4ed24461
+name: users
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: COALESCE_APP
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b24433d2-1687-4efa-b2a8-48d039ba61dd
+          stepCounter: 1d51da75-988c-4bec-9bea-978a4ed24461
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: |-
+          Document Path
+          Fully qualified document path including Project ID and database name.
+          auto-generated projection of JSON at: /_meta/path with inferred types: [string]
+        name: _meta/path
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1f2b19b6-6b87-4414-84c4-ebf089b0a942
+          stepCounter: 1d51da75-988c-4bec-9bea-978a4ed24461
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: |-
+          Flow Publication Time
+          Flow publication date-time of this document
+          auto-generated projection of JSON at: /_meta/uuid with inferred types: [string]
+        name: flow_published_at
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c8017374-5ce6-4093-b4f4-ac010f81b298
+          stepCounter: 1d51da75-988c-4bec-9bea-978a4ed24461
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: "user-provided projection of JSON at:  with inferred types: [object]"
+        name: flow_document
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+  name: users
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

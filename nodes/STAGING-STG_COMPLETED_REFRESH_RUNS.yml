@@ -1,0 +1,98 @@
+fileVersion: 1
+id: 150f3243-cac2-43bf-8faa-c1319418f13a
+name: STG_COMPLETED_REFRESH_RUNS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e045937f-dbe5-4f41-b3fa-3fec2842b366
+          stepCounter: 150f3243-cac2-43bf-8faa-c1319418f13a
+        config: {}
+        dataType: STRING
+        description: ""
+        name: run_status
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3de40419-5559-489a-ba8d-8a04c7965f61
+                stepCounter: 06019fb9-78af-419a-a4a1-a23aed682c1d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: aa8ed156-9c04-4b5e-8dfa-466a5163380c
+          stepCounter: 150f3243-cac2-43bf-8faa-c1319418f13a
+        config: {}
+        dataType: STRING
+        description: ""
+        name: account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 17c564e4-5cbd-41f1-b5d9-7ce4c14397a6
+                stepCounter: 06019fb9-78af-419a-a4a1-a23aed682c1d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 909d695a-45b3-415d-bf94-586fd962ac95
+          stepCounter: 150f3243-cac2-43bf-8faa-c1319418f13a
+        config: {}
+        dataType: DATE
+        description: ""
+        name: run_month
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 787b28b3-15b2-4a91-87fa-8a4641cf9526
+                stepCounter: 06019fb9-78af-419a-a4a1-a23aed682c1d
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5954e098-c8aa-4bbc-a6fb-139c90ea5b05
+          stepCounter: 150f3243-cac2-43bf-8faa-c1319418f13a
+        config: {}
+        dataType: INT
+        description: ""
+        name: total_refresh_runs
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a9c77e26-c147-42c7-bb65-99211dea21f3
+                stepCounter: 06019fb9-78af-419a-a4a1-a23aed682c1d
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_REFRESH_RUNS_BY_STATUS: 06019fb9-78af-419a-a4a1-a23aed682c1d
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STAGING
+            nodeName: STG_REFRESH_RUNS_BY_STATUS
+        join:
+          joinCondition: |-
+            FROM {{ ref('STAGING', 'STG_REFRESH_RUNS_BY_STATUS') }} `STG_REFRESH_RUNS_BY_STATUS`
+            WHERE run_status ilike '%complete%'
+        name: STG_COMPLETED_REFRESH_RUNS
+        noLinkRefs: []
+  name: STG_COMPLETED_REFRESH_RUNS
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

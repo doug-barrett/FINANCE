@@ -1,0 +1,118 @@
+fileVersion: 1
+id: 94a50374-ff66-4a79-9d45-4d0b1bbf2270
+name: issue_csat_response
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: PYLON
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1b54b044-fb3e-41eb-a861-dd5f711cdf92
+          stepCounter: 94a50374-ff66-4a79-9d45-4d0b1bbf2270
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: issue_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5b6517e7-9085-4794-91dc-892d0e3a92a4
+          stepCounter: 94a50374-ff66-4a79-9d45-4d0b1bbf2270
+        config: {}
+        dataType: INT
+        defaultValue: ""
+        description: ""
+        name: index
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c46e4d5e-6b75-4d17-a2e8-7b0a4f2f45d4
+          stepCounter: 94a50374-ff66-4a79-9d45-4d0b1bbf2270
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: _fivetran_deleted
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 561d9f50-2826-4cd0-81f0-21ab05bc063d
+          stepCounter: 94a50374-ff66-4a79-9d45-4d0b1bbf2270
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        name: _fivetran_synced
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 052c54e0-4921-4f58-bcca-20587cb64860
+          stepCounter: 94a50374-ff66-4a79-9d45-4d0b1bbf2270
+        config: {}
+        dataType: INT
+        defaultValue: ""
+        description: ""
+        name: score
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f4783554-974b-49bb-a1aa-95d81bdaa1a6
+          stepCounter: 94a50374-ff66-4a79-9d45-4d0b1bbf2270
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: comment
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+  name: issue_csat_response
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

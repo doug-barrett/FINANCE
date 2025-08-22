@@ -1,0 +1,124 @@
+fileVersion: 1
+id: c754851a-b3ba-431a-8044-2230eb376cec
+name: STG_ACCOUNT_RENEWALS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e6f7027b-c8bf-42ba-9f10-739060ce40f8
+          stepCounter: c754851a-b3ba-431a-8044-2230eb376cec
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the unique identifier for the account associated with the opportunity. 
+          - Sourced from the 'opportunity' table's 'account_id' column. 
+          - Used for joining and linking with the account table to access account-specific information.
+        name: account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a2205b1b-9985-40c0-8e6b-c538d1cb703a
+                stepCounter: 5042476b-f373-45bd-8ff5-fac59ae70197
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ca8f81b0-4e62-46d6-82b4-90be85f6205f
+          stepCounter: c754851a-b3ba-431a-8044-2230eb376cec
+        config: {}
+        dataType: STRING
+        description: ""
+        name: account_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cefcd3dc-59ca-41ff-a318-8c168859b8bd
+                stepCounter: 5042476b-f373-45bd-8ff5-fac59ae70197
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: db521cc1-c4c6-4adc-ac6d-c48413feec70
+          stepCounter: c754851a-b3ba-431a-8044-2230eb376cec
+        config: {}
+        dataType: STRING
+        description: ""
+        name: arr_cohort
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 077efbf6-2b8a-4646-9bfa-c0d6ee16e246
+                stepCounter: 5042476b-f373-45bd-8ff5-fac59ae70197
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e5b086da-5280-4931-b619-81eb6e8422bd
+          stepCounter: c754851a-b3ba-431a-8044-2230eb376cec
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: account_tenure
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8d87bb61-5da4-49b9-8ba2-fda351bd8b91
+                stepCounter: 5042476b-f373-45bd-8ff5-fac59ae70197
+            transform: MAX(`STG_ACCOUNT_MONTH_DETAIL`.`account_tenure`)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 57120006-cbc2-4182-906a-202f58eaa17f
+          stepCounter: c754851a-b3ba-431a-8044-2230eb376cec
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: renewal_date
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5753ce5a-414f-47a8-b6b6-fb28cd2c6ace
+                stepCounter: 04665d01-6990-4135-9aee-75c24ad808bc
+            transform: MAX(`STG_OPEN_RENEWALS`.`subscription_start_date_c`)
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STAGING
+            nodeName: STG_ACCOUNT_MONTH_DETAIL
+          - locationName: STAGING
+            nodeName: STG_OPEN_RENEWALS
+        join:
+          joinCondition: |-
+            FROM {{ ref('STAGING', 'STG_ACCOUNT_MONTH_DETAIL') }} `STG_ACCOUNT_MONTH_DETAIL`
+            INNER JOIN {{ ref('STAGING', 'STG_OPEN_RENEWALS') }} `STG_OPEN_RENEWALS`
+            ON `STG_ACCOUNT_MONTH_DETAIL`.`account_id` = `STG_OPEN_RENEWALS`.`account_id`
+            GROUP BY 1,2,3
+        name: STG_ACCOUNT_RENEWALS
+        noLinkRefs: []
+  name: STG_ACCOUNT_RENEWALS
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

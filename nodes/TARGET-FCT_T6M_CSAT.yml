@@ -1,0 +1,154 @@
+fileVersion: 1
+id: d4340704-4043-4d03-b3b4-0e64015d19c7
+name: FCT_T6M_CSAT
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: UNION ALL
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3f832665-b355-4a83-8ed4-63ee3c6aafa9
+          stepCounter: d4340704-4043-4d03-b3b4-0e64015d19c7
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the unique identifier for the account associated with the opportunity. 
+          - Sourced from the 'opportunity' table's 'account_id' column. 
+          - Used for joining and linking with the account table to access account-specific information.
+        name: account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4b53c3da-8e10-42f3-ac67-5be6320dbff5
+                stepCounter: 60aa2ae3-9a6a-40f9-ad01-2098409918ea
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: eed7df06-107f-4b8d-bb91-08a5a5470baa
+          stepCounter: d4340704-4043-4d03-b3b4-0e64015d19c7
+        config: {}
+        dataType: STRING
+        description: ""
+        name: account_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 37e58f45-ac2d-4c03-9838-9c53dfdce12d
+                stepCounter: 60aa2ae3-9a6a-40f9-ad01-2098409918ea
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f8c4ba16-b479-415f-9019-35f3a22416ad
+          stepCounter: d4340704-4043-4d03-b3b4-0e64015d19c7
+        config: {}
+        dataType: STRING
+        description: ""
+        name: arr_cohort
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7eb843e3-276b-4fbb-8199-9fe9e3518e1e
+                stepCounter: 60aa2ae3-9a6a-40f9-ad01-2098409918ea
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a48d0ac0-4d6c-496b-9eff-e597cab67aed
+          stepCounter: d4340704-4043-4d03-b3b4-0e64015d19c7
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: account_tenure
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: acf5c6c2-07ef-4ebc-aa59-5a58aa607856
+                stepCounter: 60aa2ae3-9a6a-40f9-ad01-2098409918ea
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b569880b-845f-407f-b7b7-48f13bac922e
+          stepCounter: d4340704-4043-4d03-b3b4-0e64015d19c7
+        config: {}
+        dataType: DATE
+        description: ""
+        name: csat_month
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 76fff2ac-a377-44d0-afb4-a9e31a218034
+                stepCounter: 60aa2ae3-9a6a-40f9-ad01-2098409918ea
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5516f3cc-53d3-41c9-ad62-652076995de3
+          stepCounter: d4340704-4043-4d03-b3b4-0e64015d19c7
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: t6m_csat_score
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6d4cab2e-2454-4401-b872-ba95e0447743
+                stepCounter: 60aa2ae3-9a6a-40f9-ad01-2098409918ea
+            transform: SUM(`STG_MONTHLY_CSAT`.`csat_score`) OVER (PARTITION BY `account_id` ORDER BY `csat_month` ASC ROWS BETWEEN 5 PRECEDING AND CURRENT ROW)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1d170d18-7629-4756-8e2e-949c6c69b905
+          stepCounter: d4340704-4043-4d03-b3b4-0e64015d19c7
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: metric_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "'t6m_csat'"
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          stg_monthly_csat: 60aa2ae3-9a6a-40f9-ad01-2098409918ea
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STAGING
+            nodeName: stg_monthly_csat
+        join:
+          joinCondition: |
+            FROM {{ ref('STAGING', 'stg_monthly_csat') }} `stg_monthly_csat`
+        name: FCT_T6M_CSAT
+        noLinkRefs: []
+  name: FCT_T6M_CSAT
+  overrideSQL: false
+  schema: ""
+  sqlType: Fact
+  type: sql
+  version: 1
+type: Node

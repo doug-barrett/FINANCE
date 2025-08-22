@@ -1,0 +1,76 @@
+fileVersion: 1
+id: 12a7cab4-3950-46d5-b762-e6b2ebfb1bcf
+name: STG_CUSTOMER_ACCOUNTS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: db172adb-0bcf-43af-ac0d-bab3de44903c
+          stepCounter: 12a7cab4-3950-46d5-b762-e6b2ebfb1bcf
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the unique identifier for the account associated with the opportunity. 
+          - Sourced from the 'opportunity' table's 'account_id' column. 
+          - Used for joining and linking with the account table to access account-specific information.
+        name: account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8e9e6ba3-4c8b-41eb-a494-f2f35747614f
+                stepCounter: fb9b35b0-4b67-4259-9c74-06a9e4525c1d
+            transform: DISTINCT `STG_ARR_OPPS`.`account_id`
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 96c6fcc8-5368-466f-ab86-4a23176e51ae
+          stepCounter: 12a7cab4-3950-46d5-b762-e6b2ebfb1bcf
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: account_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 28b78836-c9d1-4270-9ecd-43a00284641f
+                stepCounter: fb9b35b0-4b67-4259-9c74-06a9e4525c1d
+            transform: ""
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STAGING
+            nodeName: STG_ARR_OPPS
+        join:
+          joinCondition: FROM {{ ref('STAGING', 'STG_ARR_OPPS') }} `STG_ARR_OPPS`
+        name: STG_CUSTOMER_ACCOUNTS
+        noLinkRefs: []
+  name: STG_CUSTOMER_ACCOUNTS
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

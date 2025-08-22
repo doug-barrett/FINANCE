@@ -1,0 +1,144 @@
+fileVersion: 1
+id: 77b4c28e-5ba2-4b9c-9ec0-c73f5b72f9c6
+name: stg_monthly_pylon_csat
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3453a150-894f-4b5c-a779-742ab9e05589
+          stepCounter: 77b4c28e-5ba2-4b9c-9ec0-c73f5b72f9c6
+        config: {}
+        dataType: STRING
+        description: ""
+        name: issue_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 268fdad2-7768-4489-a3d6-947f5952e221
+                stepCounter: ed3dd0d5-b5b2-4346-b57f-5b1a3b93751c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b506b9ba-d76c-4c25-81c1-392bbe5f180e
+          stepCounter: 77b4c28e-5ba2-4b9c-9ec0-c73f5b72f9c6
+        config: {}
+        dataType: STRING
+        description: ""
+        name: account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b061feba-a35c-47cd-a2e0-8c9e45cc267a
+                stepCounter: b0f6795b-35ae-4328-89d2-8897b95d59c4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a69fdaa0-5657-4284-b548-a91dc9ba4d81
+          stepCounter: 77b4c28e-5ba2-4b9c-9ec0-c73f5b72f9c6
+        config: {}
+        dataType: STRING
+        description: ""
+        name: org_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 16c7f0a4-eef3-4a9f-8857-a9558a62ee39
+                stepCounter: b0f6795b-35ae-4328-89d2-8897b95d59c4
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 763abf8e-b18a-44cd-944d-8477260f89f1
+          stepCounter: 77b4c28e-5ba2-4b9c-9ec0-c73f5b72f9c6
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: csat_month
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 72866e30-444f-430b-abc3-cc351e60b022
+                stepCounter: b0f6795b-35ae-4328-89d2-8897b95d59c4
+            transform: DATE_TRUNC('month',`stg_pylon_tickets_accounts`.`resolution_time`)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d36b71a2-b681-4fbf-881a-d0b367d88476
+          stepCounter: 77b4c28e-5ba2-4b9c-9ec0-c73f5b72f9c6
+        config: {}
+        dataType: INT
+        description: ""
+        name: index
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9289c078-2382-4db2-8617-80dddf04d36f
+                stepCounter: ed3dd0d5-b5b2-4346-b57f-5b1a3b93751c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: dc6c826a-c18d-4775-9e88-179a52aca672
+          stepCounter: 77b4c28e-5ba2-4b9c-9ec0-c73f5b72f9c6
+        config: {}
+        dataType: INT
+        description: ""
+        name: score
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3ae7f213-b76d-47d3-bf7c-7c6768b2fc83
+                stepCounter: ed3dd0d5-b5b2-4346-b57f-5b1a3b93751c
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5a2bb6c0-7a47-4190-b3db-8e73cf757ef8
+          stepCounter: 77b4c28e-5ba2-4b9c-9ec0-c73f5b72f9c6
+        config: {}
+        dataType: STRING
+        description: ""
+        name: comment
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 98ba6968-0664-4907-ae79-9e0b239df526
+                stepCounter: ed3dd0d5-b5b2-4346-b57f-5b1a3b93751c
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          stg_pylon_csat: ed3dd0d5-b5b2-4346-b57f-5b1a3b93751c
+          stg_pylon_tickets_accounts: b0f6795b-35ae-4328-89d2-8897b95d59c4
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STAGING
+            nodeName: stg_pylon_csat
+          - locationName: STAGING
+            nodeName: stg_pylon_tickets_accounts
+        join:
+          joinCondition: |-
+            FROM {{ ref('STAGING', 'stg_pylon_csat') }} `stg_pylon_csat`
+            INNER JOIN {{ ref('STAGING', 'stg_pylon_tickets_accounts') }} `stg_pylon_tickets_accounts`
+            ON `stg_pylon_csat`.`issue_id` = `stg_pylon_tickets_accounts`.`ticket_id`
+        name: stg_monthly_pylon_csat
+        noLinkRefs: []
+  name: stg_monthly_pylon_csat
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

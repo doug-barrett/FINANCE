@@ -1,0 +1,141 @@
+fileVersion: 1
+id: 60aa2ae3-9a6a-40f9-ad01-2098409918ea
+name: stg_monthly_csat
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4b53c3da-8e10-42f3-ac67-5be6320dbff5
+          stepCounter: 60aa2ae3-9a6a-40f9-ad01-2098409918ea
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the unique identifier for the account associated with the opportunity. 
+          - Sourced from the 'opportunity' table's 'account_id' column. 
+          - Used for joining and linking with the account table to access account-specific information.
+        name: account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a2205b1b-9985-40c0-8e6b-c538d1cb703a
+                stepCounter: 5042476b-f373-45bd-8ff5-fac59ae70197
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 37e58f45-ac2d-4c03-9838-9c53dfdce12d
+          stepCounter: 60aa2ae3-9a6a-40f9-ad01-2098409918ea
+        config: {}
+        dataType: STRING
+        description: ""
+        name: account_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cefcd3dc-59ca-41ff-a318-8c168859b8bd
+                stepCounter: 5042476b-f373-45bd-8ff5-fac59ae70197
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7eb843e3-276b-4fbb-8199-9fe9e3518e1e
+          stepCounter: 60aa2ae3-9a6a-40f9-ad01-2098409918ea
+        config: {}
+        dataType: STRING
+        description: ""
+        name: arr_cohort
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 077efbf6-2b8a-4646-9bfa-c0d6ee16e246
+                stepCounter: 5042476b-f373-45bd-8ff5-fac59ae70197
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: acf5c6c2-07ef-4ebc-aa59-5a58aa607856
+          stepCounter: 60aa2ae3-9a6a-40f9-ad01-2098409918ea
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: account_tenure
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8d87bb61-5da4-49b9-8ba2-fda351bd8b91
+                stepCounter: 5042476b-f373-45bd-8ff5-fac59ae70197
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 76fff2ac-a377-44d0-afb4-a9e31a218034
+          stepCounter: 60aa2ae3-9a6a-40f9-ad01-2098409918ea
+        config: {}
+        dataType: DATE
+        description: ""
+        name: csat_month
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3754d78d-bf9d-472d-964f-e6b3059f117b
+                stepCounter: 5042476b-f373-45bd-8ff5-fac59ae70197
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6d4cab2e-2454-4401-b872-ba95e0447743
+          stepCounter: 60aa2ae3-9a6a-40f9-ad01-2098409918ea
+        config: {}
+        dataType: INTEGER
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: csat_score
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: NVL(SUM(CASE WHEN `STG_ACCOUNT_MONTH_DETAIL`.`month_start` = `stg_monthly_pylon_csat`.`csat_month` AND `stg_monthly_pylon_csat`.`score` >= 3 THEN 1 WHEN `STG_ACCOUNT_MONTH_DETAIL`.`month_start` = `stg_monthly_pylon_csat`.`csat_month` AND `stg_monthly_pylon_csat`.`score` < 3 THEN -2 ELSE NULL END), 0)
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_ACCOUNT_MONTH_DETAIL: 5042476b-f373-45bd-8ff5-fac59ae70197
+          stg_monthly_pylon_csat: 77b4c28e-5ba2-4b9c-9ec0-c73f5b72f9c6
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STAGING
+            nodeName: STG_ACCOUNT_MONTH_DETAIL
+          - locationName: STAGING
+            nodeName: stg_monthly_pylon_csat
+        join:
+          joinCondition: |-
+            FROM {{ ref('STAGING', 'STG_ACCOUNT_MONTH_DETAIL') }} `STG_ACCOUNT_MONTH_DETAIL`
+            LEFT JOIN {{ ref('STAGING', 'stg_monthly_pylon_csat') }} `stg_monthly_pylon_csat`
+            ON `STG_ACCOUNT_MONTH_DETAIL`.`account_id` = `stg_monthly_pylon_csat`.`account_id`
+            GROUP BY ALL
+            ORDER BY `STG_ACCOUNT_MONTH_DETAIL`.`account_id` asc, `STG_ACCOUNT_MONTH_DETAIL`.`month_start`
+        name: stg_monthly_csat
+        noLinkRefs: []
+  name: stg_monthly_csat
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

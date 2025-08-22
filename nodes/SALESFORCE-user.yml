@@ -1,0 +1,3331 @@
+fileVersion: 1
+id: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+name: user
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SALESFORCE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3db640a5-bde8-4580-8702-204bf9244c7e
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cf01ae74-ee90-4d8c-9721-4f0aaf5e7522
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: username
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 12f9e193-4a13-4424-a33f-b26cb571c29e
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: last_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 34de422b-e14d-4376-8396-56309b9f7101
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: first_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0a127c2f-5393-470d-8c6a-067f55c7b60c
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cd40a2bc-92ac-4892-8d18-8c84d5597b69
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: company_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0927a71f-73c6-4159-82c9-7d63d7be30df
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: division
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b3eae877-2019-4bad-865d-cfe9bbfe1816
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: department
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 79128d07-29dc-4eb9-8c2a-5b5d22a6b632
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: title
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3ff3c8b7-7da3-4a44-8db9-cf0676544ee1
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: street
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9d080c04-6209-4416-9431-037c62e064df
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: city
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f67cbf3c-e50f-45e8-9114-169eff0c6051
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: state
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 86c59ac4-2961-4e97-a0fe-a0eaf5e0437b
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: postal_code
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4edaf5f3-5d76-4c7a-b5cd-03589abd183a
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: country
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b00ace5c-28fc-403c-9945-079540bbe808
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: DOUBLE
+        defaultValue: ""
+        description: ""
+        name: latitude
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d0716ce1-0fe1-4c39-94c1-97f9fb9675a5
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: DOUBLE
+        defaultValue: ""
+        description: ""
+        name: longitude
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2d762651-b228-4519-8ee4-ba8c8db61fcb
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: geocode_accuracy
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3a80349c-d55a-4c8b-8a0a-babff476581a
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: email
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d13faca8-191b-45f9-b4bf-3d5367805cc1
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: email_preferences_auto_bcc
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: be001525-523e-41ce-8e45-1fa14fc6157e
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: email_preferences_auto_bcc_stay_in_touch
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e707323b-6aef-44ba-aa7e-3e5b432371cf
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: email_preferences_stay_in_touch_reminder
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1e226767-a98e-4c18-95f1-798f19c28c59
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: sender_email
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c34c87e5-4a0f-42e4-92b2-fcff9ee4c95c
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: sender_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8f6d52c2-0a64-4574-aa3f-5c8826c8d923
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: signature
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3dad30df-aac0-4d63-8ab8-45534d1c2ec7
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: stay_in_touch_subject
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e4657803-3ca4-437b-b8d6-413d04645b21
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: stay_in_touch_signature
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: dee4cf62-6f4e-48ef-b9b4-5e1d209ef25c
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: stay_in_touch_note
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1572c8de-7453-4b2e-88aa-54c27f49d7f4
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: phone
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0b9c34e8-2d87-4b0d-b4f8-1e338fa9a7b2
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: fax
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7302dd30-0ea6-4025-9716-529831b2a8a2
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: mobile_phone
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1b832014-afdb-4efd-b676-c85619a6d93b
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: alias
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 173d4258-8833-4055-8d08-224fd80ef742
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: community_nickname
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5c907024-85d6-414a-8b94-290fbc0dfec3
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: badge_text
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c0008d68-e683-4b27-82fa-2d7dbd854bc5
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: is_active
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a3e6a901-ac47-4c68-9611-d5086290ffb0
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: time_zone_sid_key
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c1458c3c-2f39-4659-aeb6-4353d08565cd
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: user_role_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ef89dfad-f735-4e15-9938-7ed082b11065
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: locale_sid_key
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bbb0590e-0c69-4694-8c4a-53d4ac2f5cbc
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: receives_info_emails
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: eecae078-6b9b-447a-aa7b-a4117be69209
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: receives_admin_info_emails
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2baba546-b4f4-4fa8-80e3-aff2a89fb886
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: email_encoding_key
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 33ae7b9c-3faa-4423-9e02-d243a292fa57
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: default_currency_iso_code
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e6b5af8e-a393-46d3-9427-88ada0d7ed1b
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: currency_iso_code
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ee92a941-4978-43ff-abaa-d7e44bc4dd69
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: profile_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 00af78cc-9fb1-49f0-bc45-652956c79151
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: user_type
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cf54656a-005c-4077-9cab-0816abc298a2
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: language_locale_key
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 237788d4-a55b-461e-933e-1ceffde05a9f
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: employee_number
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3d56dafa-c0ff-4988-9d45-7371b52ad45c
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: delegated_approver_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b0db9919-6f04-4d57-a4d9-a0b90828203e
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: manager_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ca4ed6aa-c4f9-4539-a437-a521378ea166
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        name: last_login_date
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9bc5c793-ddfe-4e0a-bc3d-e008d53805d3
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        name: last_password_change_date
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f40c965a-5683-4794-8693-099c3d5230ec
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        name: created_date
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d265b190-751a-4949-ad95-ecad1c1f87e6
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: created_by_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b61e683e-368d-4690-be00-9d9da0d6891a
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        name: last_modified_date
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f9c69266-2e92-40e7-8171-8b1fe78ebba5
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: last_modified_by_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ef1ac0ee-5e20-4bbf-a7e0-a77cf9f3e4ec
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        name: system_modstamp
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 75c68136-3d83-4483-969e-a904d6bcc339
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: LONG
+        defaultValue: ""
+        description: ""
+        name: number_of_failed_logins
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 412dac7b-21ab-43f5-8826-12294899b0fb
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        name: offline_trial_expiration_date
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bcad63a4-0254-4abd-b1fd-28d5ae560a20
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        name: offline_pda_trial_expiration_date
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cbae7453-73eb-4128-a8ec-60dbc7a1d0e0
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_permissions_marketing_user
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8e8a58fa-1cb9-418d-8a90-ed18d759e666
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_permissions_offline_user
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9007283f-4a47-4e6d-9d8d-70ccfb740a69
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_permissions_call_center_auto_login
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 33a434ba-44f6-4e96-9c31-c74928b76731
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_permissions_sfcontent_user
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 319be421-0581-409e-9d77-ade3c852308e
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_permissions_interaction_user
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 86bab935-5148-455c-bbd7-8138250a6e13
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_permissions_support_user
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3b70d0f2-224a-43fd-81f9-47a6af678ba8
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: forecast_enabled
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3188bb05-93cc-4188-a5dc-e47bbd667045
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_activity_reminders_popup
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 48adf6e4-a287-40ab-85a6-60e3be06b309
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_event_reminders_checkbox_default
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d2b44f31-44d9-482e-b4ac-5584b7dc41ef
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_task_reminders_checkbox_default
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2887f2f9-14c7-4a39-a018-f34f3afdb51c
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_reminder_sound_off
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: edfb090f-086b-4e09-9adc-60331cd79323
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_disable_all_feeds_email
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 757a7e2a-7171-45d0-a186-0304dc14703c
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_disable_followers_email
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 005c7ad7-ec3f-4b09-83d3-34f48f402bef
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_disable_profile_post_email
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4a175c1d-8e78-4a77-b3f7-7790ebabf47a
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_disable_change_comment_email
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e29a974b-212d-4c1f-95d4-87c82823ffb0
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_disable_later_comment_email
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cc6aa2a1-c9d3-4e58-a55d-323788d705f0
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_dis_prof_post_comment_email
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d692cb48-689b-4efa-a8f6-be23de84ca48
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_content_no_email
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6cc2927f-ab95-48ea-9a5f-a44141a81240
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_content_email_as_and_when
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f0b2af66-0739-49b5-8af6-ae5824492b3d
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_apex_pages_developer_mode
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 40c3ae02-8a62-4ee0-8392-654ece3ecc20
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_receive_no_notifications_as_approver
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 26709b54-8407-4367-acde-81f632d6e2a2
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_receive_notifications_as_delegated_approver
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d41a66aa-02cd-4c09-af72-ef0e843c4a7a
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_hide_csnget_chatter_mobile_task
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fbe88bee-c6f9-46be-b88a-82405076581a
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_disable_mentions_post_email
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 79ff1c5d-d23e-4a99-aab9-04a199a5aefd
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_dis_mentions_comment_email
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5af20a59-ae4f-4c58-9142-34a95c09a9a7
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_hide_csndesktop_task
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 50221d44-3871-46b0-a5f4-cabf4a308fc0
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_hide_chatter_onboarding_splash
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 245c77d1-e810-4a08-a03a-ef6160ab1ad0
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_hide_second_chatter_onboarding_splash
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4f184b7f-20ab-402b-81a8-3fa66c35fd0c
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_dis_comment_after_like_email
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 25623bce-813b-450c-a3d3-66a11bbbddd0
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_disable_like_email
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 99e73bcf-9059-4e6e-a578-c0a8944ba9d4
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_sort_feed_by_comment
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 53043722-dcac-44b2-8cca-76759d5992e3
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_disable_message_email
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e72855f6-7ad8-41ea-a91e-b2d1c23d6ba4
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_disable_bookmark_email
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e3d99e32-416a-4b13-896f-71cd0385eb07
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_disable_share_post_email
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3e907600-90cb-4d29-aa7c-1dd4d622180f
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_action_launcher_einstein_gpt_consent
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f69cd932-98d8-46ac-aadc-375d8c3cb02f
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_assistive_actions_enabled_in_action_launcher
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 25d21d79-3926-4b08-9f6b-1c69c83e8023
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_enable_auto_sub_for_feeds
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8bcc539d-c220-43f8-a270-85657923a09e
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_disable_file_share_notifications_for_api
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cc6b5443-b7f9-4e36-a9e8-55cfbc20bb28
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_show_title_to_external_users
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5787fcd3-96a5-4ecc-a3e0-104de293e801
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_show_manager_to_external_users
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2bec30f1-55b5-475b-b18e-a44c0520c93a
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_show_email_to_external_users
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 13810df1-60ac-4942-a732-14f75bf4556c
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_show_work_phone_to_external_users
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e23d10a6-823e-4a27-b854-7a9ce4ce149e
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_show_mobile_phone_to_external_users
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 454a0724-6430-40dd-88da-d6af623e8a5c
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_show_fax_to_external_users
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c8611977-ede4-4939-889e-c160f133f548
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_show_street_address_to_external_users
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 23928632-8aa3-47d7-883d-142dc23fab27
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_show_city_to_external_users
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d028f4ef-8292-464e-9793-f2949794b808
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_show_state_to_external_users
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 55f6f917-90e0-4595-85d3-ce8f5e086c60
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_show_postal_code_to_external_users
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 81c0915f-e8a0-47b9-9230-189b508cd173
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_show_country_to_external_users
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 47c08660-f5a4-4c11-b5a9-77a8f7e94c98
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_show_profile_pic_to_guest_users
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 88a762b0-da12-4282-8568-318229764b1f
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_show_title_to_guest_users
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8fa400c0-eff0-493c-9918-071f9717e740
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_show_city_to_guest_users
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b40246fa-652c-40ca-9c3d-23cc997a3e3d
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_show_state_to_guest_users
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 32c0e90c-fc5b-43d9-8941-5241f9ae4f9e
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_show_postal_code_to_guest_users
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a75045dd-8ea4-4655-acb3-206d908df4af
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_show_country_to_guest_users
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 17614a54-8fce-4254-8fb1-44db910442be
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_show_forecasting_change_signals
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e5d1a9b0-fe98-470e-a0c6-ffb197403965
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_live_agent_miaw_setup_deflection
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d63f4cd1-4183-4736-950e-2381892779a5
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_hide_s_1_browser_ui
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c697963a-d043-4472-a48e-0bb302598764
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_disable_endorsement_email
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9d1ecb44-e1dc-4370-90ba-50cfaa930338
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_path_assistant_collapsed
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9e89287c-172c-4579-b5d9-69a3b86d2056
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_cache_diagnostics
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5a4e9300-ab44-45cf-b706-7eca132c6065
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_show_email_to_guest_users
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b843fc8c-7816-4b73-8698-b13f000ce078
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_show_manager_to_guest_users
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6aae2054-9487-4ecd-8e06-5341bc0ee39e
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_show_work_phone_to_guest_users
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 615c1b63-0ba9-4bad-a868-244c908e1fc1
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_show_mobile_phone_to_guest_users
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: de5d64a4-5151-47a5-9671-afc9854ec83b
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_show_fax_to_guest_users
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b5974c51-32b6-4113-b408-343f063c005b
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_show_street_address_to_guest_users
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 13d89986-6827-4d21-9bbb-2c82c67a1466
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_lightning_experience_preferred
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2ce0654a-7112-4466-a62f-f6452dfe687d
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_preview_lightning
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a5987279-c427-4bec-ab0e-568094034f78
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_hide_end_user_onboarding_assistant_modal
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 27ba4e19-6f0a-4623-a6ec-0736e2f457ac
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_hide_lightning_migration_modal
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7021c016-f970-4ad4-95f5-37f082e10f0b
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_hide_sfx_welcome_mat
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f54b1d8c-3527-466f-8571-2eeea1f06a72
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_hide_bigger_photo_callout
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6170133f-ed81-400c-bf06-b0da7a62fb05
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_global_nav_bar_wtshown
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 251415a4-3a4b-47a0-82e7-66409f33651c
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_global_nav_grid_menu_wtshown
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 62d47b69-b178-4bf9-a8ad-616f90964360
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_create_lexapps_wtshown
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 28657fc9-bea2-47f4-9b45-eafa68a5237a
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_favorites_wtshown
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3aa5297b-eb01-4a50-9da1-874b8bcc8d6f
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_record_home_section_collapse_wtshown
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7ec79d46-e06d-4c7d-8a77-1c117a4a4262
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_record_home_reserved_wtshown
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 77affc0c-8601-4ba6-8a22-8cac71125245
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_favorites_show_top_favorites
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5a4c012b-e832-4656-8807-e63f04dceb7e
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_exclude_mail_app_attachments
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d1948cf6-5181-4cfb-8e41-675ecdd2a942
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_suppress_task_sfxreminders
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 257e223b-10a8-4baf-a0cb-d25e394e1cdf
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_suppress_event_sfxreminders
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 964052d8-748c-4095-89f6-78c37c4b3b2b
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_preview_custom_theme
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: addc3aad-70b2-4407-a4c8-7f9389ffba13
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_has_celebration_badge
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1de8ac28-e80b-4596-b1a0-148c0c99deef
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_user_debug_mode_pref
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 77a13332-8dc2-484d-b6f6-d62a97ae5c48
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_srhoverride_activities
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: decad0ae-e42b-4ed5-a792-5c0cf7de1d77
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_new_lightning_report_run_page_enabled
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 654a02a1-6afd-4fed-8790-82e05276be8f
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_reverse_open_activities_view
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b7307e15-72f8-4a15-ad21-e648cb9ba719
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_has_sent_warning_email
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 553ca7ce-47be-459d-b9ea-3c0f2b63b02a
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_has_sent_warning_email_238
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1c23f3de-1dbd-436c-bcb3-88cbd90e4ee4
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_has_sent_warning_email_240
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 86458c69-a277-42d0-a6b2-692db9a9913f
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_native_email_client
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 67951580-11b6-4cc1-a5ca-92370e7a79ef
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_hide_browse_product_redirect_confirmation
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cd495dc1-c44d-4bba-af44-d1fa54b67bfe
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_hide_online_sales_app_tab_visibility_requirements_modal
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 08d42d4f-573a-45ee-b0b9-e536a372fc6e
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_hide_online_sales_app_welcome_mat
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e922ab90-c414-4fe5-9101-afbe35839406
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: user_preferences_show_forecasting_rounded_amounts
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ac028e4c-950a-42a2-a64b-5b98030c3679
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: contact_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3a19c84c-9829-4d07-8685-e29ca623f2b1
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6425b173-2d5c-4047-b70c-24ed8998e47d
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: call_center_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 01ef14b2-a3be-4758-9c15-87f3d0ec1069
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: extension
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2f3a7267-64fb-4889-b5f0-6c79822d7bcd
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: federation_identifier
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ca63c03d-5dd4-41ea-87d5-3bac53e8347f
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: about_me
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7395b104-6857-4cee-8ef2-1fe62e8638ed
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: full_photo_url
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 892ee6ec-e115-4030-88cd-2580e81466aa
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: small_photo_url
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1e31b31d-d203-4d99-8244-2370731f07d7
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: is_ext_indicator_visible
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ed3e545d-09e0-4326-aeca-b587b0502802
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: out_of_office_message
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ed738f29-f12f-4777-af6d-d73b5a5c6e24
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: medium_photo_url
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cab8cd22-6fdc-4d1f-ba71-7f9774a9c189
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: digest_frequency
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cf056e75-8340-49e3-be1f-c3f046d9bc4d
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: default_group_notification_frequency
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: da96cb60-84e2-4b83-8862-d9fbd4d5f308
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        name: last_viewed_date
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 19bef9d0-09c7-40fd-95ed-fd1e15fb1cc2
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        name: last_referenced_date
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 953eb358-91b7-4159-9204-3642c37cc6fd
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: banner_photo_url
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 99ed647a-3c5d-439b-939d-4476c61d2977
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: small_banner_photo_url
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6f8f27aa-85c1-4560-828d-ad4f4ff70a29
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: medium_banner_photo_url
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 632a92ff-a274-4a37-a538-e9e893cb8970
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: is_profile_photo_active
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f5980cae-6559-4dd8-a687-a0f9b5016ece
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: individual_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 36ab5a2d-9ec2-4286-b212-3d73063fd378
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: mkto_si_is_caching_anon_web_activity_list_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 62d7dfb7-2f72-4c0d-b6b8-4552de704817
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: mkto_si_is_caching_best_bets_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7a13b3f0-6338-438a-9a32-8db8838b2091
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: mkto_si_is_caching_email_activity_list_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5bfc4d7f-3204-483f-970e-d42a36a27b03
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: mkto_si_is_caching_grouped_web_activity_list_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9e94971b-a8c1-42ff-8eca-3389e72d4b95
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: mkto_si_is_caching_interesting_moments_list_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c4b45456-7b40-4cc8-9313-2144cfa66cb7
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: mkto_si_is_caching_scoring_list_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c133d8f1-6bed-46fe-ab81-6499030299a0
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: mkto_si_is_caching_stream_list_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a3a183b7-cd95-4a49-bfcf-1436a4dbc96b
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: mkto_si_is_caching_watch_list_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a2690d77-3ada-4ffd-aeec-85b2a8b7565f
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: mkto_si_is_caching_web_activity_list_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8498d625-b686-4296-8f5c-64ec7aab1550
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: DOUBLE
+        defaultValue: ""
+        description: ""
+        name: mkto_si_sales_insight_counter_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e2151e45-c2ab-470e-aae9-4313c8211742
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: ops_user_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4072e05e-b0dc-45d8-9f91-ac1933680243
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: user_region_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b8bc3482-d9c4-48fb-a8b9-b9c9409d4783
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: bdr_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f8701756-8730-4f98-ab18-61d78c6874ec
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        name: se_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9d8f56ae-7974-4763-8489-a4e954c69340
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: run_exchange_rate_calculation_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d61cf331-7b26-4add-9bd1-6b67d08d4633
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: exchange_rate_start_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8e41fe1d-db27-4bbb-a83a-305047c0d90e
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: exchange_rate_end_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8acb6e16-4de0-4235-a339-ff597fbce37b
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: start_date_c
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1be296bc-be6c-4b36-b0b4-13d92a667018
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: BOOLEAN
+        defaultValue: ""
+        description: ""
+        name: _fivetran_deleted
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: cbb2cb3b-ce42-4f16-87e6-02261fe23d68
+          stepCounter: 29c53bed-f23b-45b6-aecf-d3dfe5259d8d
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        name: _fivetran_synced
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+  name: user
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

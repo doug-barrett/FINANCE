@@ -1,0 +1,204 @@
+fileVersion: 1
+id: 3a2ef2ef-4ad8-409b-8dd9-7fe934fe8cca
+name: FCT_HEALTH_METRICS_PERCENTILE
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: UNION ALL
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7f0f499e-3efa-4301-8fdf-5d882543556c
+          stepCounter: 3a2ef2ef-4ad8-409b-8dd9-7fe934fe8cca
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the unique identifier for the account associated with the opportunity. 
+          - Sourced from the 'opportunity' table's 'account_id' column. 
+          - Used for joining and linking with the account table to access account-specific information.
+        name: account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 46a96b51-bc17-4701-929c-081595a22106
+                stepCounter: a93a45a5-4ae9-4fd3-8d06-27883a14610e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0a843a88-9997-4efb-a8cd-6613d9e30212
+          stepCounter: 3a2ef2ef-4ad8-409b-8dd9-7fe934fe8cca
+        config: {}
+        dataType: STRING
+        description: ""
+        name: account_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 61e941f8-66a8-4e82-a5f8-e780b43b3cac
+                stepCounter: a93a45a5-4ae9-4fd3-8d06-27883a14610e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 287a5449-2f4c-4cd9-87f4-a2722fcd2534
+          stepCounter: 3a2ef2ef-4ad8-409b-8dd9-7fe934fe8cca
+        config: {}
+        dataType: STRING
+        description: ""
+        name: arr_cohort
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 62978cbb-9663-4228-a1d8-e9021492d6a1
+                stepCounter: a93a45a5-4ae9-4fd3-8d06-27883a14610e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bbfab7d3-69fc-4992-bdf5-edb501e85835
+          stepCounter: 3a2ef2ef-4ad8-409b-8dd9-7fe934fe8cca
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: account_tenure
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bc63824d-43d6-4564-863b-24de6bc69282
+                stepCounter: a93a45a5-4ae9-4fd3-8d06-27883a14610e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 423be0de-31ba-448e-96c7-a146f88dab57
+          stepCounter: 3a2ef2ef-4ad8-409b-8dd9-7fe934fe8cca
+        config: {}
+        dataType: DATE
+        description: ""
+        name: metric_month
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cf014053-082f-452c-b314-1eada0ad70b4
+                stepCounter: a93a45a5-4ae9-4fd3-8d06-27883a14610e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e8e4e650-27bc-4fbe-a1a8-1fd31e60911f
+          stepCounter: 3a2ef2ef-4ad8-409b-8dd9-7fe934fe8cca
+        config: {}
+        dataType: STRING
+        description: ""
+        name: metric_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: efa733b9-f3ee-48ca-95f9-7880718ad175
+                stepCounter: a93a45a5-4ae9-4fd3-8d06-27883a14610e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c663861c-6480-4073-a7f7-9aa648f62b46
+          stepCounter: 3a2ef2ef-4ad8-409b-8dd9-7fe934fe8cca
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: metric_value
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6682b81c-94b9-4fd6-ada6-79ef57bef602
+                stepCounter: a93a45a5-4ae9-4fd3-8d06-27883a14610e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 02ebfb55-b7c9-462f-94ce-2836c975ee36
+          stepCounter: 3a2ef2ef-4ad8-409b-8dd9-7fe934fe8cca
+        config: {}
+        dataType: DOUBLE
+        description: ""
+        name: metric_percentile
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 65425c1c-7ce7-4e19-bdab-a3cb5aec1912
+          stepCounter: 3a2ef2ef-4ad8-409b-8dd9-7fe934fe8cca
+        config: {}
+        dataType: DOUBLE
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: metric_median
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e7d16a26-32b2-423b-8c79-42070ab12872
+                stepCounter: 2620b137-4645-4337-87d9-7e1621c49336
+            transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3c31031a-d5a4-4094-b64c-6b131713e9eb
+          stepCounter: 3a2ef2ef-4ad8-409b-8dd9-7fe934fe8cca
+        config: {}
+        dataType: DOUBLE
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: median_percent
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: CASE WHEN `metric_value` IS NULL THEN 0 ELSE LEAST(1,`metric_value`/`metric_median`) END
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TARGET
+            nodeName: FCT_HEALTH_METRICS
+          - locationName: TARGET
+            nodeName: FCT_METRIC_MEDIANS
+        join:
+          joinCondition: |-
+            FROM {{ ref('TARGET', 'FCT_HEALTH_METRICS') }} `FCT_HEALTH_METRICS`
+            LEFT JOIN {{ ref('TARGET', 'FCT_METRIC_MEDIANS') }} `FCT_METRIC_MEDIANS`
+            ON `FCT_HEALTH_METRICS`.`metric_name` = `FCT_METRIC_MEDIANS`.`metric_name`
+            AND `FCT_HEALTH_METRICS`.`arr_cohort` = `FCT_METRIC_MEDIANS`.`arr_cohort`
+        name: FCT_HEALTH_METRICS_PERCENTILE
+        noLinkRefs: []
+  name: FCT_HEALTH_METRICS_PERCENTILE
+  overrideSQL: false
+  schema: ""
+  sqlType: Fact
+  type: sql
+  version: 1
+type: Node

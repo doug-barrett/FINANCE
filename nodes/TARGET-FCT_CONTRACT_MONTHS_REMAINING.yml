@@ -1,0 +1,138 @@
+fileVersion: 1
+id: b530b82e-b180-464f-9dfe-54fa57904f7c
+name: FCT_CONTRACT_MONTHS_REMAINING
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: UNION ALL
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0f06aa26-d0bd-481d-bb8e-bfc4287571ff
+          stepCounter: b530b82e-b180-464f-9dfe-54fa57904f7c
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the unique identifier for the account associated with the opportunity. 
+          - Sourced from the 'opportunity' table's 'account_id' column. 
+          - Used for joining and linking with the account table to access account-specific information.
+        name: account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e6f7027b-c8bf-42ba-9f10-739060ce40f8
+                stepCounter: c754851a-b3ba-431a-8044-2230eb376cec
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f8f1bc03-c46d-43a8-b1fb-e7684a0cfc3f
+          stepCounter: b530b82e-b180-464f-9dfe-54fa57904f7c
+        config: {}
+        dataType: STRING
+        description: ""
+        name: account_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ca8f81b0-4e62-46d6-82b4-90be85f6205f
+                stepCounter: c754851a-b3ba-431a-8044-2230eb376cec
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2bccff17-f15b-4bbf-8a52-58b813457e7c
+          stepCounter: b530b82e-b180-464f-9dfe-54fa57904f7c
+        config: {}
+        dataType: STRING
+        description: ""
+        name: arr_cohort
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: db521cc1-c4c6-4adc-ac6d-c48413feec70
+                stepCounter: c754851a-b3ba-431a-8044-2230eb376cec
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b2edb9b2-ec93-4875-ba5a-cc53df75677b
+          stepCounter: b530b82e-b180-464f-9dfe-54fa57904f7c
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: account_tenure
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e5b086da-5280-4931-b619-81eb6e8422bd
+                stepCounter: c754851a-b3ba-431a-8044-2230eb376cec
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cf11875d-ff21-4db1-8a67-6fea46e2b3f5
+          stepCounter: b530b82e-b180-464f-9dfe-54fa57904f7c
+        config: {}
+        dataType: DATE
+        description: ""
+        name: renewal_date
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 57120006-cbc2-4182-906a-202f58eaa17f
+                stepCounter: c754851a-b3ba-431a-8044-2230eb376cec
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5c233f22-7238-48fe-9ba1-b44f97671be7
+          stepCounter: b530b82e-b180-464f-9dfe-54fa57904f7c
+        config: {}
+        dataType: INTEGER
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: months_remaining
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: date_diff(month,GETDATE(),`STG_ACCOUNT_RENEWALS`.`renewal_date`)
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STAGING
+            nodeName: STG_ACCOUNT_RENEWALS
+        join:
+          joinCondition: FROM {{ ref('STAGING', 'STG_ACCOUNT_RENEWALS') }} `STG_ACCOUNT_RENEWALS`
+        name: FCT_CONTRACT_MONTHS_REMAINING
+        noLinkRefs: []
+  name: FCT_CONTRACT_MONTHS_REMAINING
+  overrideSQL: false
+  schema: ""
+  sqlType: Fact
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,164 @@
+fileVersion: 1
+id: b324c566-7062-4815-a6e9-6073aebc8b81
+name: FCT_T3M_CUSTOMER_TICKETS
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: UNION ALL
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 35116ae1-8b02-4d6a-8f8e-21cf3660bb96
+          stepCounter: b324c566-7062-4815-a6e9-6073aebc8b81
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the unique identifier for the account associated with the opportunity. 
+          - Sourced from the 'opportunity' table's 'account_id' column. 
+          - Used for joining and linking with the account table to access account-specific information.
+        name: account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0d2e4706-4771-4bbf-b161-0e2671312f01
+                stepCounter: 65f71f25-7b37-49a5-8b40-1222760a41fb
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3b4f9533-0de9-4937-819d-2ca3ec91adf6
+          stepCounter: b324c566-7062-4815-a6e9-6073aebc8b81
+        config: {}
+        dataType: STRING
+        description: ""
+        name: account_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8195582a-825f-4344-a4a7-839dce5fc984
+                stepCounter: 65f71f25-7b37-49a5-8b40-1222760a41fb
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4927ce1a-dead-4829-b4b1-ba9d3d4c4669
+          stepCounter: b324c566-7062-4815-a6e9-6073aebc8b81
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: arr_cohort
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 76fee88e-2419-48e4-a77f-252b1cd24b00
+                stepCounter: 65f71f25-7b37-49a5-8b40-1222760a41fb
+            transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: false
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 550c4f46-5d70-4547-be0b-22e8ad2a6bcf
+          stepCounter: b324c566-7062-4815-a6e9-6073aebc8b81
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: account_tenure
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d2836a47-f2a0-4938-a37b-d89658379b55
+                stepCounter: 65f71f25-7b37-49a5-8b40-1222760a41fb
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9d79ba0a-7b4d-488d-905a-a3caf1bc1129
+          stepCounter: b324c566-7062-4815-a6e9-6073aebc8b81
+        config: {}
+        dataType: DATE
+        description: ""
+        name: ticket_month
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 47794a16-a9c4-40da-8676-4f99437f7b06
+                stepCounter: 65f71f25-7b37-49a5-8b40-1222760a41fb
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 018a6de0-17b5-4d44-9b82-7886e46a59d5
+          stepCounter: b324c566-7062-4815-a6e9-6073aebc8b81
+        config: {}
+        dataType: DECIMAL
+        description: ""
+        name: t3m_ticket_count
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c4eac825-8ebf-4f87-9a38-31b52473a1f0
+                stepCounter: 65f71f25-7b37-49a5-8b40-1222760a41fb
+            transform: SUM(`FCT_MONTHLY_CUSTOMER_TICKETS`.`ticket_count`) OVER (PARTITION BY `account_id` ORDER BY `ticket_month` ASC ROWS BETWEEN 2 PRECEDING AND CURRENT ROW)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c60ed33a-c426-4b93-9a7c-918571572cdb
+          stepCounter: b324c566-7062-4815-a6e9-6073aebc8b81
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: metric_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "'t3m_tickets'"
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          FCT_MONTHLY_CUSTOMER_TICKETS: 65f71f25-7b37-49a5-8b40-1222760a41fb
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TARGET
+            nodeName: FCT_MONTHLY_CUSTOMER_TICKETS
+        join:
+          joinCondition: |-
+            FROM {{ ref('TARGET', 'FCT_MONTHLY_CUSTOMER_TICKETS') }} `FCT_MONTHLY_CUSTOMER_TICKETS`
+            ORDER BY `account_id` asc, `ticket_month` asc
+        name: FCT_T3M_CUSTOMER_TICKETS
+        noLinkRefs: []
+  name: FCT_T3M_CUSTOMER_TICKETS
+  overrideSQL: false
+  schema: ""
+  sqlType: Fact
+  type: sql
+  version: 1
+type: Node

@@ -1,0 +1,181 @@
+fileVersion: 1
+id: fd4e02ac-7658-4fa5-b6e5-0fc943fb8778
+name: FCT_MONTHLY_NODE_COUNT
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: UNION ALL
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 47c3743b-6e47-452f-8a3f-d499b5dee2fa
+          stepCounter: fd4e02ac-7658-4fa5-b6e5-0fc943fb8778
+        config: {}
+        dataType: STRING
+        description: |-
+          -  Represents the unique identifier for the account associated with the opportunity. 
+          - Sourced from the 'opportunity' table's 'account_id' column. 
+          - Used for joining and linking with the account table to access account-specific information.
+        name: account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b60dd383-780b-4ee7-a293-4ea4d7b5a3bb
+                stepCounter: 04cf093c-b308-4620-b42e-8b9b37fe6b74
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9bc34c78-d671-481b-9ea7-145c2442728c
+          stepCounter: fd4e02ac-7658-4fa5-b6e5-0fc943fb8778
+        config: {}
+        dataType: STRING
+        description: ""
+        name: account_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0c294d13-37e4-4cd7-a008-40a0d265053f
+                stepCounter: 04cf093c-b308-4620-b42e-8b9b37fe6b74
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2c1575c1-6d41-48d1-b45b-7ee3c2770485
+          stepCounter: fd4e02ac-7658-4fa5-b6e5-0fc943fb8778
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: arr_cohort
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c7f412d6-8307-4aea-9441-a18962d709ec
+                stepCounter: 04cf093c-b308-4620-b42e-8b9b37fe6b74
+            transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0b180d7a-c5af-43a7-8848-f251c80273ca
+          stepCounter: fd4e02ac-7658-4fa5-b6e5-0fc943fb8778
+        config: {}
+        dataType: INTEGER
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: account_tenure
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 834ad4a2-2236-4615-84dc-79b5121b1396
+                stepCounter: 04cf093c-b308-4620-b42e-8b9b37fe6b74
+            transform: ""
+        systemColumnType: None
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c6ed73f2-b9fd-4d9d-9185-523fb6ccee51
+          stepCounter: fd4e02ac-7658-4fa5-b6e5-0fc943fb8778
+        config: {}
+        dataType: DATE
+        description: ""
+        name: node_month
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8fe7349f-223f-4b2d-986e-d5c9c1fbb699
+                stepCounter: 04cf093c-b308-4620-b42e-8b9b37fe6b74
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: dff7f50b-fa54-4323-bc09-25e84891e287
+          stepCounter: fd4e02ac-7658-4fa5-b6e5-0fc943fb8778
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: metric_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "'monthly_nodes'"
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5bdd003b-102e-40cd-b605-b57e08ecdfe4
+          stepCounter: fd4e02ac-7658-4fa5-b6e5-0fc943fb8778
+        config: {}
+        dataType: INTEGER
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: node_count
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: |-
+              SUM(`FCT_MONTHLY_NODES_BUILT`.`nodes_built`) OVER (
+                      PARTITION BY `FCT_MONTHLY_NODES_BUILT`.`account_id`
+                      ORDER BY `node_month`
+                      ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+                  )
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          FCT_MONTHLY_NODES_BUILT: 04cf093c-b308-4620-b42e-8b9b37fe6b74
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TARGET
+            nodeName: FCT_MONTHLY_NODES_BUILT
+        join:
+          joinCondition: |+
+            FROM {{ ref('TARGET', 'FCT_MONTHLY_NODES_BUILT') }} `FCT_MONTHLY_NODES_BUILT`
+            GROUP BY account_id, account_name, arr_cohort, account_tenure, node_month, metric_name, nodes_built
+            ORDER BY account_id asc, node_month asc
+
+
+        name: FCT_MONTHLY_NODE_COUNT
+        noLinkRefs: []
+  name: FCT_MONTHLY_NODE_COUNT
+  overrideSQL: false
+  schema: ""
+  sqlType: Fact
+  type: sql
+  version: 1
+type: Node

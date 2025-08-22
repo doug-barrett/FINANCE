@@ -1,0 +1,3418 @@
+fileVersion: 1
+id: 14b9e3e7-5062-44d8-a804-a68e48284442
+name: stg_node_create_v2
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 505afe22-0bca-4991-8270-024ec69c5b98
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: |-
+          The id of the webhook request, which is automatically added by the connector
+          auto-generated projection of JSON at: /_meta/webhookId with inferred types: [string]
+        name: _meta/webhookId
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 96a34ae3-dbc7-48ef-881b-81c3d290bcba
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4fc3ffa7-c866-4268-9b10-9db26e64880a
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /_id with inferred types: [string]"
+        name: _id
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7af36fae-484b-49fd-862d-f7acf527550e
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c735865a-c673-485d-8f69-d0e35c5b9373
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/appEnv/firebaseEnv with inferred types: [string]"
+        name: attributes/appEnv/firebaseEnv
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3e7696b6-afbb-4708-88f1-192881e3f8cc
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d3957f19-2cd3-4bd3-9478-2005cf2fd88a
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/appEnv/windowInfo/frontendURLHost with inferred types: [string]"
+        name: attributes/appEnv/windowInfo/frontendURLHost
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b62282a1-bbc8-41be-818f-94581fd95202
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: deaecf1f-a9da-4540-8243-095a6b40ea0f
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/application_id with inferred types: [string]"
+        name: attributes/application_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f1049086-4432-4e02-a7aa-243957e6257c
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: af8585d5-87d0-452a-a119-47c1479e79f9
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: BOOLEAN
+        description: "auto-generated projection of JSON at: /attributes/ci/is_failure with inferred types: [boolean]"
+        name: attributes/ci/is_failure
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4276f53b-0aa4-4b5d-9a8b-53e3e1ce9824
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 750988ca-68d6-4f92-86c4-563ccb00ba03
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/ci/job/id with inferred types: [string]"
+        name: attributes/ci/job/id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 31e30a4a-62a6-4716-bb39-8b677967611b
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6e0d10d1-29d5-48a8-a13f-baa43616650b
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/ci/job/log_fingerprint with inferred types: [string]"
+        name: attributes/ci/job/log_fingerprint
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f1181424-2d9b-43c8-95e9-dd6e7dcacd67
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 35405e6a-386e-44ff-a99d-7091fa3e4251
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/ci/job/name with inferred types: [string]"
+        name: attributes/ci/job/name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 913eafab-1488-4ff5-8d82-76c6e6825ff1
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2c44e611-2c58-4619-88a7-8f3499b36063
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/ci/job/url with inferred types: [string]"
+        name: attributes/ci/job/url
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: efbf77d6-217b-4703-9f40-89a8602445e4
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c44bda41-8bdc-4278-88dc-4eacf44d0f35
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/ci/node/labels with inferred types: [array]"
+        name: attributes/ci/node/labels
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 743b9ec1-470e-4687-843a-4d54576e13a4
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5488edf9-8c7e-4c41-bdf6-50fdb13baaf8
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/ci/node/name with inferred types: [string]"
+        name: attributes/ci/node/name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bf31d67f-9f98-4e1c-8835-d145f93f0ff5
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c42769be-0c8a-41a3-9d5a-d34451194766
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/ci/pipeline/id with inferred types: [string]"
+        name: attributes/ci/pipeline/id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 41c4c235-848f-4d47-b664-4fb6b547723f
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cf984165-3300-4e9c-a333-1108e8a7a8d1
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/ci/pipeline/name with inferred types: [string]"
+        name: attributes/ci/pipeline/name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: db228597-065b-4751-8374-b26630213d19
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4c3e55c2-2727-45fa-ae15-0befb77fd952
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/ci/provider/name with inferred types: [string]"
+        name: attributes/ci/provider/name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f8e86e6a-e811-4f76-8be8-e8a463f3756a
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a4f7c332-6786-4e01-b6e5-fd7af1251547
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/ci/status with inferred types: [string]"
+        name: attributes/ci/status
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 525172fe-ab75-452a-8873-ccde92abc8ab
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2b6126c5-c42c-493f-a096-813e166d887b
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/coalesceSoftwareVersion with inferred types: [string]"
+        name: attributes/coalesceSoftwareVersion
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6c39b309-3591-4e72-8750-a80c7f5df850
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 725c64fb-c450-42c8-af54-6e5824019f5e
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/commitHash with inferred types: [string]"
+        name: attributes/commitHash
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 912e36d5-5dc1-475c-b79d-4d5e5e5e4fa3
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5cfcf84e-9be1-4a1c-8149-c0cef7c793fd
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: LONG
+        description: "auto-generated projection of JSON at: /attributes/date with inferred types: [integer]"
+        name: attributes/date
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f6931c4e-688f-475f-ad54-fadb260322d0
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ffc2dadf-6be2-4ff6-9bc7-7020653de297
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/dd-request-id with inferred types: [string]"
+        name: attributes/dd-request-id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8cccdd87-ba05-4289-9b67-17ba0e70fdc4
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b3b6802d-536a-41f0-89c7-d75bab817dba
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/domain with inferred types: [string]"
+        name: attributes/domain
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f650e903-1758-4545-af6a-59b2b5668336
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7525dd8d-6d7f-480e-9504-ed8708805374
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/env with inferred types: [string]"
+        name: attributes/env
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fbdf2e27-0ab9-4d51-a9b0-c0695ea7e1df
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 38266083-3f51-41b1-8067-e5b857e54d24
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/envID with inferred types: [integer string]"
+        name: attributes/envID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 814db02d-4bce-4932-8397-aea763a2370e
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e014f1c2-497a-4c30-95b9-4fd6069667c2
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: LONG
+        description: "auto-generated projection of JSON at: /attributes/environmentID with inferred types: [integer]"
+        name: attributes/environmentID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5eece32f-a31e-4523-b247-a9c2e03f524a
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fe4c6e32-eb06-4bb6-983f-7a8c86068ed1
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/git/branch with inferred types: [string]"
+        name: attributes/git/branch
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 326ce43a-f8c9-4d97-bb3d-f4d6523f0b16
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 93f33642-57be-4759-b9f8-333d31a4d94f
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/git/commit/author/email with inferred types: [string]"
+        name: attributes/git/commit/author/email
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fca83cfd-819b-4a61-a569-2b429f8ceeb7
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 52dad57a-2bab-423b-960a-c6338304c0bf
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/git/commit/author/name with inferred types: [string]"
+        name: attributes/git/commit/author/name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 28df26bb-328b-40ae-8a83-2ba00ef399b7
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3783eda6-c7b5-400d-9945-e14f8b1333f8
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: TIMESTAMP
+        description: "auto-generated projection of JSON at: /attributes/git/commit/committer/date with inferred types: [string]"
+        name: attributes/git/commit/committer/date
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6c5adb11-974b-450f-b6f2-33e3b813784c
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2aabedba-f690-4ee7-93b4-fa62570135e8
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/git/commit/committer/email with inferred types: [string]"
+        name: attributes/git/commit/committer/email
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cba4a2ec-0ca4-4ffa-85de-ba4646f0ce3b
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a50ac6af-4433-4e07-86ec-246b483ed931
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/git/commit/committer/name with inferred types: [string]"
+        name: attributes/git/commit/committer/name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c229433e-491b-4c77-b8aa-cd428a9e72cc
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8b7ac6ed-f730-43b2-9e98-30a2cd86824f
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/git/commit/message with inferred types: [string]"
+        name: attributes/git/commit/message
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e85f956f-e368-466d-b660-13c9a0b8cc3c
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 80dc8984-a248-44a7-89a2-5be6e4e78035
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/git/commit/sha with inferred types: [string]"
+        name: attributes/git/commit/sha
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ed703cca-7a99-4a6e-ab64-af2bf1aa7f67
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ebf47e88-38e5-438c-9801-d7afdf6b3ed3
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/git/default_branch with inferred types: [string]"
+        name: attributes/git/default_branch
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6375200a-4327-4b44-a1c3-85886b9b7ddb
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c7ef78de-a04e-4d4e-bf62-04df3346e9d3
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/git/repository_url with inferred types: [string]"
+        name: attributes/git/repository_url
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 50e0c739-6494-4977-9138-39bd40a6b277
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7d057706-dae3-4311-86dd-dcdaa2487a79
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/github/app_id with inferred types: [string]"
+        name: attributes/github/app_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ebd765a5-fe4f-41f5-bf47-218dbb69f2a9
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c160ca64-67a4-45a3-865c-51186f12039b
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/github/conclusion with inferred types: [string]"
+        name: attributes/github/conclusion
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 82f80866-701d-472e-ae6b-c146459be78f
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7d17a390-a763-43e5-b212-28faec4fb4ae
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/github/html_url with inferred types: [string]"
+        name: attributes/github/html_url
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 298aaebc-ab81-4642-9d9b-75b6c86b94c7
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a47b8be8-23e5-4763-8638-f4ef43441a7c
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/github/node_group with inferred types: [string]"
+        name: attributes/github/node_group
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 25d810a1-c9bf-4cea-a057-f2ae45a20495
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 69fba970-a6fb-4a0f-950a-ed0c21b6cdf9
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/github/run_attempt with inferred types: [string]"
+        name: attributes/github/run_attempt
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: dbee9e88-c640-4b38-8ae7-ff3b5ce93cbc
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: df429d21-f11d-4d1f-bb0e-0c003368b99b
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/hostname with inferred types: [string]"
+        name: attributes/hostname
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: dbdd136b-8820-4fa0-b1ce-d9f0b8302dbb
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fe025e3a-c333-4f34-95a7-3e781ceec321
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/http/method with inferred types: [string]"
+        name: attributes/http/method
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 47df784b-07b5-4ca8-8bfe-c3b4565b9b3b
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3f2c39d8-0d35-4c56-b32e-1cf903ac9ae2
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/http/useragent with inferred types: [string]"
+        name: attributes/http/useragent
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ffa67d4f-825c-424f-ae19-54cf2d4fd3b7
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9868335c-6fb0-4e26-bb7a-176d59f713b5
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/http/useragent_details/browser/family with inferred types: [string]"
+        name: attributes/http/useragent_details/browser/family
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b29038c6-1143-4e39-b457-ce9ffa453460
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d22904e0-2654-4958-8de8-1b7022dda51d
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/http/useragent_details/browser/major with inferred types: [string]"
+        name: attributes/http/useragent_details/browser/major
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4cfaeff8-fa18-4733-9974-2f6cf7c6ef7d
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ed1538d1-78ce-4716-a974-f66c3a365cbe
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/http/useragent_details/browser/minor with inferred types: [string]"
+        name: attributes/http/useragent_details/browser/minor
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2acb0bf6-253e-4fba-8724-a2189d2c9676
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9d961855-0df7-41a7-a9a7-34affa5fc2a2
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/http/useragent_details/browser/patch with inferred types: [string]"
+        name: attributes/http/useragent_details/browser/patch
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 387c08bd-34f3-4717-81e2-e9235806a9f4
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5d3418e8-4dbf-4362-a83e-6683b56d6695
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/http/useragent_details/browser/patch_minor with inferred types: [string]"
+        name: attributes/http/useragent_details/browser/patch_minor
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 469e2140-632e-4105-b63b-46d56399a96c
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 88e3b38b-0ae5-4db0-846a-5ac4d62fd6f5
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/http/useragent_details/device/brand with inferred types: [string]"
+        name: attributes/http/useragent_details/device/brand
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0d1c11a7-35e9-43d9-9782-1c1b8f9f7e9b
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8d9153e5-ecc9-4074-a4a5-907fe8faa6f0
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/http/useragent_details/device/category with inferred types: [string]"
+        name: attributes/http/useragent_details/device/category
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 330d36b5-fcd3-4117-b6c7-982ca04aa255
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 76552f1e-d268-43b3-bd06-f09865a129fc
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/http/useragent_details/device/family with inferred types: [string]"
+        name: attributes/http/useragent_details/device/family
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6f218032-34d1-4758-b2d1-50d3cba10e6c
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9cf6183e-b53c-410e-a0a6-51b7aa8c5fb1
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/http/useragent_details/device/model with inferred types: [string]"
+        name: attributes/http/useragent_details/device/model
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d1e693c9-edaf-4224-b5a4-23af488886ff
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 755d8b3e-aef6-45af-b6a9-7dfacb3f7cc9
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/http/useragent_details/os/family with inferred types: [string]"
+        name: attributes/http/useragent_details/os/family
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3a170d8b-e687-4b29-aad6-2e17a4377956
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4f3672af-59c1-4b46-bf65-01b3208bfe08
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/http/useragent_details/os/major with inferred types: [string]"
+        name: attributes/http/useragent_details/os/major
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f30eb81c-f7fd-4296-b9a9-7e25183cc468
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 24c3f386-c955-420f-81f9-9d40e821111c
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/http/useragent_details/os/minor with inferred types: [string]"
+        name: attributes/http/useragent_details/os/minor
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d02d0944-083e-4cae-9cf4-586bb545288a
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2dba5540-b92f-48fe-9f37-267df67815a9
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/http/useragent_details/os/patch with inferred types: [string]"
+        name: attributes/http/useragent_details/os/patch
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2e0bb1ec-fdac-4bdb-93bb-9ec41043230e
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3dcefe6c-e174-40b5-879b-0788c4ae6406
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/kubernetesJobUuid with inferred types: [string]"
+        name: attributes/kubernetesJobUuid
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d8bdb1a3-1025-4b07-84ac-e362c25d2771
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2e93d772-1014-4bad-8d8a-00ec18695349
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/level with inferred types: [string]"
+        name: attributes/level
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8f546caa-dc75-4914-aa78-1dc09343fc49
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 863e01cf-9bc4-4da8-8b04-79605cfc6247
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/logContext/orgID with inferred types: [string]"
+        name: attributes/logContext/orgID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b6d7fa3b-8f10-468c-a548-1fc4a47b845f
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 27fa94c2-7a6c-47f5-9b36-37819e4a72b7
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/logContext/userID with inferred types: [string]"
+        name: attributes/logContext/userID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: af33958e-d815-4266-9125-52001cc74b0f
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 20cedac3-f281-4ab5-9a47-21895d0d77ed
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/loggingArea with inferred types: [string]"
+        name: attributes/loggingArea
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f17b3495-bf8f-44fe-9e79-77b1b7ad43c4
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7a790223-4f0e-4512-91e5-4b6c8f74882a
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/metric-name with inferred types: [string]"
+        name: attributes/metric-name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3165ba5b-f0e3-4e9e-aa54-cce7e147ae56
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f2d0dd40-d7e2-4fa6-b039-45152c2f1878
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/network/client/geoip/as/domain with inferred types: [string]"
+        name: attributes/network/client/geoip/as/domain
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 253c11c1-10a4-4c3d-8469-490370b6d92c
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1717a267-1244-4b60-bdc5-5b9f48583e93
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/network/client/geoip/as/name with inferred types: [string]"
+        name: attributes/network/client/geoip/as/name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: dca5f071-824f-4dfb-a87a-0ad63c151c26
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2fbccc28-3578-41a6-806f-d22534d48056
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/network/client/geoip/as/number with inferred types: [string]"
+        name: attributes/network/client/geoip/as/number
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: dff87e42-9eb2-4955-9fb3-f6753eec2cdb
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7e09b014-0191-4999-b5ef-566e37262678
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/network/client/geoip/as/route with inferred types: [string]"
+        name: attributes/network/client/geoip/as/route
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 57248d35-9422-49d4-bb63-e437570f6707
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 45d3ec6d-67e2-4e5c-ac03-6a4de05f454c
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/network/client/geoip/as/type with inferred types: [string]"
+        name: attributes/network/client/geoip/as/type
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ca0f51e3-c154-46a2-95ce-d404b26594e1
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 50d62ba8-bb94-46b3-a6ec-bdc82f366113
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/network/client/geoip/city/name with inferred types: [string]"
+        name: attributes/network/client/geoip/city/name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 163e1621-eb28-433a-9e2b-d1e333a9193c
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 979882a5-8d30-496d-9152-d3c6b388423c
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/network/client/geoip/continent/code with inferred types: [string]"
+        name: attributes/network/client/geoip/continent/code
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fbc2ebec-ba1f-4674-8ed8-014312564a44
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f78af829-f31d-4cd2-b577-26f427fded17
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/network/client/geoip/continent/name with inferred types: [string]"
+        name: attributes/network/client/geoip/continent/name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2e1589b2-d003-4a80-beab-7283c7ff2593
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 297850d2-129d-4b7f-8b7b-8485e9fe6a13
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/network/client/geoip/country/iso_code with inferred types: [string]"
+        name: attributes/network/client/geoip/country/iso_code
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b7180df4-7038-4467-b9d5-4302791538e3
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ebfd623b-b509-4178-9464-436567540f56
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/network/client/geoip/country/name with inferred types: [string]"
+        name: attributes/network/client/geoip/country/name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bb1c4e70-e55f-41f2-b39c-ca834ff5975d
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b396512d-78cd-4117-8067-4d7809f065bf
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/network/client/geoip/ipAddress with inferred types: [string]"
+        name: attributes/network/client/geoip/ipAddress
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3d9dfdbc-a33d-41c1-9fa3-f888c989cae9
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 89876452-78b5-4c20-82ca-6f53835b1665
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/network/client/geoip/location/latitude with inferred types: [number]"
+        name: attributes/network/client/geoip/location/latitude
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2ab887f2-0dcd-42be-8c07-d84ec420d179
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 50f8df76-fb74-46d5-ba8b-70046f6e4839
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/network/client/geoip/location/longitude with inferred types: [number]"
+        name: attributes/network/client/geoip/location/longitude
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4974c5fa-e15e-4185-8485-21ac1bed8b2c
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8c4f3d1c-0a5e-480a-bdb6-defc7b0ed8e0
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/network/client/geoip/subdivision/iso_code with inferred types: [string]"
+        name: attributes/network/client/geoip/subdivision/iso_code
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 14eb86c2-f63a-4cfe-a4b9-e7db6338047c
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f6513848-bfc0-4c21-bc2b-b6b9c937e2c6
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/network/client/geoip/subdivision/name with inferred types: [string]"
+        name: attributes/network/client/geoip/subdivision/name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 72318184-0f40-4d4f-8a9c-e0103d70acb0
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: eef0aa4f-be2f-4140-99bf-2e2b14f971a7
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/network/client/geoip/timezone with inferred types: [string]"
+        name: attributes/network/client/geoip/timezone
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c4866409-c1ad-4b28-8955-0bbfc5f20f63
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4a2882ef-6da7-4d8e-af41-72c22b6cd431
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/network/client/ip with inferred types: [string]"
+        name: attributes/network/client/ip
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2f8911a0-6153-4d2d-abb7-7e38255c7318
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 543a8502-7c0e-4c4a-bfa1-dba453a414ef
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: BOOLEAN
+        description: "auto-generated projection of JSON at: /attributes/network/client/is_private_network_ip with inferred types: [boolean]"
+        name: attributes/network/client/is_private_network_ip
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a7f4707c-e809-477d-bd4c-2b7252095957
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a91fbb87-509f-4043-8acd-434a534e06b3
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/network/ip/attributes with inferred types: [array]"
+        name: attributes/network/ip/attributes
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7c7519a6-890f-4d4a-9fb1-a798da1ddb75
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 437efe7e-6615-491c-9471-d2119ccf6c80
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/network/ip/list with inferred types: [array]"
+        name: attributes/network/ip/list
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a3dc2aaa-76bd-4d3a-8210-959140216140
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d4d0ef9e-aa77-456c-8c50-5c26fd43e64c
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/nodeID with inferred types: [string]"
+        name: attributes/nodeID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1b2d7d42-b84b-4035-950d-d1870bb53fb9
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b025f5cc-6cd6-4e99-b77c-9b1990368270
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/orgID with inferred types: [string]"
+        name: attributes/orgID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ffcdd8b0-f8e7-468a-9f5a-2e6ab096b2b1
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 58d0352a-5922-4199-b16f-a6d61e4191b7
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/company_name with inferred types: [string]"
+        name: attributes/orgLookup/company_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3a9585f1-499f-4295-a3d7-612651674c17
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d1fe5e26-041e-4401-a3fe-d50b446ba0f5
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/days_since_last_activity with inferred types: [string]"
+        name: attributes/orgLookup/days_since_last_activity
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e718fd9f-1b61-41a9-90c7-d70195b9137b
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d3455901-8168-4f0f-80ba-143c8d8c33bd
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/firebase_env with inferred types: [string]"
+        name: attributes/orgLookup/firebase_env
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6c8f77eb-8825-4026-a519-d2476e9679ad
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: db2c8327-5e69-4ac5-9fd9-9cf53ba19f08
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/last_activity_timestamp with inferred types: [string]"
+        name: attributes/orgLookup/last_activity_timestamp
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bca3574d-0afc-44eb-8cb0-149846429fca
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: dd7d7334-d3b3-4931-9e3a-93927a40bd46
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/max_node_count with inferred types: [string]"
+        name: attributes/orgLookup/max_node_count
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5a39c12d-7879-4659-8d95-b5a710644623
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e650ac3c-9b91-41a8-bc28-614ab254df55
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/org_create_date with inferred types: [string]"
+        name: attributes/orgLookup/org_create_date
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cbe1f50e-1b18-4c97-b739-6eafb23188d0
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: dbfad2f0-656c-4fa9-93ed-b2117710c121
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/org_name with inferred types: [string]"
+        name: attributes/orgLookup/org_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ec591ac5-0b2d-4fe5-b958-0b921cd466b4
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c41323c2-f4ad-4e0f-9759-69ef2e8a6a13
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/subscription_end_date with inferred types: [string]"
+        name: attributes/orgLookup/subscription_end_date
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 39dd0ea1-0de1-4cdf-a86e-d2eb97cf2c2c
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9ddfd620-47bc-48fb-ae2f-a66314949517
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/subscription_start_date with inferred types: [string]"
+        name: attributes/orgLookup/subscription_start_date
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 830b8bb6-bfae-47ba-827f-240519bd67a7
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 56a8353c-9155-4a6c-b159-0ee94cacdd92
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/ticket_closed_resolved_count with inferred types: [string]"
+        name: attributes/orgLookup/ticket_closed_resolved_count
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6b66c220-9191-4616-a1e3-0b9de6b5d194
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2a7c70df-a96d-4dd7-9d21-ef80b66dbe5b
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/ticket_open_pending_count with inferred types: [string]"
+        name: attributes/orgLookup/ticket_open_pending_count
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3b475a4f-ac05-4574-b12f-65e47e7e8e26
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4b5295bc-0672-4009-b75e-eb6a0d624b85
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/ticket_total_count with inferred types: [string]"
+        name: attributes/orgLookup/ticket_total_count
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6562fa16-2732-43d3-8bdb-0fd0d86dd28c
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4689d9e5-7fe6-4dd8-8cb4-01b196553dbc
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/ticket_wait_on_dev_count with inferred types: [string]"
+        name: attributes/orgLookup/ticket_wait_on_dev_count
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: daed133c-b5a0-4bb7-948d-cdb09fd95425
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3da8df94-6511-465b-9e78-87990dce9ee9
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/trial_activated_by_user_id with inferred types: [string]"
+        name: attributes/orgLookup/trial_activated_by_user_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 592a3acb-562f-4708-b475-9ac4987d6456
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d9403389-a025-45dd-bf7f-5f8c09340c55
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/trial_source with inferred types: [string]"
+        name: attributes/orgLookup/trial_source
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ac538931-674e-4128-8858-44183ef76c2f
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d712a5cf-d063-47f3-b290-68487a3b4d86
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/type with inferred types: [string]"
+        name: attributes/orgLookup/type
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: eaa2d819-397b-4d0e-8f63-51cbf7e10abb
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 74c9fd4c-777c-4dc7-b210-bd8f9a336710
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/orgLookup/user_count with inferred types: [string]"
+        name: attributes/orgLookup/user_count
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3e7f3d44-4c3c-4e8c-989d-0db2fcfa5f53
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 03a97c9c-9729-4831-9d10-826cc61a1cf5
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/origin with inferred types: [string]"
+        name: attributes/origin
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 474573dd-8251-475f-b73f-5f675db3aff7
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: eee5893c-397e-42b8-9979-ad81bcd14c3b
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: LONG
+        description: "auto-generated projection of JSON at: /attributes/params/accepted with inferred types: [integer]"
+        name: attributes/params/accepted
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6164bd6b-377e-47cf-928c-50f534c2ddaa
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a7c62f64-b863-4394-b51e-164d51b9a00c
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: LONG
+        description: "auto-generated projection of JSON at: /attributes/params/allEntityCount with inferred types: [integer]"
+        name: attributes/params/allEntityCount
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c712d2c1-7f25-4d71-8cc2-f0401adfb334
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5d26bcdb-b5e7-4f3a-9b49-140b63249bfc
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: BOOLEAN
+        description: "auto-generated projection of JSON at: /attributes/params/artTest with inferred types: [boolean]"
+        name: attributes/params/artTest
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9cce2700-9d1c-4df9-91d2-f3bd09e3a897
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5498b454-3668-4cb4-ad4c-8af589ae6b8d
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/params/attribution with inferred types: [array]"
+        name: attributes/params/attribution
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1ee5a0c4-939d-4aea-a29e-5bdef6e775a0
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6c698e89-3ad2-4ad4-ab75-d9cc20b093da
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/params/browserName with inferred types: [string]"
+        name: attributes/params/browserName
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b8486e52-f7b7-454a-b811-03e72b827a83
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a898b3bb-40d0-492f-983f-1fb6036bae18
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: LONG
+        description: "auto-generated projection of JSON at: /attributes/params/candidatesTokenCount with inferred types: [integer]"
+        name: attributes/params/candidatesTokenCount
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cfe83146-bcd0-4491-9bbb-aaa64d80bc51
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5c5d36e2-5d2b-4094-ae6d-20f31e5b7067
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/params/commitSHA with inferred types: [string]"
+        name: attributes/params/commitSHA
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 76acaf3d-8d7e-4ec4-b330-29cb8f6188b2
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9c40db80-dee3-4004-8c45-5d73daa8268e
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: BOOLEAN
+        description: "auto-generated projection of JSON at: /attributes/params/concurrencyTest with inferred types: [boolean]"
+        name: attributes/params/concurrencyTest
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: db063d04-087b-482c-ba63-a5ead43309ff
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 71c02050-d880-4a84-ab0b-ad91c13a32af
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: LONG
+        description: "auto-generated projection of JSON at: /attributes/params/contextCount with inferred types: [integer]"
+        name: attributes/params/contextCount
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f7176bee-bca6-4628-8ea4-fc0cfb00ba79
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 28735838-67d8-41c1-834d-772efaf13fd0
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/params/duration with inferred types: [number]"
+        name: attributes/params/duration
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 000b41e5-cad4-43b2-87de-446b8c769105
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4d56d9eb-cfe6-4ed1-b3f8-d74cdfaa172f
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/params/entryType with inferred types: [string]"
+        name: attributes/params/entryType
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: dbd74135-17bf-4832-9731-1bcaa2697804
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 660cc012-dc35-411f-aeff-ab07d176c9d0
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/params/error/caller with inferred types: [string]"
+        name: attributes/params/error/caller
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d7b01a20-b041-4ead-8273-b03e8974f353
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d6c3adc5-16cc-490b-87c4-daa4bd8c7802
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/params/error/code with inferred types: [string]"
+        name: attributes/params/error/code
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 961bce2d-a656-4400-986d-97b3bd880ca4
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6bab9c1d-bd5f-4986-8418-b8e5103987cc
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/params/error/data/filepaths with inferred types: [array]"
+        name: attributes/params/error/data/filepaths
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 00e4bc4a-ab46-4b16-bf79-9ecfdfc11ac3
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5faad0b5-5282-4992-af98-2f9ea78a6604
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/params/error/data/what with inferred types: [string]"
+        name: attributes/params/error/data/what
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 554b0bee-b819-42d4-bbc0-3d5f748efe57
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0a113be2-530c-44aa-a978-e13b05b67173
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/params/error/matcherResult/actual with inferred types: [string]"
+        name: attributes/params/error/matcherResult/actual
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bd36ef02-58d7-471e-a81d-982b4cbf57f0
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 75631627-5553-4ee4-9e33-ea4f95c35b91
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/params/error/matcherResult/expected with inferred types: [string]"
+        name: attributes/params/error/matcherResult/expected
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6b59dbe2-6a39-43d2-b143-f5fe8a21ddac
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e011b5db-766f-4a40-969e-610aa18ffa53
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/params/error/matcherResult/log with inferred types: [array]"
+        name: attributes/params/error/matcherResult/log
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3902dbed-ba0a-4af2-9922-ad4cf1a7c989
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1446ba75-6d55-4126-a076-d403baff2f7e
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/params/error/matcherResult/message with inferred types: [string]"
+        name: attributes/params/error/matcherResult/message
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 58a82f01-1d4b-4bc2-92a5-dd132a3eefcd
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0cf11ca4-2a9e-4841-92a9-d60fc596a444
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/params/error/matcherResult/name with inferred types: [string]"
+        name: attributes/params/error/matcherResult/name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 64ce8e04-73da-4778-9c59-ac38a84d98c8
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a21e1ac8-3525-4b94-a19d-c76c63baf144
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: BOOLEAN
+        description: "auto-generated projection of JSON at: /attributes/params/error/matcherResult/pass with inferred types: [boolean]"
+        name: attributes/params/error/matcherResult/pass
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 47100350-8e95-4c9f-9db2-c8949c6e9ee9
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 528ab325-a622-4153-9076-4e7f1d1b1c7c
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: LONG
+        description: "auto-generated projection of JSON at: /attributes/params/error/matcherResult/timeout with inferred types: [integer]"
+        name: attributes/params/error/matcherResult/timeout
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d1841492-6554-4d00-83fd-97f8c9004c1c
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 91630564-c078-49c5-a00f-566340f90a07
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/params/error/message with inferred types: [string]"
+        name: attributes/params/error/message
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8b0b9d86-160e-4bd1-b1ff-39b7602b7378
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 99269c9c-8886-4258-a206-ae8052bb7f2c
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/params/error/name with inferred types: [string]"
+        name: attributes/params/error/name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d58bc562-0403-4f8c-a1c5-a5651008c6e7
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fd412e63-46f1-4d58-a60e-d72f13d8cd9a
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/params/error/stack with inferred types: [string]"
+        name: attributes/params/error/stack
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2eff007a-92db-40a7-9a75-e5054d266727
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6dae1b05-3185-48ec-ad2b-b9ecd788bff0
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: BOOLEAN
+        description: "auto-generated projection of JSON at: /attributes/params/isFinal with inferred types: [boolean]"
+        name: attributes/params/isFinal
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 555a98d0-2e8d-4917-918c-4770c491ab92
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fab5b9ba-d9e4-4abe-8a71-e936e7d29c71
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: LONG
+        description: "auto-generated projection of JSON at: /attributes/params/modified with inferred types: [integer]"
+        name: attributes/params/modified
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9db7abfc-3712-4e1b-a181-e72a3857379f
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a6b63e2f-c986-4491-bb2a-551da8305e2f
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: LONG
+        description: "auto-generated projection of JSON at: /attributes/params/modifiedFiles with inferred types: [integer]"
+        name: attributes/params/modifiedFiles
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7d81852e-8b58-4a9a-b31e-24d2f8b278b6
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3255fa04-960f-42d5-90e8-4a24428b68a3
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/params/name with inferred types: [string]"
+        name: attributes/params/name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6a534aa2-1d61-4842-b3d5-95bab1b5849b
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4ca521dd-8c18-4f53-bf7d-cf6e34fa7ead
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: LONG
+        description: "auto-generated projection of JSON at: /attributes/params/numOfColumns with inferred types: [integer]"
+        name: attributes/params/numOfColumns
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 644ad305-18c5-4b8b-820f-27b9b2a3caa5
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 674cea70-6964-4c15-99ef-d1371426e22d
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: LONG
+        description: "auto-generated projection of JSON at: /attributes/params/numOfDeployableEnvs with inferred types: [integer]"
+        name: attributes/params/numOfDeployableEnvs
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 14d2eee1-dc69-47ef-8970-c612dc0aa06a
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9123d7d6-866e-42d1-989f-e120792263f5
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: LONG
+        description: "auto-generated projection of JSON at: /attributes/params/numOfNodes with inferred types: [integer]"
+        name: attributes/params/numOfNodes
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4f4c1f4e-5a66-4eb4-b26d-2b846eca9662
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 69763483-404a-49ac-bd32-948f97ab9973
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/params/os with inferred types: [string]"
+        name: attributes/params/os
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6267211a-7699-4efc-a21f-727c778b0242
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8b29cdc3-28b2-48b0-9a3b-f9f6b67a8504
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/params/platform with inferred types: [string]"
+        name: attributes/params/platform
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: be705211-ea93-4e87-8818-8101b6cfadce
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 152ac021-d971-4634-82fb-5538b5302803
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: LONG
+        description: "auto-generated projection of JSON at: /attributes/params/promptTokenCount with inferred types: [integer]"
+        name: attributes/params/promptTokenCount
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 09ed7dd9-efbb-490d-b50d-283d4c9d9df8
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7eb2cb9f-2744-4474-bd2a-a9a0c0fa1bb2
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/params/ref with inferred types: [string]"
+        name: attributes/params/ref
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 308843ed-1cbe-4551-a29e-c3819e233c22
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c94d86c4-28ac-42dc-8371-dc28c680275a
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: LONG
+        description: "auto-generated projection of JSON at: /attributes/params/rejected with inferred types: [integer]"
+        name: attributes/params/rejected
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 01204543-3b97-458d-a1ad-474b9f156115
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cfd755c7-5a97-4565-a702-a322894de99b
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/params/startTime with inferred types: [number]"
+        name: attributes/params/startTime
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8269283d-6daa-4777-a62a-66175ad8f027
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: dae5fba1-b013-41e1-a826-e4efa7e7a2ce
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/params/stepCounter with inferred types: [string]"
+        name: attributes/params/stepCounter
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e97c2b9f-eaf6-49d8-b90b-7a61fb7cc81b
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 580690ea-a5bd-4f7a-8ca9-7515a46d7f1f
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/params/tabID with inferred types: [string]"
+        name: attributes/params/tabID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8c756d82-de99-4b07-a433-d7bde0cad484
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 97c195f2-5bef-46e5-9f5f-327a765fd07e
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/params/tabType with inferred types: [string]"
+        name: attributes/params/tabType
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bfdfc672-5767-4abf-9745-a90a69bafd31
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4d0cc54d-ac5d-42b7-bd22-88abc7fcd74a
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: LONG
+        description: "auto-generated projection of JSON at: /attributes/params/timeout with inferred types: [integer]"
+        name: attributes/params/timeout
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7b80503f-7ddd-4209-aae4-f76085426bcf
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a548680b-bcb2-42b9-9a5c-ba5048a88ad0
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: LONG
+        description: "auto-generated projection of JSON at: /attributes/params/totalRows with inferred types: [integer]"
+        name: attributes/params/totalRows
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a223c27e-62c3-4ba0-97d2-ae2e0832ced9
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 284af4c6-0e0b-4d8f-8751-8db25ce75660
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/params/totalRuns with inferred types: [string]"
+        name: attributes/params/totalRuns
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c663f2ae-3ce9-427a-8a83-09507d152ed5
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 95964c39-79c1-4bbf-ba01-f6532324d03b
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: LONG
+        description: "auto-generated projection of JSON at: /attributes/params/totalTokenCount with inferred types: [integer]"
+        name: attributes/params/totalTokenCount
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 49e5ad93-6e49-4056-8e1d-446160a51732
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e45f98ae-2231-4857-9912-498319e3cdab
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/params/traceId with inferred types: [string]"
+        name: attributes/params/traceId
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9949ae1d-d058-403a-bc0f-5f6dd0ad1e21
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 02669635-256f-430a-9023-7eca5e5c1c6c
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: BOOLEAN
+        description: "auto-generated projection of JSON at: /attributes/params/vm with inferred types: [boolean]"
+        name: attributes/params/vm
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3c09450f-262e-429c-969c-7c91a7d35d80
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0470225c-d21d-498a-ba1f-3a50308ea559
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: BOOLEAN
+        description: "auto-generated projection of JSON at: /attributes/params/warning with inferred types: [boolean]"
+        name: attributes/params/warning
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8e5f1dbd-7754-4236-ba90-0e86a0f737ec
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 32bfc849-34f4-40b7-8d22-92c1fe54f1b7
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/planID with inferred types: [string]"
+        name: attributes/planID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6f7392e4-52aa-42ee-b459-a4bb3ca9cc84
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9f4ebdd4-fb5d-4f38-b95a-3aed29de4223
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/reactAppCoalesceDev with inferred types: [string]"
+        name: attributes/reactAppCoalesceDev
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8d0bc570-b8da-4619-a7c4-ccb0f7c8ffbc
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b8b953ae-7966-4e1e-bd8a-51294d77b7b7
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/requestID with inferred types: [string]"
+        name: attributes/requestID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a8d0e588-d64f-4943-ab37-18c8c9200423
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e58a69ca-1e15-42b7-9de3-d08ed28cf76c
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: LONG
+        description: "auto-generated projection of JSON at: /attributes/runID with inferred types: [integer]"
+        name: attributes/runID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2293577d-3bb4-4e66-a100-1b86a35ef761
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 241c5b89-1a44-4933-acc0-70d7ecf2eee5
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/service with inferred types: [string]"
+        name: attributes/service
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4891ada0-0431-4982-817a-4c1bbe960b52
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 730b59fc-d693-4130-98d7-ff4ceab38247
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/session_id with inferred types: [string]"
+        name: attributes/session_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 03663ac7-4625-43d4-8e68-729d9d8a8481
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2660335b-4901-4e8b-96c5-55384fbb1bc7
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/snowflakeRequestID with inferred types: [string]"
+        name: attributes/snowflakeRequestID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: aa94145f-beb4-49e5-8b57-5c8e761fcc58
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: de9eaf31-8349-42ab-b3ae-2a9099bd4652
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/span_id with inferred types: [string]"
+        name: attributes/span_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 79f231c2-3ae2-4756-acf0-e6f9692d638e
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a20c0fa3-dfa6-432f-a1f8-1d97733372e7
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/status with inferred types: [string]"
+        name: attributes/status
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3888c0f8-d78c-495c-a667-f7a4f94a29bc
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d386aa05-fc6a-4202-999f-d0b7a464b528
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/threat_intel/indicators_matched with inferred types: [array]"
+        name: attributes/threat_intel/indicators_matched
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 21bcf624-f671-4836-859c-6669139b2710
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8ba78d65-5762-4b63-bf98-37555ab7cfa4
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/threat_intel/ip with inferred types: [array]"
+        name: attributes/threat_intel/ip
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4a063893-111f-4f06-ba8e-d594abd83754
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f9d4ee4d-f3b8-4dc9-b2dd-ae40b9fbb0f3
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/threat_intel/results with inferred types: [array]"
+        name: attributes/threat_intel/results
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 97cca427-074e-49a0-a5bc-3a570f695acc
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a1884382-4f7b-4201-81d3-8d3716f8fa2d
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: LONG
+        description: "auto-generated projection of JSON at: /attributes/time-ms with inferred types: [integer]"
+        name: attributes/time-ms
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d17617a4-b680-47c4-9580-5836c66ca63a
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e6a6bc80-0233-4a13-85c9-89d582977a65
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/timestamp with inferred types: [integer string]"
+        name: attributes/timestamp
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 665de62e-373f-45b3-b9a4-55f7d2301a67
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 992d853f-6767-4d36-b95d-85f85db01225
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: LONG
+        description: "auto-generated projection of JSON at: /attributes/total time-ms with inferred types: [integer]"
+        name: attributes/total_time-ms
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8cb67b46-1ce7-4171-b0a1-cf2f85449cc0
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 48f2b0a0-7386-4364-88ec-54276728f111
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/traceId with inferred types: [string]"
+        name: attributes/traceId
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1e6c67f1-00d3-4b2f-aab7-531e57ee5db9
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5b366fa7-3af7-464f-adf5-093504abbd51
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/trace_flags with inferred types: [string]"
+        name: attributes/trace_flags
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 293188b7-9b42-4fb3-b620-812b79366b82
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 29c7968b-5756-4916-b50f-573b62f3ac02
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/trace_id with inferred types: [string]"
+        name: attributes/trace_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5387b0e4-8e29-466d-876f-45cc2441ecff
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 511b2dc4-3cfe-4551-a234-11d9fc701f73
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/urlPath with inferred types: [string]"
+        name: attributes/urlPath
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5b20a395-48aa-4f20-86cf-d456d40956bb
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9a286ef8-947b-44e2-b76d-77d649a4b72a
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/userID with inferred types: [string]"
+        name: attributes/userID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e766b617-a3d1-41c2-a285-76ac965b08f6
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ca455e6c-35a2-45bf-b686-e9d7dd96ba87
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/user_action/id with inferred types: [string]"
+        name: attributes/user_action/id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 67e7c93d-5db0-4170-8e50-c23c018482cd
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c3139c89-b1ca-4dcc-9d81-0867df9d05e8
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/id with inferred types: [string]"
+        name: attributes/view/id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6498ff95-a4a4-45e2-8ebb-d783ef80f3a3
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cc95e16b-e446-4a33-be51-514a79e00dfa
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/referrer with inferred types: [string]"
+        name: attributes/view/referrer
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 25c71e00-983e-4131-ad80-6bc34a5bd3ba
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c0ea57bc-81f8-42a8-93e1-d0fff984325a
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/hash with inferred types: [string]"
+        name: attributes/view/referrer_details/hash
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b48c5490-df09-4b7e-9c3c-567276bf95b6
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: febb4c00-a72f-4c4b-9629-7027e0c3f361
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/host with inferred types: [string]"
+        name: attributes/view/referrer_details/host
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ee0df824-f4dd-4623-8d3d-cc74a19f7460
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4263b397-a656-4cd4-8b62-f4ea7ece5e98
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/path with inferred types: [string]"
+        name: attributes/view/referrer_details/path
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bfd7c165-8ce1-4ee7-af22-4b21edc75012
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bdecc539-9d53-47fc-a7cf-c1d921613a28
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/4nx4fwtbualw5kh6ckrfyulsfy with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/4nx4fwtbualw5kh6ckrfyulsfy
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d669c837-7d99-473a-b7e2-1337707cc9bf
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3b4d7eea-3884-4252-98b0-18c5f879a23d
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/code with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/code
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f02e466e-1e72-45b5-97e5-7eea3f2ae0b8
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4216fcb1-f33e-49f1-8738-5f4eae07ffbd
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/dlrhrthbb5dwiqwobkimz75pk4 with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/dlrhrthbb5dwiqwobkimz75pk4
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ac51c91f-5033-44f8-a260-f17e80e97b28
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d0837da6-7734-490a-b6e7-0bbba1c4d3b5
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/environment with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/environment
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 03434731-2448-4d17-8547-0c81c28ad4ef
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6b998629-365d-47c9-ab07-e2b023b624b6
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/environmentId with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/environmentId
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0a136350-3904-472e-ab5a-9b903f2ba4a0
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8ce9973e-f11d-42bb-9b0a-fb0a33e82ec8
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/error with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/error
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a984d3cc-61a6-4906-bd96-cd49c286ae9e
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 64db9231-a0f8-4f09-a7d1-e210d4c41690
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/error_description with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/error_description
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: de80e187-3ee5-4de2-be18-a5cb38df702d
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 48301ae2-cc41-4fd6-a434-602321fccbf5
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/hxjw224cu7p44tnodov2eihnki with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/hxjw224cu7p44tnodov2eihnki
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: eca8ff5e-e8fd-48c9-a041-129481dbbf9b
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d6abb05e-d400-4514-9ea1-810325ab5b6d
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/isNewWorkspace with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/isNewWorkspace
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0ec73b0c-2ed1-474e-aaba-b7d9c7672b8d
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 661c5cde-462e-4879-992e-8a59d2a10019
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/iss with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/iss
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 99bd83e1-d17d-454e-9862-39bc202fdbd4
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 876bc5c8-cc3f-4760-a705-4e4b8201a528
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/job with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/job
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1fae06d5-3b37-4bc6-baff-a5db4f95dc07
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 11f3a6a2-3f02-49d4-b30b-5aff6aaeef97
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/jobName with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/jobName
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b0053564-3474-4da5-8e41-e849d79b81cb
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 765675d4-2d62-4ac3-8128-f9ddac01c13a
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/oAuthSuccess with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/oAuthSuccess
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: db7352dd-d3d3-427d-b5ea-88abf92d4642
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cc35de52-01a7-4695-a6d7-08cdb9b0014f
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/project with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/project
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a56b679e-5dcd-4c04-98d7-7fd21551bd34
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cf83111f-046a-4be4-a0b6-2bb9e3882f17
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/projectId with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/projectId
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0bb9503d-fd21-466a-afd7-2bc0e26db225
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a65eee71-e055-44a8-966b-d7d8a32f0e1c
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/r6yhr35uptmktabafiyzdcrtbi with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/r6yhr35uptmktabafiyzdcrtbi
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 40230b09-ee73-468f-8934-a56be306a258
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b13c031c-ce87-40d7-9e3f-3016aeb68680
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/runStatus with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/runStatus
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0b802dd9-26e0-43a4-a6b4-d3d218efc2f3
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 76f12684-dfab-46b3-8e6c-2beafbdc5953
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/runType with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/runType
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 160c0f96-9f15-4784-a0f3-f06767626d01
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cd56b3a6-7d96-45cb-831b-5f73bb950e11
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/search with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/search
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 89282319-3ea9-4600-991a-46797fec57a5
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 254625d1-15a0-46a6-b93c-1d5602d8f0bb
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/session_state with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/session_state
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ec49db29-7221-48f2-aa00-3a792dd56a1d
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: abef9b4b-7457-4dcd-b2ae-3e0c96c38ecb
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/state with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/state
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9b1d4354-1d3c-419b-96bc-fd9fb2351e54
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ec4242cd-82f0-45a0-a7ff-3a0f6f490e80
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/subError with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/subError
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: db1b12e6-e6f6-4d61-a3b2-05d3ff5a7728
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8e345b2c-299d-4861-927b-e5848ccb6615
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/token with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/token
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1dcbac50-c2fc-4a7b-afe8-5aad0899e5fe
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7a0995a8-e0f5-4577-a8fc-f14af3c62758
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/u6anhvxpptwa4gsmiwranrmmtu with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/u6anhvxpptwa4gsmiwranrmmtu
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4ebb5c4a-5751-46f9-881a-721eaebb6d8a
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 32a43942-0b71-4910-ae27-375bf1de2a5a
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/v3ghoddxsrmejt3w262lheg7xe with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/v3ghoddxsrmejt3w262lheg7xe
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ef78a902-a16d-4423-9d91-aeaeaf44ceb7
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e75c1be5-4516-4808-81c3-547ff89134e2
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/queryString/workspaceId with inferred types: [string]"
+        name: attributes/view/referrer_details/queryString/workspaceId
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b816091c-5e73-4256-b56a-573ce51dcffb
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 16608c8a-555a-40c4-a165-1e8810b35998
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/referrer_details/scheme with inferred types: [string]"
+        name: attributes/view/referrer_details/scheme
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fd68e2d1-4090-4a75-a9a9-0755a9a7475d
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b5e6796c-2b2b-4fb1-8a3b-6e95cb493c45
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/url with inferred types: [string]"
+        name: attributes/view/url
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: bce6a80f-ae86-4294-9a8f-8adcd86ff307
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d17f679a-6e49-48ee-b509-715488be4ec1
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/hash with inferred types: [string]"
+        name: attributes/view/url_details/hash
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9bd74f6d-1ae9-4e14-ba17-dbd8ee97cdd1
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d14c3d82-bfdb-42ac-894c-1bd59393915f
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/host with inferred types: [string]"
+        name: attributes/view/url_details/host
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 83189635-987a-4a2c-abf1-36653a8b69c6
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0ec36af4-bc5f-4fcb-8af9-b27154127b5b
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/path with inferred types: [string]"
+        name: attributes/view/url_details/path
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9caa02e5-9c15-4fe0-aabf-483faa8af84e
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b5b023c3-a109-4c3b-820c-4ee1df47b5d4
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/code with inferred types: [string]"
+        name: attributes/view/url_details/queryString/code
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 47fb391a-f315-447d-8589-cbfde1577461
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e2f40a61-05e5-4d66-a183-94317f8774ce
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/environment with inferred types: [string]"
+        name: attributes/view/url_details/queryString/environment
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ad3c623f-63d5-4f2e-b1de-89bb85dc83eb
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3ffa5af5-8fe8-4b8d-b055-5c7aaf15932a
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/environmentId with inferred types: [string]"
+        name: attributes/view/url_details/queryString/environmentId
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f911d19b-55d9-4a23-a78f-9a674907ce5a
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6365335e-edc7-424b-95b3-3ca69a085d5f
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/error with inferred types: [string]"
+        name: attributes/view/url_details/queryString/error
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3e2ab643-2b27-4dff-b366-78a415547155
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 348c9064-da64-4978-bced-bedddcefb53b
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/error_description with inferred types: [string]"
+        name: attributes/view/url_details/queryString/error_description
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a2a7fb0b-4740-4b26-a683-dd7d9bfa0725
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b50d0849-e35b-4062-b373-430ad97c9f12
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/include with inferred types: [string]"
+        name: attributes/view/url_details/queryString/include
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5690d9ac-39c7-4565-a2a8-9b4ac0304e03
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 003045ea-2acc-4f10-ae43-453484259352
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/isNewWorkspace with inferred types: [string]"
+        name: attributes/view/url_details/queryString/isNewWorkspace
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: de7b6c15-d074-45a7-b4b5-976c9f1688f2
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4dd838ac-a3d1-489e-9b79-cdc36bcaf100
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/iss with inferred types: [string]"
+        name: attributes/view/url_details/queryString/iss
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4bb94a90-3a31-4a7f-b9ab-b03101dbad3f
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 489c5095-f3fd-43bb-9538-36d9a4e3bc6f
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/jobName with inferred types: [string]"
+        name: attributes/view/url_details/queryString/jobName
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4c7153a3-a103-4fbf-9f4c-558768e05e5b
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 991f7e10-7a28-4351-81fb-dacd04294c05
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/locationName with inferred types: [string]"
+        name: attributes/view/url_details/queryString/locationName
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d4d2ab3c-9862-4ec9-a997-abecbc795f2f
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 538cadb5-f27b-4918-a787-cb2487aecb47
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/oAuthSuccess with inferred types: [string]"
+        name: attributes/view/url_details/queryString/oAuthSuccess
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fa98e4a3-910b-432e-849a-ec975073546b
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f0310bff-b086-4c58-b14a-653ad2cd0283
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/project with inferred types: [string]"
+        name: attributes/view/url_details/queryString/project
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: eb980b9f-470e-409f-a1e5-ec59aa7a3b7f
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: cd2a47aa-f788-46f2-ac96-12d64ebb5102
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/projectId with inferred types: [string]"
+        name: attributes/view/url_details/queryString/projectId
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 488fc1d9-652f-42b7-a80d-7b5b1b1f724c
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: adebfb8e-0635-47bd-84f7-8e556ee56ce9
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/runStatus with inferred types: [string]"
+        name: attributes/view/url_details/queryString/runStatus
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cf569984-c390-45ff-acc2-fa4b26148957
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a66fca28-9a2e-4c81-a987-8122bd3f7731
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/runType with inferred types: [string]"
+        name: attributes/view/url_details/queryString/runType
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f0cc8f83-ac38-4dd8-8ca7-a8af421f602d
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: df9aa24b-fc29-40c3-9e33-b78e4489e65e
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/search with inferred types: [string]"
+        name: attributes/view/url_details/queryString/search
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 42d8230b-fefc-4edc-b06c-d3efb82e4d2d
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f283c758-48b3-442b-876a-99462391d026
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/session_state with inferred types: [string]"
+        name: attributes/view/url_details/queryString/session_state
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2f56e041-9b07-4744-ac5b-638b780cb31f
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0b6f4da0-b8da-41c5-9a35-b3389ae547aa
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/sqlType with inferred types: [string]"
+        name: attributes/view/url_details/queryString/sqlType
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0392b44e-38ae-4b50-b31c-23ce1c6c681d
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1ddaa85a-e7cf-4875-a7a2-97d39375c5bb
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/state with inferred types: [string]"
+        name: attributes/view/url_details/queryString/state
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 73798d8b-79a7-45e9-a27b-10bac91f5c76
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d0074bf6-f302-4466-8953-fcb631b2a719
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/subError with inferred types: [string]"
+        name: attributes/view/url_details/queryString/subError
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a5b926e7-999b-41a4-9bd4-f017ca111545
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c729eca6-3e63-420f-83ea-149b8ec51e0a
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/queryString/workspaceId with inferred types: [string]"
+        name: attributes/view/url_details/queryString/workspaceId
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e48bcb32-95d5-40a2-9461-1d03759be3a0
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1fe34ac1-6642-41d0-8511-75abb3fa988c
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/view/url_details/scheme with inferred types: [string]"
+        name: attributes/view/url_details/scheme
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1bb188d5-bda4-4813-84ea-16249feee521
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f15935c2-bcab-4df6-9d29-a669e8505867
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /attributes/workspaceID with inferred types: [integer string]"
+        name: attributes/workspaceID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 13bcd164-b932-4fb7-8f84-ec28f5dd3764
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 87e65b75-2cb1-467a-8935-0fd53329cd79
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: TIMESTAMP
+        description: "auto-generated projection of JSON at: /date with inferred types: [string]"
+        name: date
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3dcf8366-0e4a-4d8e-ae6d-92df7050fa05
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e918560c-1720-4976-976e-c3122229b1ee
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: TIMESTAMP
+        description: |-
+          Flow Publication Time
+          Flow publication date-time of this document
+          auto-generated projection of JSON at: /_meta/uuid with inferred types: [string]
+        name: flow_published_at
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 930b1b77-07f0-40a3-8701-2cba086a275d
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e263260d-077d-452b-bef0-a2f57d160d2e
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /host with inferred types: [string]"
+        name: host
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e3d74cc5-055b-4931-8337-e8027874bb12
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 09273bcd-e443-4df6-8b63-13a97595e470
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /message with inferred types: [string]"
+        name: message
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6003590c-1586-4ba2-b2c5-6bd623c65012
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6a888f39-60b2-4193-9d90-f9b010336a52
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /service with inferred types: [string]"
+        name: service
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 16e476ac-c766-47a0-bd67-70446df1ad8f
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 04b26e7f-ea1a-4d5d-aef1-ab2953947ddf
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /source with inferred types: [string]"
+        name: source
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 34c69f6f-9921-44fd-a2a2-9055b376772c
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 461d9617-990e-486e-8018-5a26709854cd
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /span_id with inferred types: [string]"
+        name: span_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d701552b-5db1-41ca-8f37-f34daddb0d9f
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 47374ef6-3c53-4225-ad08-0b8740472335
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /status with inferred types: [string]"
+        name: status
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9ebe644b-62ed-4593-9989-15a0bceab558
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: eaace434-d71b-44e3-9c58-3eef6d07f649
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /tags with inferred types: [array]"
+        name: tags
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fbc1953a-6733-4eb3-87e7-8ca7e955f8c1
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 748d6391-6b24-463b-84e0-4460d29accde
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at: /trace_id with inferred types: [string]"
+        name: trace_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fc3b73e2-2f5f-4185-be7e-f7a92ce5f925
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 20e56470-a7b5-4114-8d66-d63d255e0bde
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: "auto-generated projection of JSON at:  with inferred types: [object]"
+        name: flow_document
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5021fa7f-5252-45b7-920e-0fc46276edfa
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c730095f-cccc-4644-af3a-43a3ad020cc7
+          stepCounter: 14b9e3e7-5062-44d8-a804-a68e48284442
+        config: {}
+        dataType: STRING
+        description: ""
+        name: attributes/view/referrer_details/queryString/xzhbp2ryserne6ntlbzoaee25y
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 974863fe-9c4c-4c56-8e4e-349e1a8e96ab
+                stepCounter: 9dbd672a-fa84-45b7-84f9-54d82daad4e1
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: DATADOG
+            nodeName: node_create_v2
+        join:
+          joinCondition: FROM {{ ref('DATADOG', 'node_create_v2') }} `node_create_v2`
+        name: stg_node_create_v2
+        noLinkRefs: []
+  name: stg_node_create_v2
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

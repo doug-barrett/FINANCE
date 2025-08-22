@@ -1,0 +1,174 @@
+fileVersion: 1
+id: bd5aa7a7-157a-448b-bc3c-ea8ccbe4f064
+name: FCT_MONTHLY_DEPLOY_SUCCESS
+operation:
+  config:
+    groupByAll: false
+    insertStrategy: UNION ALL
+    orderby: false
+    orderbycolumn:
+      items:
+        - {}
+    postSQL: ""
+    preSQL: ""
+    selectDistinct: false
+    testsEnabled: false
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f465ab8b-7976-43c9-a596-8ef674e7c1ea
+          stepCounter: bd5aa7a7-157a-448b-bc3c-ea8ccbe4f064
+        config: {}
+        dataType: STRING
+        description: ""
+        name: account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c6955674-87c3-4b02-9f2a-f2268b1e7218
+                stepCounter: 21cb62b5-762e-4b26-9024-adf4cf789848
+            transform: ""
+      - acceptedValues:
+          strictMatch: false
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: bebce34c-0350-48fc-8ac7-255002cec799
+          stepCounter: bd5aa7a7-157a-448b-bc3c-ea8ccbe4f064
+        config: {}
+        dataType: STRING
+        description: ""
+        name: account_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f68ffba2-d76f-46af-9de2-404dbecf295b
+                stepCounter: 21cb62b5-762e-4b26-9024-adf4cf789848
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c4513272-6292-40e4-9f30-15afe1dc9fbb
+          stepCounter: bd5aa7a7-157a-448b-bc3c-ea8ccbe4f064
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: arr_cohort
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 273e1fea-c9e2-489b-a4da-3ac4c43ebe39
+                stepCounter: 21cb62b5-762e-4b26-9024-adf4cf789848
+            transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: false
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f2d082af-a65b-4db8-96f2-70dd351b63c1
+          stepCounter: bd5aa7a7-157a-448b-bc3c-ea8ccbe4f064
+        config: {}
+        dataType: INTEGER
+        description: ""
+        name: account_tenure
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0331466b-517a-44a4-8867-1a218fed18a7
+                stepCounter: 21cb62b5-762e-4b26-9024-adf4cf789848
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9a2557e3-fbe1-4c80-a10a-da18d308ce52
+          stepCounter: bd5aa7a7-157a-448b-bc3c-ea8ccbe4f064
+        config: {}
+        dataType: DATE
+        description: ""
+        name: run_month
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9647b81f-1835-4e4d-aa95-53ccbfb282c0
+                stepCounter: 21cb62b5-762e-4b26-9024-adf4cf789848
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 03654417-3e55-40ed-b50c-21baddf34f79
+          stepCounter: bd5aa7a7-157a-448b-bc3c-ea8ccbe4f064
+        config: {}
+        dataType: DOUBLE
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: deploy_success_rate
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: NVL(`STG_COMPLETED_DEPLOY_RUNS`.`total_deploy_runs`/`FCT_MONTHLY_DEPLOY_RUNS`.`total_deploy_runs`,0)
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4890ca56-808a-4fbd-abd9-d72a2200126c
+          stepCounter: bd5aa7a7-157a-448b-bc3c-ea8ccbe4f064
+        config: {}
+        dataType: STRING
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: metric_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "'monthly_deploy_success'"
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STAGING
+            nodeName: STG_COMPLETED_DEPLOY_RUNS
+          - locationName: TARGET
+            nodeName: FCT_MONTHLY_DEPLOY_RUNS
+        join:
+          joinCondition: |-
+            FROM {{ ref('TARGET', 'FCT_MONTHLY_DEPLOY_RUNS') }} `FCT_MONTHLY_DEPLOY_RUNS`
+            LEFT JOIN {{ ref('STAGING', 'STG_COMPLETED_DEPLOY_RUNS') }} `STG_COMPLETED_DEPLOY_RUNS`
+            ON `STG_COMPLETED_DEPLOY_RUNS`.`account_id` = `FCT_MONTHLY_DEPLOY_RUNS`.`account_id`
+            AND `STG_COMPLETED_DEPLOY_RUNS`.`run_month` = `FCT_MONTHLY_DEPLOY_RUNS`.`run_month`
+            ORDER BY `FCT_MONTHLY_DEPLOY_RUNS`.`account_id` asc, `FCT_MONTHLY_DEPLOY_RUNS`.`run_month` asc
+        name: FCT_MONTHLY_DEPLOY_SUCCESS
+        noLinkRefs: []
+  name: FCT_MONTHLY_DEPLOY_SUCCESS
+  overrideSQL: false
+  schema: ""
+  sqlType: Fact
+  type: sql
+  version: 1
+type: Node

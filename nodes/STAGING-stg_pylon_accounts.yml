@@ -1,0 +1,221 @@
+fileVersion: 1
+id: 8f6eb510-13f4-4ca5-8e55-58d7bd2ca081
+name: stg_pylon_accounts
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d295efe5-f565-44dc-86ea-1458148da596
+          stepCounter: 8f6eb510-13f4-4ca5-8e55-58d7bd2ca081
+        config: {}
+        dataType: STRING
+        description: ""
+        name: pylon_account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0a4a726c-9871-4ed0-9059-4da4617fe32e
+                stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3cf365db-538d-40ec-8bfd-0ec53114f323
+          stepCounter: 8f6eb510-13f4-4ca5-8e55-58d7bd2ca081
+        config: {}
+        dataType: STRING
+        description: ""
+        name: org_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: aa5f328a-7f06-4442-935f-bc9aa17d8fe6
+                stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+            transform: get_json_object(custom_account_salesforce_product_org_id_c, '$.value')
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8a0c9dff-fb7f-4cdd-a5b0-dc7526448723
+          stepCounter: 8f6eb510-13f4-4ca5-8e55-58d7bd2ca081
+        config: {}
+        dataType: STRING
+        description: ""
+        name: account_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f7da24fb-8131-4a0f-9b44-1ab54cd45c69
+                stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+            transform: get_json_object(custom_account_salesforce_name, '$.value')
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7566b8fe-322f-45b4-94b0-204b7dd84aa1
+          stepCounter: 8f6eb510-13f4-4ca5-8e55-58d7bd2ca081
+        config: {}
+        dataType: STRING
+        description: ""
+        name: account_type
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0c204301-08e2-48e3-bec0-85a89d6364c0
+                stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+            transform: get_json_object(custom_salesforce_type, '$.value')
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4e34b76e-d4a2-437c-a482-ac9b762c96e1
+          stepCounter: 8f6eb510-13f4-4ca5-8e55-58d7bd2ca081
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: created_at
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 712cf205-de16-4e26-9b07-0e9234e49e6a
+                stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c0299c82-c4fb-489f-936c-9a897457d770
+          stepCounter: 8f6eb510-13f4-4ca5-8e55-58d7bd2ca081
+        config: {}
+        dataType: STRING
+        description: ""
+        name: owner
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 79ecdca7-f14d-4c1d-b723-52737ccd3064
+                stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3703228b-8a18-4ad0-94a0-6f6707556174
+          stepCounter: 8f6eb510-13f4-4ca5-8e55-58d7bd2ca081
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: latest_customer_activity_time
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c6d8674b-ae63-42e2-8856-3199f86f977f
+                stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a1b15ad4-1984-493d-a277-3a7eee5b0574
+          stepCounter: 8f6eb510-13f4-4ca5-8e55-58d7bd2ca081
+        config: {}
+        dataType: STRING
+        description: ""
+        name: name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9383781f-ab60-4053-80aa-3609c0e3884c
+                stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5d8c3606-265e-450b-bf7b-8960ab0f4a9a
+          stepCounter: 8f6eb510-13f4-4ca5-8e55-58d7bd2ca081
+        config: {}
+        dataType: STRING
+        description: ""
+        name: primary_domain
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a21374ed-b2c2-4ccc-8e54-8aafc8b1b770
+                stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 633563ed-f79d-41b7-be04-0fa3b110df57
+          stepCounter: 8f6eb510-13f4-4ca5-8e55-58d7bd2ca081
+        config: {}
+        dataType: STRING
+        description: ""
+        name: firestore_env
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 71b5451a-6adc-4b23-b113-ce1f158a305f
+                stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+            transform: get_json_object(custom_account_salesforce_firestore_environment_c, '$.value')
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c1a750fe-44c6-48e7-873b-8228f070ab14
+          stepCounter: 8f6eb510-13f4-4ca5-8e55-58d7bd2ca081
+        config: {}
+        dataType: STRING
+        description: ""
+        name: support_package
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2d472615-ca08-44ab-889c-39c684874ddd
+                stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+            transform: get_json_object(custom_account_salesforce_current_support_package_c, '$.value')
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ebd92dda-1114-4bc3-9014-1da4c8191172
+          stepCounter: 8f6eb510-13f4-4ca5-8e55-58d7bd2ca081
+        config: {}
+        dataType: BOOLEAN
+        description: ""
+        name: _fivetran_deleted
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f6002d8b-a134-425b-8f77-6169e684e6e1
+                stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 73130a3f-95e9-4330-a995-af5b3014c2f8
+          stepCounter: 8f6eb510-13f4-4ca5-8e55-58d7bd2ca081
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: _fivetran_synced
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: da173697-2e04-4f9e-9c18-d882e989b815
+                stepCounter: e265743e-3d7c-49b9-9f71-667922cd596b
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: PYLON
+            nodeName: account
+        join:
+          joinCondition: FROM {{ ref('PYLON', 'account') }} `account`
+        name: stg_pylon_accounts
+        noLinkRefs: []
+  name: stg_pylon_accounts
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node

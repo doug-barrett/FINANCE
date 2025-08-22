@@ -1,0 +1,195 @@
+fileVersion: 1
+id: 8dee8f86-5b07-401d-96c8-32c54baab956
+name: V_T3M_TICKET_MEDIANS
+operation:
+  config:
+    OverrideSQLCreate: false
+    groupByAll: false
+    insertStrategy: UNION
+    selectDistinct: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f9bacd57-3ea3-43ff-b5c0-7edd99f32702
+          stepCounter: 8dee8f86-5b07-401d-96c8-32c54baab956
+        config: {}
+        dataType: string
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: metric_name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 234afe68-5663-48b0-a993-4ef3ed4ac7bf
+          stepCounter: 8dee8f86-5b07-401d-96c8-32c54baab956
+        config: {}
+        dataType: string
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: arr_cohort
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: ""
+        systemColumnType: None
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3d08b410-6751-4718-9bee-ff98918df6a2
+          stepCounter: 8dee8f86-5b07-401d-96c8-32c54baab956
+        config: {}
+        dataType: double
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: metric_median
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: ""
+        systemColumnType: None
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: |-
+            {{ stage('Override Create SQL') }}
+             CREATE OR REPLACE VIEW {{ ref('TARGET', 'V_T3M_TICKET_MEDIANS')}} AS (
+            with `source_100K+` as (
+            select *
+            from customer_health_metrics.default.fct_t3m_customer_tickets
+            where account_tenure > 6
+            and ticket_month >= date_add(month,-12,DATE_TRUNC('month',GETDATE()))
+            and ticket_month < DATE_TRUNC('month',GETDATE())
+            and arr_cohort = '100K+'
+            ),
+
+
+            `100K+` as (
+            select
+             't3m_tickets' as metric_name, 
+             '100K+' as arr_cohort,
+             median(distinct t3m_ticket_count) as metric_median
+            from
+             `source_100K+`
+            group by all
+            ),
+
+
+            `source_50K-100K` as (
+            select *
+            from customer_health_metrics.default.fct_t3m_customer_tickets
+            where account_tenure > 6
+            and ticket_month >= date_add(month,-12,DATE_TRUNC('month',GETDATE()))
+            and ticket_month < DATE_TRUNC('month',GETDATE())
+            and arr_cohort = '50K-100K'
+            ),
+
+
+            `50K-100K` as (
+            select
+             't3m_tickets' as metric_name, 
+             '50K-100K' as arr_cohort,
+             median(distinct t3m_ticket_count) as metric_median
+            from
+             `source_50K-100K`
+            group by all
+            ),
+
+
+            `source_30K-50K` as (
+            select *
+            from customer_health_metrics.default.fct_t3m_customer_tickets
+            where account_tenure > 6
+            and ticket_month >= date_add(month,-12,DATE_TRUNC('month',GETDATE()))
+            and ticket_month < DATE_TRUNC('month',GETDATE())
+            and arr_cohort = '30K-50K'
+            ),
+
+
+            `30K-50K` as (
+            select
+             't3m_tickets' as metric_name, 
+             '30K-50K' as arr_cohort,
+             median(distinct t3m_ticket_count) as metric_median
+            from
+             `source_30K-50K`
+            group by all
+            ),
+
+
+            `source_0-30K` as (
+            select *
+            from customer_health_metrics.default.fct_t3m_customer_tickets
+            where account_tenure > 6
+            and ticket_month >= date_add(month,-12,DATE_TRUNC('month',GETDATE()))
+            and ticket_month < DATE_TRUNC('month',GETDATE())
+            and arr_cohort = '0-30K'
+            ),
+
+
+            `0-30K` as (
+            select
+             't3m_tickets' as metric_name, 
+             '0-30K' as arr_cohort,
+             median(distinct t3m_ticket_count) as metric_median
+            from
+             `source_0-30K`
+            group by all
+            )
+
+
+            select *
+            from `100K+`
+            UNION
+            select *
+            from `50K-100K`
+            UNION
+            select *
+            from `30K-50K`
+            UNION
+            select *
+            from `0-30K`)
+        dependencies:
+          - locationName: TARGET
+            nodeName: FCT_T3M_CUSTOMER_TICKETS
+        join:
+          joinCondition: FROM {{ ref('TARGET', 'FCT_T3M_CUSTOMER_TICKETS') }} `FCT_T3M_CUSTOMER_TICKETS`
+        name: V_T3M_TICKET_MEDIANS
+        noLinkRefs: []
+  name: V_T3M_TICKET_MEDIANS
+  overrideSQL: true
+  schema: ""
+  sqlType: View
+  type: sql
+  version: 1
+type: Node

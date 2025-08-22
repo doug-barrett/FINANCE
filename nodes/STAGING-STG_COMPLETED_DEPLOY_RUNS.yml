@@ -1,0 +1,98 @@
+fileVersion: 1
+id: e22c9d7f-ad52-4cdd-acfe-b0544d01c3f3
+name: STG_COMPLETED_DEPLOY_RUNS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b8ac6133-a265-4028-ac36-da91a83346a6
+          stepCounter: e22c9d7f-ad52-4cdd-acfe-b0544d01c3f3
+        config: {}
+        dataType: STRING
+        description: ""
+        name: run_status
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8ed45837-5362-4aee-89df-a2f5f2d79115
+                stepCounter: 152530fe-a88b-48ce-b645-ca2975593433
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 99da04ff-55d4-4c7f-a3a1-2fbc49bd8cb5
+          stepCounter: e22c9d7f-ad52-4cdd-acfe-b0544d01c3f3
+        config: {}
+        dataType: STRING
+        description: ""
+        name: account_id
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8bd9e168-2c00-43f9-834a-8f1f00a1bebb
+                stepCounter: 152530fe-a88b-48ce-b645-ca2975593433
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d8b2e319-cd26-4e7a-9213-200659c2f36d
+          stepCounter: e22c9d7f-ad52-4cdd-acfe-b0544d01c3f3
+        config: {}
+        dataType: DATE
+        description: ""
+        name: run_month
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 886d47bf-787f-4f89-afce-8f568809ebb4
+                stepCounter: 152530fe-a88b-48ce-b645-ca2975593433
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: df01b1bb-619c-472f-a2c3-600071f174d0
+          stepCounter: e22c9d7f-ad52-4cdd-acfe-b0544d01c3f3
+        config: {}
+        dataType: INT
+        description: ""
+        name: total_deploy_runs
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d999d373-3f15-4952-8bc9-1534f5b811fe
+                stepCounter: 152530fe-a88b-48ce-b645-ca2975593433
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          STG_DEPLOY_RUNS_BY_STATUS: 152530fe-a88b-48ce-b645-ca2975593433
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: STAGING
+            nodeName: STG_DEPLOY_RUNS_BY_STATUS
+        join:
+          joinCondition: |-
+            FROM {{ ref('STAGING', 'STG_DEPLOY_RUNS_BY_STATUS') }} `STG_DEPLOY_RUNS_BY_STATUS`
+            WHERE run_status ilike '%complete%'
+        name: STG_COMPLETED_DEPLOY_RUNS
+        noLinkRefs: []
+  name: STG_COMPLETED_DEPLOY_RUNS
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
